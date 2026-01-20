@@ -7,3 +7,4 @@
 - Tommy Brunelle
 - Ahmed Ait Hammou
 - Noah PAYET
+- Jacob Chagnon
