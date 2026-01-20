@@ -4,3 +4,4 @@
 - Philippe Gauthier
 
 ## Étudiants : 
+- Tommy Brunelle
