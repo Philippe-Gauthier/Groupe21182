@@ -8,3 +8,4 @@
 - Ahmed Ait Hammou
 - Noah PAYET
 - Jacob Chagnon
+- Cassey Martin
