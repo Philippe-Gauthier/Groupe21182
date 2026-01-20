@@ -11,6 +11,7 @@
 - Cassey Martin
 - Médjoua
 - Rosemarie Dalton
+- Vincent Goulet
 
 ---
 
