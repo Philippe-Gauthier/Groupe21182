@@ -9,5 +9,4 @@
 - Noah PAYET
 - Jacob Chagnon
 - Cassey Martin
-  Médjoua
-  
+- Médjoua
