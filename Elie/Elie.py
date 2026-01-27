@@ -1,8 +1,8 @@
 
 name = input("Entrez votre nom: ");
 
-chois = input("Bonjour, " + name " faites votre chois entre 3 portes: gauche, droite ou centre");
-
+porte = input("Bonjour, " + name " faites votre chois entre 3 portes: gauche, droite ou centre");
+#?
 
 match porte:
 
