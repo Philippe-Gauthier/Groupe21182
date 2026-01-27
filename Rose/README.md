@@ -12,4 +12,21 @@ Faire une histoire dont vous etes le heros.
 
 ---
 
+## Entrees ##
+
+[inserer entree]
+
+---
+
+## Sorties ## 
+
+[inserer sorties]
+
+---
+
+## Structure de controle ##
+
+[inserer structure de controle]
+
+---
 
