@@ -1,11 +1,19 @@
 # Projet 1
+---
+## Description
+Jeu interactif avec des options qui déterminent le déroulement d'une histoire.
 
+---
 
-## Entrée
+## Introduction
 
-## Sortie
+## Choix 1
 
-## Contrôle
+---
+## Texte 2
+
+## Choix 2
+---
 
 
 
