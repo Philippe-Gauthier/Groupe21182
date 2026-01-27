@@ -1,2 +1,4 @@
 # Entrer
-# sortirss
+# sortir
+# Control
+# Modern combat 
