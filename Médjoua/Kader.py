@@ -1,3 +1,0 @@
-#Entrer
-#control
-#sortir
