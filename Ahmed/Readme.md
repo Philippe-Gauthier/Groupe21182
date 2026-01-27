@@ -2,6 +2,6 @@
 
 #sortie
 
-#contrôle de programme
+#Structure de contôle
 
 #théme (Hardware)
