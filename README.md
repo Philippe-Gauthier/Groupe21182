@@ -12,6 +12,7 @@
 - Médjoua
 - Rosemarie Dalton
 - Vincent Goulet
+- Elie Thauvette
 
 ---
 
