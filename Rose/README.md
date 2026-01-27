@@ -14,19 +14,19 @@ Faire une histoire dont vous etes le heros.
 
 ## Entrees ##
 
-[inserer entree]
+Les entrees attendues sont les choix faits par l'utilisateur.
 
 ---
 
 ## Sorties ## 
 
-[inserer sorties]
+Les sorties seront la continuite de l'histoire, ainsi que les prochaines options de choix.
 
 ---
 
 ## Structure de controle ##
 
-[inserer structure de controle]
+La structure de controle sera un arbre, donc elle sera lineaire. 
 
 ---
 
