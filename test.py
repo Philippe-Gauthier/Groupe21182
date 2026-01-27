@@ -1,7 +1,3 @@
-#ceci est un commentaire
-print ("aaaah")
-
-#oh non
-
-#bris de temps
-
+print(1)
+print(2)
+print(3)
