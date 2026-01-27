@@ -1,3 +1,18 @@
-print("wow")
+"""
+Docstring
+C'est pour les commentaires plus long
+sur plusieurs lignes
+concerne tout le code, ou toute une fonction
 
-print("IL le sauras jamais que c'est moi")
+Philippe Gauthier
+
+Fichier principale projet livre interactif
+
+
+
+
+"""
+
+# Ceci est un commentaire court
+
+
