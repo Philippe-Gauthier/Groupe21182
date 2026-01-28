@@ -30,9 +30,4 @@ window.grid_columnconfigure(0, weight=1)
 button.grid(row=3, column=0)
 
 
-#button.pack(side="bottom", pady=50)
-#button.place(relx=0.45, rely=0.45)
-#button.place(relx=0.45, rely=0.9)
-
-
 window.mainloop()
