@@ -12,6 +12,8 @@ so in button a, b, and c there are different options if the page was 2, and it s
 
 (yes, the fractal tree is gonna be insane since there are 4 options. yes, i will ask if i can make a text file to ppick from to keep this code cleaner)
 
+if we want to change the story (inn future) simply add a class prefix or smt to be able to change aptly between stories
+
 """
 
 import tkinter as tk
