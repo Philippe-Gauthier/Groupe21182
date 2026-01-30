@@ -1,7 +1,6 @@
 """
-Docstring for Jake.projet
-Pinou 
-ouioui
+
+
 
 Jacob Chagnon
 
