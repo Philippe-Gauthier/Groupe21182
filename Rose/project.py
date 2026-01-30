@@ -17,7 +17,7 @@ if we want to change the story (inn future) simply add a class prefix or smt to 
 """
 
 import tkinter as tk
-import StrandedText
+import StrandedText as st
 
 buttonSize = 67
 
@@ -27,64 +27,66 @@ currPage = 0
 
 
 
-initialText = StrandedText.initialText
-option1 = StrandedText.p1o1
-option2 = StrandedText.p1o2
-option3 = StrandedText.p1o3
-option4 = StrandedText.p1o4
+newText = st.initialText
+option1 = st.p1_option1
+option2 = st.p1_option2
+option3 = st.p1_option3
+option4 = st.p1_option4
 
     
 def button1Pressed() :
     global i
     global currPage
+    global newText
+    global option1
+    global option2
+    global option3
+    global option4
     i += 1
   
     if (i == 1) :
         currPage = 2
         
-        newText = StrandedText.page2Text
-        option1 = "Hope for the best"
-        option2 = "Grab Theo's hand"
-        option3 = "Pray"
-        option4 = "Start crying"
+        newText = st.p2_text
+        option1 = st.p2_option1
+        option2 = st.p2_option2
+        option3 = st.p2_option3
+        option4 = st.p2_option4
         
         
-    text.config(state=tk.NORMAL)
-    text.delete('1.0', tk.END)
-    text.insert(tk.END, newText)
-    text.config(state=tk.DISABLED)
-    buttonA.config(text=option1)
-    buttonB.config(text=option2)
-    buttonC.config(text=option3)
-    buttonD.config(text=option4)
+    updateText()
     
 def button2Pressed() :
     global i
     global currPage
+    global newText
+    global option1
+    global option2
+    global option3
+    global option4
+
     i += 1
     
     if (i == 1) :
         currPage = 3
         
-        newText = "You grab your towel and shampoo and walk to the shower room. You start the water and let the warmth engulf your cold skin. Nothing beats a nice warm shower to start your day. You wash your hair and \nscrub yourself clean, then enjoy a few more minutes under the hot water. Just as you're about to finish \ngetting dressed, the ship starts violently shaking. It feels like it crashed into something. You rapidly \nfinish putting your socks on, but there is not much you can do to help the situation."
-        option1 = "Hope for the best"
-        option2 = "Try to find your friends"
-        option3 = "Pray"
-        option4 = "Start crying"
-        
-        
-    text.config(state=tk.NORMAL)
-    text.delete('1.0', tk.END)
-    text.insert(tk.END, newText)
-    text.config(state=tk.DISABLED)
-    buttonA.config(text=option1)
-    buttonB.config(text=option2)
-    buttonC.config(text=option3)
-    buttonD.config(text=option4)
+        newText = st.p3_text
+        option1 = st.p3_option1
+        option2 = st.p3_option2
+        option3 = st.p3_option3
+        option4 = st.p3_option4
+
+    updateText()
     
 def button3Pressed() :
     global i
     global currPage
+    global newText
+    global option1
+    global option2
+    global option3
+    global option4
+
     i += 1
     
     if (i == 1) :
@@ -104,6 +106,11 @@ def button3Pressed() :
 def button4Pressed() :
     global i
     global currPage
+    global newText
+    global option1
+    global option2
+    global option3
+    global option4
     i += 1
     
     if (i == 1) :
@@ -111,6 +118,16 @@ def button4Pressed() :
         print("meep")
         
         
+    text.config(state=tk.NORMAL)
+    text.delete('1.0', tk.END)
+    text.insert(tk.END, newText)
+    text.config(state=tk.DISABLED)
+    buttonA.config(text=option1)
+    buttonB.config(text=option2)
+    buttonC.config(text=option3)
+    buttonD.config(text=option4)
+
+def updateText() :
     text.config(state=tk.NORMAL)
     text.delete('1.0', tk.END)
     text.insert(tk.END, newText)
@@ -156,7 +173,7 @@ buttonC.config(height=2, width=buttonSize)
 buttonD.grid(row=2, column=0, sticky="W", padx=5, pady=5)
 buttonD.config(height=2, width=buttonSize)
 
-text.insert(tk.END, initialText)
+text.insert(tk.END, newText)
 
 text.config(state=tk.DISABLED)
 window.mainloop()
