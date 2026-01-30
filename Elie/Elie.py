@@ -1,7 +1,7 @@
 
 name = input("Entrez votre nom: ")
 
-porte = input("Bonjour, " + name " faites votre chois entre 3 portes: gauche, droite ou centre?")
+porte = input("Bonjour, " + name + " faites votre chois entre 3 portes: gauche, droite ou centre?")
 #la console indique que la parentaise ne ferme pas
 
 match porte:
