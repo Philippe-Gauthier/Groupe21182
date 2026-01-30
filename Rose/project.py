@@ -3,16 +3,7 @@ Rosemarie Dalton
 
 Fichier principal pour le projet "un livre dont vous etes le heros"
 
-use currPage to define what happens next: first loop simply starts the tree, bu then we can assign pages to the options instead of relying on the indexer
-
-for example : button a is pressed for the first time : page is 2
-button c is pressed : page is 6
-
-so in button a, b, and c there are different options if the page was 2, and it sets the currPage to another unique id to continue this sequence
-
-(yes, the fractal tree is gonna be insane since there are 4 options.)
-
-if we want to change the story (inn future) simply add a class prefix or smt to be able to change aptly between stories
+first page : you have 4 options
 
 """
 import textwrap as tw
@@ -21,9 +12,8 @@ import StrandedText as st
 
 buttonSize = 67
 
-i = 0
 
-currPage = 0
+currPage = 1
 
 
 
@@ -57,12 +47,11 @@ def updateText() :
 
     
 def button1Pressed() :
-    global i
     global currPage
  
-    i += 1
+
   
-    if (i == 1) :
+    if (currPage == 1) :
         currPage = 2 
         setOptions(st.p2)
     elif (currPage == 2) :
@@ -83,12 +72,10 @@ def button1Pressed() :
     updateText()
     
 def button2Pressed() :
-    global i
     global currPage
 
-    i += 1
     
-    if (i == 1) :
+    if (currPage == 1) :
         currPage = 3
         setOptions(st.p3)
     elif (currPage == 2) :
@@ -98,35 +85,55 @@ def button2Pressed() :
         currPage = 11
         setOptions(st.p11)
     elif (currPage == 4) :
+        currPage = 8
+        setOptions(st.p8)
+    elif (currPage == 5) :
         currPage = 12
         setOptions(st.p12)
-    elif (currPage == 5) :
-        currPage = 13
-        setOptions(st.p13)
 
     updateText()
     
 def button3Pressed() :
-    global i
     global currPage
 
-    i += 1
     
-    if (i == 1) :
+    if (currPage == 1) :
         currPage = 4
-        setOptions(st.p4)   
+        setOptions(st.p4) 
+    elif (currPage == 2) :
+        currPage = 13
+        setOptions(st.p13)
+    elif (currPage == 3) :
+        currPage = 14
+        setOptions(st.p14)
+    elif (currPage == 4) :
+        currPage = 8
+        setOptions(st.p8)
+    elif (currPage == 5) :
+        currPage = 15
+        setOptions(st.p15) 
         
     updateText()
     
 def button4Pressed() :
-    global i
     global currPage
 
-    i += 1
     
-    if (i == 1) :
+    if (currPage == 1) :
         currPage = 5
         setOptions(st.p5)
+    elif (currPage == 2) :
+        currPage = 16
+        setOptions(st.p16)
+    elif (currPage == 3) :
+        currPage = 17
+        setOptions(st.p17)
+    elif (currPage == 4) :
+        currPage = 8
+        setOptions(st.p8)
+    elif (currPage == 5) :
+        currPage = 18
+        setOptions(st.p18) 
         
     updateText()
 

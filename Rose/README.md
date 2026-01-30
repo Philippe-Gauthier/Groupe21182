@@ -14,7 +14,7 @@ Faire une histoire dont vous etes le heros.
 
 ## Entrees ##
 
-Les entrees attendues sont les choix faits par l'utilisateur.
+Les entrees attendues sont les choix faits par l'utilisateur par l'intermediaire d'un bouton dans un window
 
 ---
 

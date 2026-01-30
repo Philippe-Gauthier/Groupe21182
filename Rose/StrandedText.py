@@ -49,7 +49,7 @@ class p5 :
 #p6
 
 class p6 :
-    text = "page 6"
+    text = "After a lot of shaking and screaming from everyone in the dining room, everything suddenly goes quiet. Just as you think it might've just been a big wave, you hear a gut-wrenching sound, like metal folding in on itself. Before you understand what's going on, you find yourself in the chill ocean water. Desperately searching for something to hold on to, you eventually find a wooden table floating in front of you. Just as you reach it, you see anothing figure grabbing onto it. You quickly wipe your eyes, and notice it's your friend, Theo. You briefly talk, trying to figure out what to do, and end up with four options :"
 
     option1 = "Sleep"
     option2 = "Sleep"
@@ -58,7 +58,7 @@ class p6 :
 
 #p7
 class p7 :
-    text = "page 7"
+    text = "After a lot of shaking and distant screaming from the other passengers, everything suddenly goes quiet. Just as you think it might've just been a big wave, you hear a gut-wrenching sound, like metal folding in on itself. Before you understand what's going on, you find yourself in the chill ocean water. Desperately searching for something to hold on to, you eventually find a wooden table floating in front of you. Just as you reach it, you see anothing figure grabbing onto it. You quickly wipe your eyes, and notice it's your friend, Theo. You briefly talk, trying to figure out what to do, and end up with four options :"
 
     option1 = "Sleep"
     option2 = "Sleep"
@@ -106,6 +106,54 @@ class p12 :
 
 class p13 :
     text = "page 13"
+
+    option1 = "Sleep"
+    option2 = "Sleep"
+    option3 = "Sleep"
+    option4 = "Sleep"
+
+class p14 :
+    text = "page 14"
+
+    option1 = "Sleep"
+    option2 = "Sleep"
+    option3 = "Sleep"
+    option4 = "Sleep"
+
+class p15 :
+    text = "page 15"
+
+    option1 = "Sleep"
+    option2 = "Sleep"
+    option3 = "Sleep"
+    option4 = "Sleep"
+
+class p16 :
+    text = "page 16"
+
+    option1 = "Sleep"
+    option2 = "Sleep"
+    option3 = "Sleep"
+    option4 = "Sleep"
+
+class p17 :
+    text = "page 17"
+
+    option1 = "Sleep"
+    option2 = "Sleep"
+    option3 = "Sleep"
+    option4 = "Sleep"
+
+class p18 :
+    text = "page 18"
+
+    option1 = "Sleep"
+    option2 = "Sleep"
+    option3 = "Sleep"
+    option4 = "Sleep"
+
+class p19 :
+    text = "page 19"
 
     option1 = "Sleep"
     option2 = "Sleep"
