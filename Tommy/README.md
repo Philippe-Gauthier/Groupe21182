@@ -1,17 +1,25 @@
-# THÉMATIQUE
-### **Employé modèle**
+# PROJET 01
+Un livre dont vous êtes le héros.
+## THÉMATIQUE
+### Employé modèle
 Bravo! Vous avez menti sur votre CV et avez eu le job. Seul problème, vous êtes gravement sous-qualifié et ne savez absolument pas ce que vous faites. Tentez de survivre ce premier quart de travail sans soulever les soupçons de votre patron méfiant.
 
-# ENTRÉE
-### **Système de choix sous forme de # de page:**
+# COMMENT JOUER
+## ENTRÉE
+### Système de choix sous forme de chiffres:
 
-Chaque page vous décrira la situation dans laquelle vous vous trouvez. Deux choix s'offriront alors à vous sous forme d'actions, chacune d'entre elle liée à une page précise.
+À chaque page, une situation vous sera décrite. À la fin de cette même page, deux choix s'offriront à vous: le choix 1. ou le choix 2. Vous pourrez alors inscrire le chiffre correspondant à votre décision.
 
-# SORTIE
-
-Une fois la décision prise, rendez-vous au numéro de page associé à ce choix. Celle-ci vous envoie vers une nouvelle situation à laquelle vous faites face (encore une fois sous forme de système de choix.) Répétez alors le processus d'entrée précédent.
+## SORTIE
+Votre choix vous envoie vers une prochaine page où une nouvelle situation et deux autres choix vous seront proposés.
 
 # CONTRÔLE
 ### **Structure en arbre:**
 
-Chaque décision vous fait progresser tranquillement dans l'histoire et vous emmène vers une nouvelle situation unique. Aucun chemin n'est le même et aucune décision ne vous apportera au même endroit ou à la même problématique.
+Chaque décision vous fait progresser tranquillement dans l'histoire et vous emmène vers une nouvelle situation unique. Aucun chemin n'est le même et aucune décision ne vous apportera au même endroit.
+
+# À FAIRE
+- Rédiger l'histoire ainsi que les choix possibles
+- Choisir les fonctions utilisées pour la programmation
+- programmer le tout
+- Tester le produit final/debugging
