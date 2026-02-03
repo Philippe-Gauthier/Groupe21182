@@ -70,10 +70,10 @@ print("aaaa")
 - Code de conduite
 - "Getting Started"
 - Algorithms and Design Patter
-ASGI Servers
-Asynchronous Programming
-Audio
-Authentication
-Build Tools
-Built-in Classes Enhancement
+- ASGI Servers
+- Asynchronous Programming
+- Audio
+- Authentication
+- Build Tools
+- Built-in Classes Enhancement
 
