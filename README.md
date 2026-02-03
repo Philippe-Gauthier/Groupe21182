@@ -56,4 +56,6 @@ print("aaaa")
 - Façon de contribuer
 - lien vers documentation externe
 - How to use
+- mise à jour
+- guides
 - 
