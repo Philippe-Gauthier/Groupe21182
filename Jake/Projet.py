@@ -15,6 +15,7 @@ print("Une affiche à l'orée de la forêt te prévient que tu es sur le point d
 choice = input("Tu t'avances vers la forêt (F) ou tu t`éloignes (E)")
 if choice == "E":
     print("Ton aventure se termine avant même d'avoir débuté. Tu rates ta chance. C'est fini.")
+    print("GAME OVER")
 
 if choice == "F":
     print("")
