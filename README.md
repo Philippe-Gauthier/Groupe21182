@@ -68,3 +68,4 @@ print("aaaa")
 - Multiple Language Support
 - Documents
 - Code de conduite
+- "Getting Started"
