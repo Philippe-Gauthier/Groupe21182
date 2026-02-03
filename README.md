@@ -66,3 +66,4 @@ print("aaaa")
 - FAQ
 - Multiple Language Support
 - Documents
+- Code de conduite
