@@ -9,6 +9,9 @@ Bienvenue ! Ce futur jeu est un jeu à choix qui raconte l'histoire d'une person
 
 Le **but** est de survivre le plus longtemps possible et, éventuellement, de réussir votre vie.
 
+![Reunion Island](https://cdn.discordapp.com/attachments/1462820126779899967/1468338016757219521/LTEuanBn.png?ex=6983a7d7&is=69825657&hm=ff52ecdee4228edbd610bf0b1abd1b901b3b4cce56b0fb49dfc5299812a98e48)
+
+
 ---
 
 ## Usage
