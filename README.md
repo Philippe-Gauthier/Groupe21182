@@ -57,3 +57,13 @@ print("aaaa")
 - lien vers documentation externe
 - How to use
 - What's new/Changements apportés 
+- mise à jour
+- guides
+- Data
+- Code
+- Evaluation metrics
+- Licenses
+- Configuration
+- FAQ
+- Multiple Language Support
+- Documents
