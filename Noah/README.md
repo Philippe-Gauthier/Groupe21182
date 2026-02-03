@@ -20,6 +20,10 @@ Le **but** est de survivre le plus longtemps possible et, éventuellement, de r�
 
 Ce "jeu" utilise [Tkinter](https://docs.python.org/fr/3/library/tkinter.html) afin de donner une interface digne de ce nom
 
+Tkinter est installé devrait être par défaut, si ce n'est pas le cas, lancez la commande suivante:
+
+```sudo apt-get install python-tk```
+
 
 ### Entrée
 
