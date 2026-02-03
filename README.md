@@ -50,3 +50,9 @@ Ceci est un deuxième paragraphe.
 ```python
 print("aaaa")
 ```
+---
+
+- Petite description
+- Façon de contribuer
+- lien vers documentation externe
+- 
