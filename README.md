@@ -64,3 +64,4 @@ print("aaaa")
 - Licenses
 - Configuration
 - FAQ
+- Multiple Language Support
