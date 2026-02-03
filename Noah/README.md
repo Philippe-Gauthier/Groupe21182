@@ -18,9 +18,12 @@ Le **but** est de survivre le plus longtemps possible et, éventuellement, de r�
 
 ```python project.py```
 
+Ce "jeu" utilise [Tkinter](https://docs.python.org/fr/3/library/tkinter.html) afin de donner une interface digne de ce nom
+
+
 ### Entrée
 
-Pour jouer, vous devez entrer 1, 2, 3 ou 4 selon les choix disponibles dans la console.
+Pour jouer, vous devez appuyez sur les boutons qui sera disponible a l'ouverture de l'interface
 
 ### Sortie
 
