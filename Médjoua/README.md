@@ -11,7 +11,7 @@ En entrer du jeu de question à choix multiple on aura les questions qui seront 
 Chaque question aura trois propositions de reponse dont une seul sera vrai qui seront indentifier par des chiffres.
 
 # sortir
-En sortir Médjoua fera un choix parmi les propositions de reponse de reponse donnée en entrer grace à la fonction Input(""). 
+En sortir Médjoua fera un choix parmi les propositions de reponse donnée en entrer grace à la fonction Input(""). 
 
 # Sturcture Control
 Lorsque les questions seront affichées par la fonction print("") avvec les propositions de reponse identifier par des chiffres
