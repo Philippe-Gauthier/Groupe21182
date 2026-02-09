@@ -1,0 +1,33 @@
+{
+    "intro": {
+        "texte": "Bienvenue dans ce super jeu, dès que vous êtes prêt à appuyer sur Continuer !",
+        "choix1": {"texte": "Continuer", "destination": "debut"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null}
+    },
+
+    "debut": {
+        "texte": "Sans vous y attendre, vous venez au monde… Ou voulez-vous naître ?",
+        "choix1": {"texte": "CHU de Saint-Denis", "destination": "chu1"},
+        "choix2": {"texte": "CHU de Saint-Pierre", "destination": "chu2"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null}
+    },
+
+    "chu1": {
+        "texte": "Vous naissez au CHU de Saint-Denis, que faites vous ?",
+        "choix1": {"texte": "Pleurer", "destination": "pleurer"},
+        "choix2": {"texte": "Dormir", "destination": "dormir"},
+        "choix3": {"texte": "S'enfuir de l'hopital", "destination": "fuite"},
+        "choix4": {"texte": "Non disponible", "destination": null}
+    },
+
+    "chu2": {
+        "texte": "Vous naissez au CHU de Saint-Pierre, que faites vous ?",
+        "choix1": {"texte": "Pleurer", "destination": "pleurer1"},
+        "choix2": {"texte": "Dormir", "destination": "dormir1"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null}
+    }
+}

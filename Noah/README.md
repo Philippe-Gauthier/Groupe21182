@@ -37,6 +37,6 @@
 
 ## TODO
 
-|       Main Story        | Documentation | Tkinter | 
-|-------------------------|:-------------:|:------:|
-| ➖ (En attente de push) | ✅           |   ➖   |
+|       Main Story        | Documentation | Mécaniques principales   | Mecaniques secondaires (Argent/Age) |Finitions (Image, formattage) |
+|:-----------------------:|:------------:|:-------------------------:|:-----------------------------------:|:----------------------------:|
+| ❌                     | ✅           |   ✅                     |❌                                   |❌                            |

@@ -1,22 +1,86 @@
 """
 by Noah PAYET
 Fichier principal pour le début de l'hisoitre / simulateur d'ile de La Réunion
-
 """
-age = 0
-money = 0
-name = input('Quel est votre nom ?')
 
-print(f"Bonjour {name}, êtes vous prêt a poursuivre l'histoire de votre vie a La Réunion ?")
+# Importer les librairies necessaire au bon fonctionnement
+import json
+from tkinter import *
 
-start = input("Oui/Non")
-print(start)
-if start == "Oui":
-    {
-print ("Nice")
-} 
-else :{
-        print ("hmm") 
-    }
+# Recupere les infos du fichier JSON
+with open("story.json", "r", encoding="utf-8") as f:
+    story = json.load(f)
 
-# C'est de loin un code basique et sera un peu plus pousser plus tard
+# Permet d'afficher un chapitre
+def afficher_chapitre(chapitre):
+    global chapitre_actuel
+    chapitre_actuel = chapitre
+
+    # Recupere les donnees du json et les assignes a une variable
+    data = story[chapitre]
+
+    question = data["texte"]
+    choix1 = data["choix1"]["texte"]
+    choix2 = data["choix2"]["texte"]
+    choix3 = data["choix3"]["texte"]
+    choix4 = data["choix4"]["texte"]
+
+    
+    question_label.config(text=question)
+
+    # Associe chaque bouton a la destination correspondante. lambda sert de fonction temporaire qui appelle choisir associe au bouton
+    bouton1.config(text=choix1, command=lambda: choisir(data["choix1"]["destination"]))
+    bouton2.config(text=choix2, command=lambda: choisir(data["choix2"]["destination"]))
+    bouton3.config(text=choix3, command=lambda: choisir(data["choix3"]["destination"]))
+    bouton4.config(text=choix4, command=lambda: choisir(data["choix4"]["destination"]))
+
+# aqppeler lorsqu'on clique sur un choix 
+def choisir(nouveau_chapitre):
+    if nouveau_chapitre:    
+        afficher_chapitre(nouveau_chapitre)
+
+
+
+# creer une fenetre avec Tkinter
+fenetre = Tk()
+fenetre.geometry("1366x768")
+fenetre['bg'] = 'white'
+
+titre_label = Label(fenetre, text="Reunion Island Simulator")
+titre_label.pack(padx=20, pady=20)
+
+#frame image + question (a faire)
+Frame2 = Frame(fenetre, bg="white", borderwidth=2, relief=GROOVE)
+Frame2.pack(expand=True, fill=BOTH, padx=40, pady=10)
+
+boite_question = Frame(Frame2, bg="white", borderwidth=2, relief=GROOVE)
+boite_question.place(relx=0.5, rely=0.5, anchor=CENTER)
+
+question_label = Label(boite_question, text="test", bg="white", font=("Arial", 16))
+question_label.pack(padx=20, pady=20)
+
+# frame question
+Frame1 = Frame(fenetre, bg="white")
+Frame1.pack(pady=20)
+
+bouton1 = Button(Frame1, text="choix1")
+bouton1.pack(side=LEFT, padx=10)
+
+bouton2 = Button(Frame1, text="choix2")
+bouton2.pack(side=LEFT, padx=10)
+
+Label(Frame1, text="Faites un choix", bg="white").pack(side=LEFT, padx=20)
+
+bouton3 = Button(Frame1, text="choix3")
+bouton3.pack(side=LEFT, padx=10)
+
+bouton4 = Button(Frame1, text="choix4")
+bouton4.pack(side=LEFT, padx=10)
+
+
+#premier chapitre afficher
+afficher_chapitre("intro")
+
+fenetre.mainloop()
+
+
