@@ -19,7 +19,7 @@ def choisir_option(choix_1, choix_2):
     print("************************************")
     print(f"1: {choix_1}")
     print(f"2: {choix_2}")
-    decision = int(input("Quelle option?"))
+    decision = int(input)
     return  decision
 
 
