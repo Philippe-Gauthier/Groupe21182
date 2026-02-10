@@ -2,7 +2,7 @@
 
 # Ce fichier est personnel juste pour me retrouver dans toute les docs utiliser
 
-## sTKINTER/PILLOW
+## TKINTER/PILLOW
 
 
 - https://python.doctor/page-tkinter-interface-graphique-python-tutoriel\
