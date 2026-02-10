@@ -1,184 +1,134 @@
+"""Rosemarie Dalton
+
+Refactored main file for the "choose your own adventure" GUI.
+
+Improvements applied:
+- Replaced repeated if/elif navigation with a data-driven transitions table
+- Encapsulated state in an App class (removes globals)
+- Avoid repeated textwrap calls; wrap only when updating the displayed text
 """
-Rosemarie Dalton
 
-Fichier principal pour le projet "un livre dont vous etes le heros"
-
-first page : you have 4 options
-
-"""
 import textwrap as tw
 import tkinter as tk
 import StrandedText as st
 
-buttonSize = 67
 
+class App:
+    """
+    Voici la plus grande partie du code. 
+    La classe App gère l'état de l'application et l'interface utilisateur.
 
-currPage = 1
-
-
-
-newText = tw.fill(st.p1.text, 100)
-option1 = st.p1.option1
-option2 = st.p1.option2
-option3 = st.p1.option3
-option4 = st.p1.option4
-
-def setOptions(page) :
-    global option1
-    global option2
-    global option3
-    global option4
-    global newText
-    newText = page.text
-    option1 = page.option1
-    option2 = page.option2
-    option3 = page.option3
-    option4 = page.option4
-
-def updateText() :
-    text.config(state=tk.NORMAL)
-    text.delete('1.0', tk.END)
-    text.insert(tk.END, tw.fill(newText, 100))
-    text.config(state=tk.DISABLED)
-    buttonA.config(text=option1)
-    buttonB.config(text=option2)
-    buttonC.config(text=option3)
-    buttonD.config(text=option4)
-
+    Ici, vous allez trouver les fonctions suivantes :
+    - __init__: Initialise l'application, crée l'interface utilisateur et définit les pages et les transitions.
+    - update_view: Met à jour le texte affiché et les étiquettes des boutons en fonction de la page actuelle.
+    - on_button: Gère les pressions de boutons et met à jour la page actuelle en fonction des transitions définies dans __init__.
     
-def button1Pressed() :
-    global currPage
- 
-
-  
-    if (currPage == 1) :
-        currPage = 2 
-        setOptions(st.p2)
-    elif (currPage == 2) :
-        currPage = 6
-        setOptions(st.p6)
-    elif (currPage == 3) :
-        currPage = 7
-        setOptions(st.p7)
-    elif (currPage == 4) :
-        currPage = 8
-        setOptions(st.p8)
-    elif (currPage == 5) :
-        currPage = 9
-        setOptions(st.p9)
-
-        
-        
-    updateText()
-    
-def button2Pressed() :
-    global currPage
-
-    
-    if (currPage == 1) :
-        currPage = 3
-        setOptions(st.p3)
-    elif (currPage == 2) :
-        currPage = 10
-        setOptions(st.p10)
-    elif (currPage == 3) :
-        currPage = 11
-        setOptions(st.p11)
-    elif (currPage == 4) :
-        currPage = 8
-        setOptions(st.p8)
-    elif (currPage == 5) :
-        currPage = 12
-        setOptions(st.p12)
-
-    updateText()
-    
-def button3Pressed() :
-    global currPage
-
-    
-    if (currPage == 1) :
-        currPage = 4
-        setOptions(st.p4) 
-    elif (currPage == 2) :
-        currPage = 13
-        setOptions(st.p13)
-    elif (currPage == 3) :
-        currPage = 14
-        setOptions(st.p14)
-    elif (currPage == 4) :
-        currPage = 8
-        setOptions(st.p8)
-    elif (currPage == 5) :
-        currPage = 15
-        setOptions(st.p15) 
-        
-    updateText()
-    
-def button4Pressed() :
-    global currPage
-
-    
-    if (currPage == 1) :
-        currPage = 5
-        setOptions(st.p5)
-    elif (currPage == 2) :
-        currPage = 16
-        setOptions(st.p16)
-    elif (currPage == 3) :
-        currPage = 17
-        setOptions(st.p17)
-    elif (currPage == 4) :
-        currPage = 8
-        setOptions(st.p8)
-    elif (currPage == 5) :
-        currPage = 18
-        setOptions(st.p18) 
-        
-    updateText()
+    """
 
 
+    def __init__(self, window):
+        """
+        :param self: le parametre self permet d'acceder aux variables qui sont normalement uniques a la fonction dans d'autres fonctions de la classe App.
+        :param window: le parametre window est la fenetre principale de l'application tkinter. 
+        lorsque l'on cree une instance de la classe App, on lui passe cette fenetre pour 
+        qu'elle puisse y ajouter la fenetre dans laquelle l'application va s'executer.
+        """
+        self.window = window
+        self.button_size = 67
+
+        # ici on cree un "lexique" qui associe chaque numero de page a son objet page, provenant du fichier StrandedText.py
+        self.pages = {
+            1: st.p1,
+            2: st.p2,
+            3: st.p3,
+            4: st.p4,
+            5: st.p5,
+            6: st.p6,
+            7: st.p7,
+            8: st.p8,
+            9: st.p9,
+            10: st.p10,
+            11: st.p11,
+            12: st.p12,
+            13: st.p13,
+            14: st.p14,
+            15: st.p15,
+            16: st.p16,
+            17: st.p17,
+            18: st.p18,
+            19: st.p19,
+        }
+
+        # transitions[page] = (next_if_button1, next_if_button2, ...)
+        self.transitions = {
+            1: (2, 3, 4, 5),
+            2: (6, 10, 13, 16),
+            3: (7, 11, 14, 17),
+            4: (8, 8, 8, 8),
+            5: (9, 12, 15, 18),
+            # pages without explicit transitions will keep the same page
+        }
+
+        self.curr_page = 1
+
+        # build UI
+        self.text = tk.Text(window, height=20, width=10, font=("Helvetica", 16))
+        window.resizable(False, False)
+        window.title("Livre")
+        window.geometry("980x600")
+        window.configure(bg="grey")
+
+        self.text.grid(row=0, column=0, columnspan=2, sticky="NSEW", padx=5, pady=5)
+        window.grid_rowconfigure(index=0, weight=0)
+        window.grid_columnconfigure(index=0, weight=1)
+
+        # create buttons and attach index-based handlers
+        self.buttons = []
+        for i in range(4):
+            b = tk.Button(window, text="", command=lambda index=i + 1: self.on_button(index))
+            b.config(height=2, width=self.button_size)
+            self.buttons.append(b)
+
+        # place buttons (A/B share row 1, C/D share row 2, left/right alternation)
+        self.buttons[0].grid(row=1, column=0, sticky="E", padx=5, pady=5)
+        self.buttons[1].grid(row=1, column=0, sticky="W", padx=5, pady=5)
+        self.buttons[2].grid(row=2, column=0, sticky="E", padx=5, pady=5)
+        self.buttons[3].grid(row=2, column=0, sticky="W", padx=5, pady=5)
+
+        self.update_view()
+
+    def update_view(self):
+        """Refresh the text and button labels for the current page."""
+        page = self.pages.get(self.curr_page)
+        if not page:
+            # gracefully handle missing pages
+            display = "[Page missing]"
+            options = ["", "", "", ""]
+        else:
+            display = tw.fill(page.text, 100)
+            options = [page.option1, page.option2, page.option3, page.option4]
+
+        self.text.config(state=tk.NORMAL)
+        self.text.delete("1.0", tk.END)
+        self.text.insert(tk.END, display)
+        self.text.config(state=tk.DISABLED)
+
+        for btn, label in zip(self.buttons, options):
+            btn.config(text=label)
+
+    def on_button(self, index):
+        """Handle a button press (index in 1..4)."""
+        transition = self.transitions.get(self.curr_page)
+        if transition and 1 <= index <= len(transition):
+            self.curr_page = transition[index - 1]
+        # if no transition defined, do nothing (stay on page)
+        self.update_view()
 
 
 
-    
-window = tk.Tk()
+root = tk.Tk()
+app = App(root)
+root.mainloop()
 
-
-text = tk.Text(window, height=20, width=10, font=("Helvetica", 16))
-
-window.resizable(False, False)
-
-window.title("Livre")
-window.geometry("980x600")
-window.configure(bg="grey")
-
-
-text.grid(row=0, column=0, columnspan=2, sticky="NSEW", padx=5, pady=5)
-window.grid_rowconfigure(index=0, weight=0)
-window.grid_columnconfigure(index=0, weight=1)
-
-
-buttonA = tk.Button(window, text=option1, command=button1Pressed)
-buttonB = tk.Button(window, text=option2, command=button2Pressed)
-buttonC = tk.Button(window, text=option3, command=button3Pressed)
-buttonD = tk.Button(window, text=option4, command=button4Pressed)
-
-buttonA.grid(row=1, column=0, sticky="E", padx=5, pady=5)
-buttonA.config(height=2, width=buttonSize)
-
-buttonB.grid(row=1, column=0, sticky="W", padx=5, pady=5)
-buttonB.config(height=2, width=buttonSize)
-
-buttonC.grid(row=2, column=0, sticky="E", padx=5, pady=5)
-buttonC.config(height=2, width=buttonSize)
-
-buttonD.grid(row=2, column=0, sticky="W", padx=5, pady=5)
-buttonD.config(height=2, width=buttonSize)
-
-text.insert(tk.END, newText)
-
-text.config(state=tk.DISABLED)
-window.mainloop()
 
 
