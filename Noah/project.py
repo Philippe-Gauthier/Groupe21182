@@ -34,7 +34,7 @@ def afficher_chapitre(chapitre):
     bouton3.config(text=choix3, command=lambda: choisir(data["choix3"]["destination"]))
     bouton4.config(text=choix4, command=lambda: choisir(data["choix4"]["destination"]))
 
-# aqppeler lorsqu'on clique sur un choix 
+# appeler lorsqu'on clique sur un choix 
 def choisir(nouveau_chapitre):
     if nouveau_chapitre:    
         afficher_chapitre(nouveau_chapitre)
