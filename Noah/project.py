@@ -6,6 +6,7 @@ Fichier principal pour le début de l'hisoitre / simulateur d'ile de La Réunion
 # Importer les librairies necessaire au bon fonctionnement
 import json
 from tkinter import *
+#from tkinter.filedialog import *
 
 # Recupere les infos du fichier JSON
 with open("story.json", "r", encoding="utf-8") as f:
@@ -24,9 +25,11 @@ def afficher_chapitre(chapitre):
     choix2 = data["choix2"]["texte"]
     choix3 = data["choix3"]["texte"]
     choix4 = data["choix4"]["texte"]
+    #image = data["image"]["texte"]
 
     
     question_label.config(text=question)
+    #Frame2.config(image=PhotoImage(file=image))
 
     # Associe chaque bouton a la destination correspondante. lambda sert de fonction temporaire qui appelle choisir associe au bouton
     bouton1.config(text=choix1, command=lambda: choisir(data["choix1"]["destination"]))
