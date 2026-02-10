@@ -9,6 +9,7 @@
 - https://docs.python.org/fr/3/library/tkinter.html
 - https://tkdocs.com/tutorial/
 - https://info.blaisepascal.fr/
+- https://www.activestate.com/resources/quick-reads/how-to-add-images-in-tkinter/
 
 
 ```
