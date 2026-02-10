@@ -24,6 +24,7 @@ class App:
     
     """
 
+   
 
     def __init__(self, window):
         """
@@ -42,6 +43,9 @@ class App:
         """
         self.window = window
         self.button_size = 67
+        self.testmode = False
+        self.testPage = 6
+        self.path = []
 
         # ici on cree un "lexique" qui associe chaque numero de page a son objet page, provenant du fichier StrandedText.py
         self.pages = {
@@ -94,17 +98,47 @@ class App:
             3: (7, 9, 7, 13),
             4: (8, 8, 8, 8),
             5: (12, 14, 12, 14),
-            # v potentiellement a modifier v
-            6: (17, 18, 19, 20),
-            7: (21, 22, 23, 24),
-            8: (25, 26, 27, 28),
-            9: (29, 30, 31, 32),
-            10: (33, 34, 35, 36),
-            11: (37, 38, 39, 40),
+            6: (15, 16, 17, 18),
+            7: (15, 16, 17, 18),
+            8: (19, 20, 21, 22),
+            9: (15, 16, 17, 18),
+            10: (15, 16, 17, 18),
+            11: (15, 16, 17, 18),
+            12: (19, 20, 21, 22),
+            13: (15, 16, 17, 18),
+            14: (19, 20, 21, 22),
+            # v end v
+            15: (25, 26, 27, 28),
+            16: (29, 30, 31, 32),
+            17: (33, 34, 35, 36),
+            18: (37, 38, 39, 40),
+            19: (41, 41, 41, 41),
+            20: (41, 41, 41, 41),
+            21: (41, 41, 41, 41),
+            22: (41, 41, 41, 41),
+            23: (41, 41, 41, 41),
+            24: (41, 41, 41, 41),
+            25: (41, 41, 41, 41),
+            26: (41, 41, 41, 41),
+            27: (41, 41, 41, 41),
+            28: (41, 41, 41, 41),
+            29: (41, 41, 41, 41),
+            30: (41, 41, 41, 41),
+            31: (41, 41, 41, 41),
+            32: (41, 41, 41, 41),
+            33: (41, 41, 41, 41),
+            34: (41, 41, 41, 41),
+            35: (41, 41, 41, 41),
+            36: (41, 41, 41, 41),
+            37: (41, 41, 41, 41),
+            38: (41, 41, 41, 41),
+            39: (41, 41, 41, 41),
+            40: (41, 41, 41, 41),
             # les pages sans transitions definies restent sur la meme page
         }
-
-        self.curr_page = 1
+        if self.testmode:
+            self.curr_page = self.testPage
+        else : self.curr_page = 1
 
         # configuration de l'interface utilisateur : on cree un widget Text pour afficher le texte de la page, et des boutons pour les options. On configure aussi la fenetre (taille, titre, couleur de fond etc.)
         self.text = tk.Text(window, height=20, width=10, font=("Helvetica", 16))
@@ -141,7 +175,9 @@ class App:
         - les étiquettes des boutons sont mises à jour pour refléter les options de la nouvelle page actuelle
 
         """
+
         page = self.pages.get(self.curr_page)
+        
         if not page:
             # gracefully handle missing pages
             display = "[Page missing]"
@@ -149,6 +185,7 @@ class App:
         else:
             display = tw.fill(page.text, 100)
             options = [page.option1, page.option2, page.option3, page.option4]
+            self.appendToPath(self.curr_page)
 
         self.text.config(state=tk.NORMAL)
         self.text.delete("1.0", tk.END)
@@ -173,6 +210,10 @@ class App:
             self.curr_page = transition[index - 1]
         # if no transition defined, do nothing (stay on page)
         self.update_view()
+    
+    def appendToPath(self, page):
+        self.path.append(page)
+        print(self.path)
 
 
 # la partie suivante crée la fenetre principale de l'application, crée une instance de la classe App en lui passant cette fenetre, et lance la boucle principale de l'application pour que l'interface soit responsive et puisse réagir aux interactions de l'utilisateur.
