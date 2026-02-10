@@ -90,17 +90,17 @@ class App:
         # ceci est un dictionnaire qui associe chaque numero de page a une liste de pages suivantes en fonction du bouton appuye (1 pour A, 2 pour B, 3 pour C, 4 pour D etc.)
         self.transitions = {
             1: (2, 3, 4, 5),
-            2: (6, 10, 13, 16),
-            3: (7, 11, 14, 17),
+            2: (6, 10, 6, 11),
+            3: (7, 9, 7, 13),
             4: (8, 8, 8, 8),
-            5: (9, 12, 15, 18),
+            5: (12, 14, 12, 14),
             # v potentiellement a modifier v
-            6: (19, 20, 21, 22),
-            7: (23, 24, 25, 26),
-            8: (27, 28, 29, 30),
-            9: (31, 32, 33, 34),
-            10: (35, 36, 37, 38),
-            11: (39, 40, 40, 40),
+            6: (17, 18, 19, 20),
+            7: (21, 22, 23, 24),
+            8: (25, 26, 27, 28),
+            9: (29, 30, 31, 32),
+            10: (33, 34, 35, 36),
+            11: (37, 38, 39, 40),
             # les pages sans transitions definies restent sur la meme page
         }
 
@@ -179,6 +179,7 @@ class App:
 root = tk.Tk()
 app = App(root)
 root.mainloop()
+
 
 
 

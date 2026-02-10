@@ -66,15 +66,15 @@ class p7 :
     option4 = "Sleep"
 
 class p8 :
-    text = "page 8"
+    text = "From some kind of mist, you see what looks like a deer approaching you. Its majestic antlers seem to be raching for you. You reach back, following the deer to a lushious cave. Through the vines, you see a beautiful waterfall, with a small pond at the bottom. What seemed like a small cave is in reality its own ecosystem, with a variety of plants you've never seen before. Suddenly, you feel a strong urge to jump into the pond. Right at the moment you should've touched the water, you feel your skin burning up. You open your eyes and find Theo looking concernedly at you. You quickly realize you're on a beach, with nothing but ocean in front of you. You look at Theo, then behind you, only to discover what could be considered a paradise island in other circumstances. You quickly consort with Theo, then, with a plan in mind, you go into the lushious palm forest."
 
-    option1 = "Sleep"
-    option2 = "Sleep"
-    option3 = "Sleep"
-    option4 = "Sleep"
+    option1 = "Grab a long stick, possibly for defense"
+    option2 = "Head towards a strangly tall rock"
+    option3 = "Collect some branches near the edge of the palm forest"
+    option4 = "Grab some unknown fruits from a nearby tree"
 
 class p9 :
-    text = "page 9"
+    text = "You walk around the ship, trying to find your friends. The furious ocean is the only once creaming back at you when you call out their names. Suddenly, everything goes quiet. Just as you think it might've just been a big wave, you hear a gut-wrenching sound, like metal folding in on itself. Before you understand what's going on, you find yourself in the chill ocean water. Desperately searching for something to hold on to, you eventually find a wooden table floating in front of you. Just as you reach it, you see anothing figure grabbing onto it. You quickly wipe your eyes, and notice it's your friend, Theo. You briefly talk, trying to figure out what to do, and end up with four options :"
 
     option1 = "Sleep"
     option2 = "Sleep"
@@ -82,7 +82,7 @@ class p9 :
     option4 = "Sleep"
 
 class p10 :
-    text = "page 10"
+    text = "You reach for Theo's hand, and soon after, you hear a gut-wrenching sound, like metal folding in on itself. Before you understand what's going on, you find yourself in the chill ocean water. Desperately searching for something to hold on to, you eventually find a wooden table floating in front of you. Just as you reach it, you see anothing figure grabbing onto it. You quickly wipe your eyes, and notice it's your friend, Theo. You briefly talk, trying to figure out what to do, and end up with four options :"
 
     option1 = "Sleep"
     option2 = "Sleep"
@@ -90,22 +90,22 @@ class p10 :
     option4 = "Sleep"
 
 class p11 :
-    text = "page 11"
+    text = "As expected, crying doesn't help. After a lot of shaking and screaming from everyone in the dining room, everything suddenly goes quiet. Just as you think it might've just been a big wave, you hear a gut-wrenching sound, like metal folding in on itself. Before you understand what's going on, you find yourself in the chill ocean water. Desperately searching for something to hold on to, you eventually find a wooden table floating in front of you. Just as you reach it, you see anothing figure grabbing onto it. You quickly wipe your eyes, and notice it's your friend, Theo. You briefly talk, trying to figure out what to do, and end up with four options :"
     option1 = "Sleep"
     option2 = "Sleep"
     option3 = "Sleep"
     option4 = "Sleep"
 
 class p12 :
-    text = "page 12"
+    text = "Wether you wanted to or not, that metal pole really knocked you out. You have no choice but to seep into the darkness of your own mind. Weirdly enough, you wake up on a, not soft but almost, surface. Slowly, you open your eyes and find Theo looking concernedly at you. You quickly realize you're on a beach, with nothing but ocean in front of you. You look at Theo, then behind you, only to discover what could be considered a paradise island in other circumstances. You quickly consort with Theo, then, with a plan in mind, you go into the lushious palm forest."
 
-    option1 = "Sleep"
-    option2 = "Sleep"
-    option3 = "Sleep"
-    option4 = "Sleep"
+    option1 = "Grab a long stick, possibly for defense"
+    option2 = "Head towards a strangly tall rock"
+    option3 = "Collect some branches near the edge of the palm forest"
+    option4 = "Grab some unknown fruits from a nearby tree"
 
 class p13 :
-    text = "page 13"
+    text = "As expected, crying doesn't help. After a lot of shaking, everything suddenly goes quiet. Just as you think it might've just been a big wave, you hear a gut-wrenching sound, like metal folding in on itself. Before you understand what's going on, you find yourself in the chill ocean water. Desperately searching for something to hold on to, you eventually find a wooden table floating in front of you. Just as you reach it, you see anothing figure grabbing onto it. You quickly wipe your eyes, and notice it's your friend, Theo. You briefly talk, trying to figure out what to do, and end up with four options :"
 
     option1 = "Sleep"
     option2 = "Sleep"
@@ -113,12 +113,12 @@ class p13 :
     option4 = "Sleep"
 
 class p14 :
-    text = "page 14"
+    text = "As you wished, you drift into a strange vivid light. From some kind of mist, you see what looks like a deer approaching you. Its majestic antlers seem to be raching for you. You reach back, following the deer to a lushious cave. Through the vines, you see a beautiful waterfall, with a small pond at the bottom. What seemed like a small cave is in reality its own ecosystem, with a variety of plants you've never seen before. Suddenly, you feel a strong urge to jump into the pond. Right at the moment you should've touched the water, you feel your skin burning up. You open your eyes and find Theo looking concernedly at you. You quickly realize you're on a beach, with nothing but ocean in front of you. You look at Theo, then behind you, only to discover what could be considered a paradise island in other circumstances. You quickly consort with Theo, then, with a plan in mind, you go into the lushious palm forest."
 
-    option1 = "Sleep"
-    option2 = "Sleep"
-    option3 = "Sleep"
-    option4 = "Sleep"
+    option1 = "Grab a long stick, possibly for defense"
+    option2 = "Head towards a strangly tall rock"
+    option3 = "Collect some branches near the edge of the palm forest"
+    option4 = "Grab some unknown fruits from a nearby tree"
 
 class p15 :
     text = "page 15"
