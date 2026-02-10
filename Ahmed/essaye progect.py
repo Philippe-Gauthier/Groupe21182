@@ -1,8 +1,3 @@
-"""
-Docstring for Ahmed.projet
-by Ahmed Ait Hammou
-Fichier principal pour Hardware and technoligies\ Choiceforge
-"""
 print ("Quelle compagnie a un meilleur raport qualité pour prix dans les GPU?")
 option = input ("Entrez '1' pour Nvidia, '2'pour AMD ou '3' pour Intel:")
 if option == "2":
@@ -18,3 +13,5 @@ if option == "2":
     print ("GPU est la bonne réponse ")
 else:
     print ("mauvaise réponse")
+
+    
