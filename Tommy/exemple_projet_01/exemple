@@ -1,0 +1,19 @@
+
+def choisir_option(choix_1, choix_2):
+    """
+    Entr/es: trois choix (texte)
+    sortie: option choisie (int)
+    but: demander a lutilisateur de choisir une option
+    """
+    print("_________")
+    print(f"1: {choix_1}")
+    print(f"2: {choix_2}")
+    decision = int(input("Veuillez choisir une option: "))
+    return decision
+
+choix_11 = "test1"
+choix_12 = "test2"
+choix_13 = "test3"
+
+print("Ceci est une question")
+choisir_option(choix_11, choix_12)
