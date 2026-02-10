@@ -12,7 +12,7 @@
 - À chaque page, une situation vous sera décrite. À la fin de cette même page, deux ou trois choix s'offriront à vous: le choix 1, le choix 2 ou le choix 3. Vous pourrez alors inscrire le chiffre correspondant à votre décision.
 
 ## SORTIE
-- Votre choix vous envoie vers une prochaine page où une nouvelle situation et deux autres choix vous seront proposés.
+- Votre choix vous envoie vers une prochaine page où une nouvelle situation et d'autres choix vous seront proposés.
 
 # CONTRÔLE
 ### **Structure en arbre:**
