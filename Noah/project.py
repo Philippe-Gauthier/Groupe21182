@@ -51,7 +51,7 @@ def choisir(nouveau_chapitre):
 # Creation de la fenetre principale
 fenetre = Tk()
 fenetre.geometry("1366x768")
-fenetre['bg'] = 'white'
+fenetre['bg'] = 'gray'
 
 # Titre de la fenetre
 fenetre.title("Reunion Island Simulator")

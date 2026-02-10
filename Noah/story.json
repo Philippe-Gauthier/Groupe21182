@@ -9,7 +9,7 @@
     },
 
     "debut": {
-        "texte": "Sans vous y attendre, vous venez au monde… Ou voulez-vous naître ?",
+        "texte": "Sans vous y attendre, vous venez au monde… vous n'avez pas conscience de ce qu'il ce passe mais vous pouvez quand même décider d'une chose, ou voulez vous naître ?",
         "choix1": {"texte": "CHU de Saint-Denis", "destination": "chu1"},
         "choix2": {"texte": "CHU de Saint-Pierre", "destination": "chu2"},
         "choix3": {"texte": "Non disponible", "destination": null},
@@ -18,7 +18,7 @@
     },
 
     "chu1": {
-        "texte": "Vous naissez au CHU de Saint-Denis, que faites vous ?",
+        "texte": "Vous naissez au CHU de Saint-Denis, dans un élan de folie vous décidez de ?",
         "choix1": {"texte": "Pleurer", "destination": "pleurer"},
         "choix2": {"texte": "Dormir", "destination": "dormir"},
         "choix3": {"texte": "S'enfuir de l'hopital", "destination": "fuite"},
@@ -27,11 +27,20 @@
     },
 
     "chu2": {
-        "texte": "Vous naissez au CHU de Saint-Pierre, que faites vous ?",
+        "texte": "Vous naissez au CHU de Saint-Pierre, dans un élan de folie vous décidez de ?",
         "choix1": {"texte": "Pleurer", "destination": "pleurer1"},
         "choix2": {"texte": "Dormir", "destination": "dormir1"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/intro.png"
+    },
+
+    "fuite": {
+        "texte": "Vous tentez de prendre la fuite mais vous n'avez pas encore obtenu la capacité de vous déplacer ! \n Cependant votre mere remarque tout de même vos mouvements et ce dit que vous allez être un enfant très agité !",
+        "choix1": {"texte": "Pleurer", "destination": "pleurer1"},
+        "choix2": {"texte": "Dormir", "destination": "dormir1"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/fuite.png"
     }
 }
