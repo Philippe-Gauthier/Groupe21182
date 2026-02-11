@@ -55,7 +55,32 @@ choix101 = "H = 1/T"
 choix102 = "C = Q*t"
 choix103 = "H = L*di/dt"
 
+test11 = "Quel composant filtre la tension ?"
+choix111 = "la Diode"
+choix112 = "le condensatuer"
+choix113 = "la resistance"
 
+test12 = "Quel est l'unité de mesure du condensateur ?"
+choix121 = "Henri"
+choix122 = "Ohm"
+choix123 = "Farad"
+
+test13 = "Quel instrument permet de mésurer la capacitance ?"
+choix131 = "Oscilloscope"
+choix132 = "Générateur"
+choix133 = "multimètre"
+
+test14 = "Quel est spéciliter ?"
+choix141 = "mémoire de courant"
+choix142 = "memoire de  tension"
+choix143 = "memoire de puissance"
+
+test15 = "Quel composant laisse passé le courant dans un seul sens ?"
+test151 = "la diode"
+test152 = "la resistance"
+test153 = "la bobine"
+
+test16 = ""
 
 
 
