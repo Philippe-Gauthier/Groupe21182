@@ -12,6 +12,8 @@ choix_03 = "CCCC"
 choix_04 = "DDDD"
 choix_05 = "EEEE"
 choix_06 = "FFFF"
+choix_07 = "GGGG"
+choix_08 = "HHHH"
 
 
 def choisir_deux_options(choix1, choix2):
@@ -58,4 +60,5 @@ else:
     print("   ")
     print(page_03)
     choisir_deux_options(choix_05, choix_06)
+
 
