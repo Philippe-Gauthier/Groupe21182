@@ -1,3 +1,10 @@
+"""
+Auteur : Médjoua, Karaboue.
+date :   fevrier 2026.
+Projet : Jeu de question à choix multiple.
+"""
+
+
 test1 = "Quelle est l unité de la tension électrique ?"
 choix11 = "Ampère"
 choix12 = "Volt "
@@ -54,7 +61,8 @@ choix103 = "H = L*di/dt"
 
 
 
-def reponse_(choix1, choix2, choix3,) : 
+def trouver_reponse(choix1, choix2, choix3,) : 
+ """ Trouver la bonne reponse parmis les troischoix de reponse(...) """
  print("------------------------------")
  print(f"1: {choix1}")
  print(f"2: {choix2}")
@@ -65,40 +73,40 @@ def reponse_(choix1, choix2, choix3,) :
 
 print(test1)
 
-reponse_(choix11, choix12, choix13)
+trouver_reponse(choix11, choix12, choix13)
 
 print(test2)
 
-reponse_(choix21, choix22, choix23)
+trouver_reponse(choix21, choix22, choix23)
 
 print(test3)
 
-reponse_(choix31, choix32, choix33)
+trouver_reponse(choix31, choix32, choix33)
 
 print(test4)
 
-reponse_(choix41, choix42, choix43)
+trouver_reponse(choix41, choix42, choix43)
 
 print(test5)
 
-reponse_(choix51, choix52, choix53)
+trouver_reponse(choix51, choix52, choix53)
 
 print(test6)
 
-reponse_(choix61, choix62, choix63)
+trouver_reponse(choix61, choix62, choix63)
 
 print(test7)
 
-reponse_(choix71, choix72, choix73)
+trouver_reponse(choix71, choix72, choix73)
 
 print(test8)
 
-reponse_(choix81, choix82, choix83)
+trouver_reponse(choix81, choix82, choix83)
 
-print(test9)
+print(test9)         
 
-reponse_(choix91, choix92, choix93)
+trouver_reponse(choix91, choix92, choix93)
 
 print(test10)
 
-reponse_(choix101, choix102, choix103)
+trouver_reponse(choix101, choix102, choix103)
