@@ -30,20 +30,18 @@ def choisir_deux_options(choix1, choix2):
      print(f"1: {choix1}")
      print(f"2: {choix2}")
      print("   ")
-     decision = int(input("Que choisis-tu de faire?: "))
+     decision = (input("Que choisis-tu de faire?: "))
 
-     if decision == 1:
-         return decision
-     elif decision == 2:
-         return decision
+     if decision == "1":
+         return int(decision)
+     elif decision == "2":
+         return int(decision)
      else:
-         print("J'aime ton énergie, mais il faudrait choisir une des options proposées.")
-         print("----------------------------------------------")
-         print(f"1: {choix1}")
-         print(f"2: {choix2}")
          print("   ")
-         decision = int(input("Que choisis-tu de faire?: "))
-         return decision
+         print("J'aime ton énergie, mais il faudrait choisir une des options proposées.")
+        
+       
+         
 
 
 def choisir_trois_options(choix1, choix2, choix3):
