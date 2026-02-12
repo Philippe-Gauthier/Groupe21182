@@ -83,12 +83,11 @@ decision_01 = choisir_deux_options(choix_respir, choix_shooter)
 if decision_01 == 2:
     print("   ")
     print(page_02)
+    decision_02 = choisir_trois_options(choix_03, choix_04, choix_05)
 
 if decision_01 == 1:
     print("   ")
     print(page_03)
-
-decision_02 = choisir_trois_options(choix_03, choix_04, choix_05)
 
 if decision_02 == 1:
     print("   ")
