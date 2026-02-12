@@ -24,12 +24,27 @@ def choisir_deux_options(choix1, choix2):
     But: demander à l'utilisateur de choisir une option
 
     """
-    print("----------------------------------------------")
-    print(f"1: {choix1}")
-    print(f"2: {choix2}")
-    print("   ")
-    decision = int(input("Que choisis-tu de faire?: "))
-    return decision
+    while True: 
+
+     print("----------------------------------------------")
+     print(f"1: {choix1}")
+     print(f"2: {choix2}")
+     print("   ")
+     decision = int(input("Que choisis-tu de faire?: "))
+
+     if decision == 1:
+         return decision
+     elif decision == 2:
+         return decision
+     else:
+         print("J'aime ton énergie, mais il faudrait choisir une des options proposées.")
+         print("----------------------------------------------")
+         print(f"1: {choix1}")
+         print(f"2: {choix2}")
+         print("   ")
+         decision = int(input("Que choisis-tu de faire?: "))
+         return decision
+
 
 def choisir_trois_options(choix1, choix2, choix3):
       
@@ -56,9 +71,12 @@ if decision_01 == 2:
     print(page_02)
     choisir_deux_options(choix_03, choix_04)
 
-else:
+if decision_01 == 1:
     print("   ")
     print(page_03)
     choisir_deux_options(choix_05, choix_06)
+
+
+    
 
 
