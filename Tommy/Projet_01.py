@@ -3,11 +3,11 @@ Tommy Brunelle
 Fichier principal du projet de livre interactif
 
 """
-page_01 = "C'est le grand jour, tes mensonges ont porté fruit.\nTu commences ton premier quart de travail en tant que chef cuisinier dans 1h.\nTu es remplis de remords face aux mensonges liés à cette embauche, mais il faut ce qu'il faut pour arriver hein?\nTu dois te préparer à partir, mais tu es terriblement stressé.\n\nQue fais tu?"
-page_02 = "test if"
-page_03 = "test else"
-choix_01 = "AAAA"
-choix_02 = "BBBB"
+intro = "C'est le grand jour, tes mensonges ont porté fruit.\nTu commences ton premier quart de travail en tant que chef cuisinier dans 1h.\nTu es remplis de remords face aux mensonges liés à cette embauche, mais il faut ce qu'il faut pour arriver hein?\nTu dois te préparer à partir, mais tu es terriblement stressé.\n\nQue fais tu?"
+page_02 = "histoire_02"
+page_03 = "histoire_03"
+choix_respir = "Tu prends un bon grand respir et te dirige au travail, ça va passer."
+choix_shooter = "Tu décides de prendre 2-3 shooters pour la confiance, il est midi quelque part comme on dit"
 choix_03 = "CCCC"
 choix_04 = "DDDD"
 choix_05 = "EEEE"
@@ -48,8 +48,8 @@ def choisir_trois_options(choix1, choix2, choix3):
     return decision
 
 print("   ")
-print(page_01)
-decision_01 = choisir_deux_options(choix_01, choix_02)
+print(intro)
+decision_01 = choisir_deux_options(choix_respir, choix_shooter)
 
 if decision_01 == 2:
     print("   ")
