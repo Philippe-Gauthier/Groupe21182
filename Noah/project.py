@@ -29,8 +29,7 @@ def afficher_chapitre(chapitre):
     image_path = data["image"]
     image = Image.open(image_path)
     global photo
-    resized_image = image.resize((300, 300 ))
-    photo = ImageTk.PhotoImage(resized_image)
+    photo = ImageTk.PhotoImage(image)
 
     # Associe chaque bouton a la destination correspondante. lambda sert de fonction temporaire qui appelle choisir associe au bouton
     bouton1.config(text=choix1, command=lambda: choisir(data["choix1"]["destination"]))
@@ -50,7 +49,8 @@ def choisir(nouveau_chapitre):
 
 # Creation de la fenetre principale
 fenetre = Tk()
-fenetre.geometry("1366x768")
+fenetre.minsize(1366, 768)
+fenetre.maxsize(1920, 1080)
 fenetre['bg'] = 'gray'
 
 # Titre de la fenetre
@@ -60,36 +60,36 @@ titre_label.pack(padx=20, pady=20)
 
 # Frame principale qui contient l'image et la question
 Frame2 = Frame(fenetre, bg="white", borderwidth=2, relief=GROOVE)
-Frame2.pack(expand=True, fill=BOTH, padx=40, pady=10)
+Frame2.pack(expand=True, fill=BOTH, padx=40, pady=40)
 
 # Frame pour l'image
-boite_image = Label(Frame2)
+boite_image = Label(Frame2, relief=RIDGE, borderwidth=2, anchor=CENTER)
 boite_image.pack(padx=40, pady=10)
 
 # Frame pour la question
-boite_question = Frame(Frame2, bg="white", borderwidth=2, relief=GROOVE)
-boite_question.place(relx=0.5, rely=0.5, anchor=CENTER)
+boite_question = Frame(Frame2, bg="gray", relief=RIDGE)
+boite_question.pack(padx=0.5, pady=2)
 
 # Label pour la question
-question_label = Label(boite_question, text="test", bg="white", font=("Arial", 16))
+question_label = Label(boite_question, font=("Arial", 16))
 question_label.pack(padx=20, pady=20)
 
 # Frame pour les boutons de choix
-Frame1 = Frame(fenetre, bg="white")
+Frame1 = Frame(fenetre, relief=RIDGE, bg="gray")
 Frame1.pack(pady=20)
 
-bouton1 = Button(Frame1, text="choix1")
+bouton1 = Button(Frame1, text="choix1", relief=RIDGE, font=("Arial", 12), bg="lightgray")
 bouton1.pack(side=LEFT, padx=10)
 
-bouton2 = Button(Frame1, text="choix2")
+bouton2 = Button(Frame1, text="choix2", relief=RIDGE, font=("Arial", 12), bg="lightgray")
 bouton2.pack(side=LEFT, padx=10)
 
-Label(Frame1, text="Faites un choix", bg="white").pack(side=LEFT, padx=20)
+Label(Frame1, text="Faites un choix").pack(side=LEFT, padx=20)
 
-bouton3 = Button(Frame1, text="choix3")
+bouton3 = Button(Frame1, text="choix3", relief=RIDGE, font=("Arial", 12), bg="lightgray")
 bouton3.pack(side=LEFT, padx=10)
 
-bouton4 = Button(Frame1, text="choix4")
+bouton4 = Button(Frame1, text="choix4", relief=RIDGE, font=("Arial", 12), bg="lightgray")
 bouton4.pack(side=LEFT, padx=10)
 
 

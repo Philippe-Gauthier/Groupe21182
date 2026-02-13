@@ -14,7 +14,7 @@
         "choix2": {"texte": "CHU de Saint-Pierre", "destination": "chu2"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/intro.png"
+        "image": "img/chu.png"
     },
 
     "chu1": {
@@ -23,7 +23,7 @@
         "choix2": {"texte": "Dormir", "destination": "dormir"},
         "choix3": {"texte": "S'enfuir de l'hopital", "destination": "fuite"},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/intro.png"
+        "image": "img/chu1.png"
     },
 
     "chu2": {
@@ -32,7 +32,7 @@
         "choix2": {"texte": "Dormir", "destination": "dormir1"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/intro.png"
+        "image": "img/chu2.png"
     },
 
     "fuite": {
