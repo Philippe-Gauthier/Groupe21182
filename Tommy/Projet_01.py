@@ -4,17 +4,18 @@ Fichier principal du projet de livre interactif
 
 """
 intro = "C'est le grand jour, tes mensonges ont porté fruit.\nTu commences ton premier quart de travail en tant que chef cuisinier dans 1h.\nTu es remplis de remords face aux mensonges liés à cette embauche, mais il faut ce qu'il faut pour arriver hein?\nTu dois te préparer à partir, mais tu es terriblement stressé.\n\nQue fais tu?"
-page_02 = "Tu arrives en cuisine et tout semble normal, personne ne mentionne l'odeur d'alcool. Le chef arrive et te salue. «On est dans le rush déjà en préparation, va blanchir des patates.»"
-page_03 = "histoire_03"
-page_04 = "histoire_04"
-page_05 = "histoire_05"
-page_06 = "histoire_06"
+page_02 = "Tu arrives en cuisine et tout semble normal, personne ne mentionne l'odeur d'alcool. Le chef arrive et te salue. «On est dans le rush déjà en préparation, va blanchir des patates.»\n\n Que choisis-tu de faire?"
+page_03 = "Une fois arrivé, le chef te dévisage instantanémment. Il te reniffle. «T'es clairement ajeun...T'es pas un vrai cook!» Il te crie dessus et te force à quitter les lieux.\n\n Game Over"
+page_04 = "Il te faut des chaudières, tu cherches un peu et entre dans une chambre froide où il y a plein plein plein de chaudières.\n\nQue prends-tu? "
+page_05 = "Le cuisinier te sourit. «Oublie les patates big, Marco s'en occupe. Aide moi à couper des légumes pour ce soir.»"
+page_06 = "Le chef te voit se promener avec une cannette de peinture blanche, se fâche et te renvoi sur le champ.\n\nGame Over"
 choix_intro_01 = "Tu prends un bon grand respir et te dirige au travail, ça va passer."
 choix_intro_02 = "Tu décides de prendre 2-3 shooters pour la confiance, il est midi quelque part comme on dit"
 choix_02_01 = "Tu décides d'aller remplir une chaudière d'eau bouillante salée et une chaudière d'eau glacée pour les patates."
 choix_02_02 = "Tu restes immobile, paniqué. Tu vois un cuisinier au loin qui te fait signe d'approcher. Tu te rends vers lui."
 choix_02_03 = "Tu fouilles partout à la recherche de peinture blanche."
-
+choix_04_01 = "Tu vois deux chaudières remplies d'eau. Tu décides de sauver du temps et mieux paraître. Tu pars avec "
+choix_04_02 = ""
 
 
 def choisir_deux_options(choix1, choix2):
@@ -81,7 +82,7 @@ decision_01 = choisir_deux_options(choix_intro_01, choix_intro_02)
 if decision_01 == 2:
     print("   ")
     print(page_02)
-    decision_02 = choisir_trois_options(choix_03, choix_04, choix_05)
+    decision_02 = choisir_trois_options(choix_02_01, choix_02_02, choix_02_03)
 
 if decision_01 == 1:
     print("   ")
