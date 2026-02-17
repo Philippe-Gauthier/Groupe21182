@@ -3,17 +3,18 @@ Tommy Brunelle
 Fichier principal du projet de livre interactif
 
 """
+absence_choix = " "
 intro = "C'est le grand jour, tes mensonges ont porté fruit.\nTu commences ton premier quart de travail en tant que chef cuisinier dans 1h.\nTu es remplis de remords face aux mensonges liés à cette embauche, mais il faut ce qu'il faut pour arriver hein?\nTu dois te préparer à partir, mais tu es terriblement stressé.\n\nQue fais tu?"
 page_02 = "Tu arrives en cuisine et tout semble normal, personne ne mentionne l'odeur d'alcool. Le chef arrive et te salue. «On est dans le rush déjà en préparation, va blanchir des patates.»\n\n Que choisis-tu de faire?"
 page_03 = "Une fois arrivé, le chef te dévisage instantanémment. Il te reniffle. «T'es clairement ajeun...T'es pas un vrai cook!» Il te crie dessus et te force à quitter les lieux.\n\n Game Over"
 page_04 = "Il te faut des chaudières, tu cherches un peu et entre dans une chambre froide où il y a plein plein plein de chaudières.\n\nQue prends-tu? "
 page_05 = "Le cuisinier te sourit. «Oublie les patates big, Marco s'en occupe. Aide moi à couper des légumes pour ce soir.»"
 page_06 = "Le chef te voit se promener avec une cannette de peinture blanche, se fâche et te renvoi sur le champ.\n\nGame Over"
-page_07 = ""
-page_08 = ""
-page_09 = ""
-page_10 = ""
-page_11 = ""
+page_07 = "Bravo imbécile. Après avoir coupé plusieurs patates, le chef passe proche et voit tes chaudières.\nElles sont pour faire tremper les têtes de moppe, tu perds ton emploi.\n\nGame Over"
+page_08 = "Bien joué! Jusqu'à présent personne ne soupçonne ton manque extrême de connaissances culinaires. T'as réussi à blanchir une chaudière de patates.\n\nMaintenant quoi?"
+page_09 = "Tu ne sais pas aiguiser un couteau. Tu te coupe violemment la main et tu saignes dans tous les légumes déjà préparés.\nOn te renvoi et tu dois toi-même appeler l'ambulance."
+page_10 = "L'angoisse s'empare de toi, tu te mets à suer à profusion. Tu regardes à nouveau le cuisinier, il a un tattoo de larme sous l'oeil, tu ne te sens pas très bien.\nQue fais-tu?"
+page_11 = "La chance te sourit, il t'avoue lui aussi avoir menti sur son CV. «T'as juste à donner des ordres et les gens pensent que tu sais ce que tu fais.»"
 page_12 = ""
 page_13 = ""
 page_14 = ""
@@ -40,34 +41,6 @@ choix_11_01 = ""
 choix_11_02 = ""
 
 
-def choisir_deux_options(choix1, choix2):
-    
-    """
-    Entrées: Deux choix (texte)
-    Sortie: Option choisie (texte interprete en int)
-    But: demander à l'utilisateur de choisir une option
-
-    """
-    while True: 
-
-     print("----------------------------------------------")
-     print(f"1: {choix1}")
-     print(f"2: {choix2}")
-     print("   ")
-     decision = (input("Que choisis-tu de faire?: "))
-
-     if decision == "1":
-         return int(decision)
-     elif decision == "2":
-         return int(decision)
-     else:
-         print("   ")
-         print("J'aime ton énergie, mais il faudrait choisir une des options proposées.")
-        
-       
-         
-
-
 def choisir_trois_options(choix1, choix2, choix3):
       
     """
@@ -77,21 +50,31 @@ def choisir_trois_options(choix1, choix2, choix3):
 
     """
     while True: 
+     
+      if choix3 == " ":
+          
+          print("----------------------------------------------")
+          print(f"1: {choix1}")
+          print(f"2: {choix2}")
+          print("   ")
+          decision = (input("Que choisis-tu de faire?: "))
+     
+      else:
+          
+          print("----------------------------------------------")
+          print(f"1: {choix1}")
+          print(f"2: {choix2}")
+          print(f"3: {choix3}")
+          print("   ")
+          decision = (input("Que choisis-tu de faire?: "))
 
-     print("----------------------------------------------")
-     print(f"1: {choix1}")
-     print(f"2: {choix2}")
-     print(f"3: {choix3}")
-     print("   ")
-     decision = (input("Que choisis-tu de faire?: "))
-
-     if decision == "1":
+      if decision == "1":
          return int(decision)
-     elif decision == "2":
+      elif decision == "2":
          return int(decision)
-     elif decision == "3":
+      elif decision == "3":
          return int(decision)
-     else:
+      else:
          print("   ")
          print("J'aime ton énergie, mais il faudrait choisir une des options proposées.")
 
@@ -99,7 +82,7 @@ def choisir_trois_options(choix1, choix2, choix3):
 
 print("   ")
 print(intro)
-decision_intro = choisir_deux_options(choix_intro_01, choix_intro_02)
+decision_intro = choisir_trois_options(choix_intro_01, choix_intro_02, absence_choix)
 
 if decision_intro == 2:
     print("   ")
@@ -109,7 +92,7 @@ if decision_intro == 2:
     if decision_02 == 1:
         print("   ")
         print(page_04)
-        decision_04 = choisir_deux_options(choix_04_01, choix_04_02)
+        decision_04 = choisir_trois_options(choix_04_01, choix_04_02, absence_choix)
 
         if decision_04 == 1:
             print("   ")
