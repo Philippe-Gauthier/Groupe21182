@@ -1,3 +1,8 @@
+Nom = Karaboue
+Prénom = Médjoua
+
+
+
 # projet
 Jeu de question à choix multiple.
 
@@ -16,3 +21,4 @@ En sortir Médjoua fera un choix parmi les propositions de reponse donnée en en
 # Sturcture Control
 Lorsque les questions seront affichées par la fonction print("") avvec les propositions de reponse identifier par des chiffres
 et que Médjoua fera un choix de reponse grace à la fonction Input("") ceci le ména à une serie de questions.
+je vais utiliser la fonction "reponse_" pour permet d'introduit les choix de reponse en fonction du test.
