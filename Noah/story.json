@@ -152,9 +152,9 @@
 
     "altinter": {
         "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Vous avez maintenant 1 an et commencez à faire vos premiers pas, vous chutez et vous enervez contre le sol",
-        "choix1": {"texte": "Continuer", "destination": null},
-        "choix2": {"texte": "Non disponible", "destination": null},
-        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix1": {"texte": "Taper le sol", "destination": "taper"},
+        "choix2": {"texte": "Laisser tomber", "destination": "forfeit"},
+        "choix3": {"texte": "Demander de demenager", "destination": "demenager"},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/inter.png",
         "age": "1 an"
@@ -162,7 +162,7 @@
 
     "altinter1": {
         "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Après une bonne sieste, vous comprennez que via vos mains vous avez une grande puissance de destruction.",
-        "choix1": {"texte": "Continuer", "destination": null},
+        "choix1": {"texte": "Continuer", "destination": "feutre"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
