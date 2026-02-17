@@ -96,7 +96,6 @@ class App:
         self.transitions = {
             1: (2, 3, 4, 5),
             2: (6, 10, 6, 11),
-            3: (7, 9, 7, 13),
             4: (8, 8, 8, 8),
             5: (12, 14, 12, 14),
             6: (15, 16, 17, 18),
@@ -109,12 +108,12 @@ class App:
             13: (15, 16, 17, 18),
             14: (19, 20, 21, 22),
             # v end v
-            15: (25, 26, 27, 28),
-            16: (29, 30, 31, 32),
-            17: (33, 34, 35, 36),
-            18: (37, 38, 39, 40),
-            19: (41, 41, 41, 41),
-            20: (41, 41, 41, 41),
+            15: (7, 9, 13, 23),
+            16: (24, 25, 26, 27),
+            17: (28, 29, 30, 31),
+            18: (32, 33, 34, 35),
+            19: (36, 37, 38, 39),
+            20: (40, 41, 41, 41),
             21: (41, 41, 41, 41),
             22: (41, 41, 41, 41),
             23: (41, 41, 41, 41),
@@ -142,7 +141,7 @@ class App:
         else : self.curr_page = 1
 
         # configuration de l'interface utilisateur : on cree un widget Text pour afficher le texte de la page, et des boutons pour les options. On configure aussi la fenetre (taille, titre, couleur de fond etc.)
-        self.text = tk.Text(window, height=20, width=10, font=("Helvetica", 16))
+        self.text = tk.Text(window, height=17, width=10, font=("Helvetica", 16))
         window.resizable(False, False)
         window.title("Livre")
         window.geometry("980x600")
@@ -160,10 +159,10 @@ class App:
             self.buttons.append(b)
 
         # placer les boutons dans la fenetre en utilisant grid. Les boutons sont placés de manière à ce qu'ils soient alignés à gauche et à droite de la fenetre, avec un espacement entre eux.
-        self.buttons[0].grid(row=1, column=0, sticky="E", padx=5, pady=5)
-        self.buttons[1].grid(row=1, column=0, sticky="W", padx=5, pady=5)
-        self.buttons[2].grid(row=2, column=0, sticky="E", padx=5, pady=5)
-        self.buttons[3].grid(row=2, column=0, sticky="W", padx=5, pady=5)
+        self.buttons[0].grid(row=2, column=0, sticky="E", padx=5, pady=5)
+        self.buttons[1].grid(row=2, column=0, sticky="W", padx=5, pady=5)
+        self.buttons[2].grid(row=3, column=0, sticky="E", padx=5, pady=5)
+        self.buttons[3].grid(row=3, column=0, sticky="W", padx=5, pady=5)
 
         self.update_view()
 
@@ -176,25 +175,34 @@ class App:
         - les étiquettes des boutons sont mises à jour pour refléter les options de la nouvelle page actuelle
 
         """
-
         page = self.pages.get(self.curr_page)
-        
-        if not page:
-            # gracefully handle missing pages
-            display = "[Page missing]"
-            options = ["", "", "", ""]
-        else:
+        if page.endPage:
             display = tw.fill(page.text, 100)
-            options = [page.option1, page.option2, page.option3, page.option4]
             self.appendToPath(self.curr_page)
+            self.endOfStory(display)
+            
+             
+        else :
+        
+            if not page:
+            # gracefully handle missing pages
+                display = "[Page missing]"
+                options = ["", "", "", ""]
+            else:
+                display = tw.fill(page.text, 100)
+                options = [page.option1, page.option2, page.option3, page.option4]
+                self.appendToPath(self.curr_page)
+                tk.Button(self.window, text=f"Weather : {page.weather}\nTime : {page.time}", state=tk.DISABLED).grid(row=1, column=0, columnspan=2, pady=5, padx=5, sticky="W")
+                
 
-        self.text.config(state=tk.NORMAL)
-        self.text.delete("1.0", tk.END)
-        self.text.insert(tk.END, display)
-        self.text.config(state=tk.DISABLED)
 
-        for btn, label in zip(self.buttons, options):
-            btn.config(text=label)
+            self.text.config(state=tk.NORMAL)
+            self.text.delete("1.0", tk.END)
+            self.text.insert(tk.END, display)
+            self.text.config(state=tk.DISABLED)
+
+            for btn, label in zip(self.buttons, options):
+                btn.config(text=label)
 
     def on_button(self, index):
         """
@@ -215,6 +223,19 @@ class App:
     def appendToPath(self, page):
         self.path.append(page)
         print(self.path)
+    
+    def endOfStory(self, page):
+        print("End of story reached.")
+        self.text.config(state=tk.NORMAL)
+        self.text.delete("1.0", tk.END)
+        self.text.insert(tk.END, page)
+        self.text.config(state=tk.DISABLED)
+        for btn in self.buttons:
+            btn.destroy()
+        endButton =tk.Button(self.window, text="ok")
+        endButton.config(height=2, width=self.button_size)
+        endButton.grid(row=1, column=0, columnspan=2, pady=5)
+        
 
 
 # la partie suivante crée la fenetre principale de l'application, crée une instance de la classe App en lui passant cette fenetre, et lance la boucle principale de l'application pour que l'interface soit responsive et puisse réagir aux interactions de l'utilisateur.
