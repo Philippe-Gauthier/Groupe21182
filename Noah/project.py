@@ -73,7 +73,7 @@ titre_label = Label(fenetre, text="Reunion Island Simulator")
 titre_label.pack(padx=20, pady=20)
 
 # Label pour l'age du personnage
-age_label = Label(fenetre, text="age", font=("Arial", 12))
+age_label = Label(fenetre, text="age", font=("Arial", 12), fg="red")
 age_label.pack(padx=20, pady=10, side=RIGHT)
 
 # Frame principale qui contient l'image et la question
