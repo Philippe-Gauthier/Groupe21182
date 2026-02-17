@@ -5,7 +5,8 @@
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/intro.png"
+        "image": "img/intro.png",
+        "age": null
     },
 
     "debut": {
@@ -14,7 +15,8 @@
         "choix2": {"texte": "CHU de Saint-Pierre", "destination": "chu2"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/chu.png"
+        "image": "img/chu.png",
+        "age": "0 mois"
     },
 
     "chu1": {
@@ -23,7 +25,8 @@
         "choix2": {"texte": "Dormir", "destination": "dormir"},
         "choix3": {"texte": "S'enfuir de l'hopital", "destination": "fuite"},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/chu1.png"
+        "image": "img/chu1.png",
+        "age": "0 mois"
     },
 
     "chu2": {
@@ -32,15 +35,138 @@
         "choix2": {"texte": "Dormir", "destination": "dormir1"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/chu2.png"
+        "image": "img/chu2.png",
+        "age": "0 mois"
     },
 
     "fuite": {
         "texte": "Vous tentez de prendre la fuite mais vous n'avez pas encore obtenu la capacité de vous déplacer ! \n Cependant votre mere remarque tout de même vos mouvements et ce dit que vous allez être un enfant très agité !",
-        "choix1": {"texte": "Pleurer", "destination": "pleurer"},
-        "choix2": {"texte": "Dormir", "destination": "dormir"},
+        "choix1": {"texte": "Pleurer", "destination": "secretpleurer"},
+        "choix2": {"texte": "Dormir", "destination": "secretpleurer"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/fuite.png"
+        "image": "img/fuite.png",
+        "age": "0 mois"
+    },
+
+    "pleurer": {
+        "texte": "Vous pleurer et c'est totalement normal pour un nouveau né, votre mère vous prend dans ses bras et vous console, elle se dit que vous êtes un enfant très sensible !",
+        "choix1": {"texte": "Continuer", "destination": "inter0"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/pleure.png",
+        "age": "0 mois"
+    },
+
+    "dormir": {
+        "texte": "Vous dormez et c'est totalement normal pour un nouveau né, votre mère vous prend dans ses bras et vous console, elle se dit que vous êtes un enfant très calme !",
+        "choix1": {"texte": "Continuer", "destination": "inter1"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/dort.png",
+        "age": "0 mois"
+    },
+
+    "pleurer1": {
+        "texte": "Vous pleurer et c'est totalement normal pour un nouveau né, votre mère vous prend dans ses bras et vous console, elle se dit que vous êtes un enfant très sensible !",
+        "choix1": {"texte": "Continuer", "destination": "inter2"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/pleure.png",
+        "age": "0 mois"
+    },
+
+    "dormir1": {
+        "texte": "Vous dormez et c'est totalement normal pour un nouveau né, votre mère vous prend dans ses bras et vous console, elle se dit que vous êtes un enfant très calme !",
+        "choix1": {"texte": "Continuer", "destination": "inter3"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/dort.png",
+        "age": "0 mois"
+    },
+
+    "secretpleurer": {
+        "texte": "Vous pleurer et c'est totalement normal pour un nouveau né, votre mère vous prend dans ses bras et vous console.",
+        "choix1": {"texte": "Continuer", "destination": "altinter"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/pleure.png",
+        "age": "0 mois"
+    },
+
+    "secretdormir": {
+        "texte": "Vous dormez et c'est totalement normal pour un nouveau né, votre mère vous prend dans ses bras et vous console.",
+        "choix1": {"texte": "Continuer", "destination": "altinter1"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/dort.png",
+        "age": "0 mois"
+    },
+
+
+    "inter0": {
+        "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Vous avez maintenant 1 an et commencez à faire vos premiers pas, vous chutez et pleurez.",
+        "choix1": {"texte": "Continuer", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/inter.png",
+        "age": "1 an"
+    },
+
+    "inter1": {
+        "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Mais vous decider que vous avez la flemme et vous dormez.",
+        "choix1": {"texte": "Continuer", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/inter.png",
+        "age": "1 an"
+    },
+
+    "inter2": {
+        "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Vous avez maintenant 1 an et commencez à faire vos premiers pas, vous chutez et pleurez.",
+        "choix1": {"texte": "Continuer", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/inter.png",
+        "age": "1 an"
+    },
+
+    "inter3": {
+        "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Mais vous decider que vous avez la flemme et vous dormez.",
+        "choix1": {"texte": "Continuer", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/inter.png",
+        "age": "1 an"
+    },
+
+    "altinter": {
+        "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Vous avez maintenant 1 an et commencez à faire vos premiers pas, vous chutez et vous enervez contre le sol",
+        "choix1": {"texte": "Continuer", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/inter.png",
+        "age": "1 an"
+    },
+
+    "altinter1": {
+        "texte": "Le temps passe et votre cerveau se développe, vous commencez à comprendre le monde qui vous entoure. \n Après une bonne sieste, vous comprennez que via vos mains vous avez une grande puissance de destruction.",
+        "choix1": {"texte": "Continuer", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/inter.png",
+        "age": "1 an"
     }
 }

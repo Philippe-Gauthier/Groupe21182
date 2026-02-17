@@ -39,4 +39,4 @@
 
 |       Main Story        | Documentation | Mécaniques principales   | Mecaniques secondaires (Argent/Age) |Finitions (Image, formattage) |
 |:-----------------------:|:------------:|:-------------------------:|:-----------------------------------:|:----------------------------:|
-| ❌                     | ✅           |   ✅                     |❌                                   |❌                            |
+| ❌                     | ✅           |   ✅                     |✅Age ❌ Argent               |✅Image ❌ Formattage         |

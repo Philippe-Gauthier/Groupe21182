@@ -8,16 +8,23 @@ import json
 from tkinter import *
 from PIL import Image, ImageTk
 
+
 # Recupere les infos du fichier JSON
 with open("story.json", "r", encoding="utf-8") as f:
     story = json.load(f)
 
-# Permet d'afficher un chapitre
+"""
+Fonction qui attribue les textes, les images et les valeurs de chaque choix de chaque chapitres dans le json a une variable qui sera afficher avec Tkinter.  
+Chaque fois que cette fonction est appeler, elle raffraichi la fenetre avec les donnees du json pour afficher le chapitre correspondant au choix fait par l'utilisateur.
+elle prend en parametre le nom du chapitre a afficher recuperer dans le json comme "intro", "chu1", etc. et sera automatiquement mis a jour via la fonction choisir() si dessous ainsi que la commande des boutons.
+
+"""
+
 def afficher_chapitre(chapitre):
     global chapitre_actuel
     chapitre_actuel = chapitre
 
-    # Recupere les donnees du json et les assignes a une variable
+    
     data = story[chapitre]
 
     question = data["texte"]
@@ -25,13 +32,13 @@ def afficher_chapitre(chapitre):
     choix2 = data["choix2"]["texte"]
     choix3 = data["choix3"]["texte"]
     choix4 = data["choix4"]["texte"]
+    age = data["age"]
 
     image_path = data["image"]
     image = Image.open(image_path)
     global photo
     photo = ImageTk.PhotoImage(image)
 
-    # Associe chaque bouton a la destination correspondante. lambda sert de fonction temporaire qui appelle choisir associe au bouton
     bouton1.config(text=choix1, command=lambda: choisir(data["choix1"]["destination"]))
     bouton2.config(text=choix2, command=lambda: choisir(data["choix2"]["destination"]))
     bouton3.config(text=choix3, command=lambda: choisir(data["choix3"]["destination"]))
@@ -39,13 +46,20 @@ def afficher_chapitre(chapitre):
 
     boite_image.config(image=photo)
     question_label.config(text=question)
+    age_label.config(text=age)
 
-# appeler lorsqu'on clique sur un choix 
+ 
+"""
+Fonction appeler a chaque fois qu'on clique sur un choix pour afficher et raffraichir le chapitre correspondant au choix fait en utilisant la fonction afficher_chapitre,
+elle prend en parametre le nom du nouveau chapitre a afficher recuperer dans le json.
+
+"""
 def choisir(nouveau_chapitre):
     if nouveau_chapitre:    
         afficher_chapitre(nouveau_chapitre)
 
 
+### TKINTER
 
 # Creation de la fenetre principale
 fenetre = Tk()
@@ -57,6 +71,10 @@ fenetre['bg'] = 'gray'
 fenetre.title("Reunion Island Simulator")
 titre_label = Label(fenetre, text="Reunion Island Simulator")
 titre_label.pack(padx=20, pady=20)
+
+# Label pour l'age du personnage
+age_label = Label(fenetre, text="age", font=("Arial", 12))
+age_label.pack(padx=20, pady=10, side=RIGHT)
 
 # Frame principale qui contient l'image et la question
 Frame2 = Frame(fenetre, bg="white", borderwidth=2, relief=GROOVE)
