@@ -9,14 +9,12 @@ page_03 = "histoire_03"
 page_04 = "histoire_04"
 page_05 = "histoire_05"
 page_06 = "histoire_06"
-choix_respir = "Tu prends un bon grand respir et te dirige au travail, ça va passer."
-choix_shooter = "Tu décides de prendre 2-3 shooters pour la confiance, il est midi quelque part comme on dit"
-choix_03 = "CCCC"
-choix_04 = "DDDD"
-choix_05 = "EEEE"
-choix_06 = "FFFF"
-choix_07 = "GGGG"
-choix_08 = "HHHH"
+choix_intro_01 = "Tu prends un bon grand respir et te dirige au travail, ça va passer."
+choix_intro_02 = "Tu décides de prendre 2-3 shooters pour la confiance, il est midi quelque part comme on dit"
+choix_02_01 = "Tu décides d'aller remplir une chaudière d'eau bouillante salée et une chaudière d'eau glacée pour les patates."
+choix_02_02 = "Tu restes immobile, paniqué. Tu vois un cuisinier au loin qui te fait signe d'approcher. Tu te rends vers lui."
+choix_02_03 = "Tu fouilles partout à la recherche de peinture blanche."
+
 
 
 def choisir_deux_options(choix1, choix2):
@@ -78,7 +76,7 @@ def choisir_trois_options(choix1, choix2, choix3):
 
 print("   ")
 print(intro)
-decision_01 = choisir_deux_options(choix_respir, choix_shooter)
+decision_01 = choisir_deux_options(choix_intro_01, choix_intro_02)
 
 if decision_01 == 2:
     print("   ")
