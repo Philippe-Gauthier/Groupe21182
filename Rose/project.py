@@ -43,7 +43,7 @@ class App:
         """
         self.window = window
         self.button_size = 67
-        self.testmode = False
+        self.testmode = True
         self.testPage = 6
         self.path = []
 
@@ -88,7 +88,8 @@ class App:
             37: st.p37,
             38: st.p38,
             39: st.p39,
-            40: st.p40
+            40: st.p40,
+            41: st.p41
         }
 
         # ceci est un dictionnaire qui associe chaque numero de page a une liste de pages suivantes en fonction du bouton appuye (1 pour A, 2 pour B, 3 pour C, 4 pour D etc.)

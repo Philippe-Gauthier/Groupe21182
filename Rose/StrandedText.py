@@ -130,7 +130,7 @@ class p15 :
     option4 = "Sleep"
 
 class p16 :
-    text = "page 16"
+    text = "Using what little energy you have left, you start swimming towards the island. Unforgivable, the ocean waves try to push you away. You try to keep swimming, but your arms are slowly giving out. You know you won't be able to go on much longer, but you also know that if you stop, you'll be at the mercy of the ocean. So, you keep pushing forward, hoping to reach the island before you collapse. What feels like a few hours later, the island is finally close enough for your feet to touch the sand. You try to get up to reach the beach as fast as you can, but your legs are also giving out. "
 
     option1 = "Sleep"
     option2 = "Sleep"
