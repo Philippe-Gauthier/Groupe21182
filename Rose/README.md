@@ -34,10 +34,15 @@ La structure de controle sera un arbre, donc elle sera lineaire. Cependant, je f
 
 | Feature | Work in progress | Fontionnel |
 |---|---|---|
-| Logique changement page || Oui |
+| Logique changement page |Non| Oui |
 |Histoire|Oui|Oui|
 |Temperature|Oui|Oui|
 |Temps|Oui|Oui|
 |Pages de fin|Oui|Oui|
+|Ajout images|Non|Non|
+|Changement nom personnage|Non|Non|
+|Options pour choisir histoire|Non|Non|
+|Menu|Non|Non|
+
 
 
