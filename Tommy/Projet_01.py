@@ -14,8 +14,10 @@ choix_intro_02 = "Tu décides de prendre 2-3 shooters pour la confiance, il est 
 choix_02_01 = "Tu décides d'aller remplir une chaudière d'eau bouillante salée et une chaudière d'eau glacée pour les patates."
 choix_02_02 = "Tu restes immobile, paniqué. Tu vois un cuisinier au loin qui te fait signe d'approcher. Tu te rends vers lui."
 choix_02_03 = "Tu fouilles partout à la recherche de peinture blanche."
-choix_04_01 = "Tu vois deux chaudières remplies d'eau. Tu décides de sauver du temps et mieux paraître. Tu pars avec "
-choix_04_02 = ""
+choix_04_01 = "Tu vois deux chaudières remplies d'eau. Tu décides de sauver du temps pour mieux paraître. Tu pars avec."
+choix_04_02 = "Tu prends les deux chaudières vides du bord et retourne en cuisine."
+choix_05_01 = ""
+choix_05_02 = ""
 
 
 def choisir_deux_options(choix1, choix2):
@@ -88,17 +90,22 @@ if decision_01 == 1:
     print("   ")
     print(page_03)
 
+
+
 if decision_02 == 1:
     print("   ")
     print(page_04)
+    decision_03 = choisir_deux_options(choix_04_01, choix_04_02)
 
 if decision_02 == 2:
     print("   ")
     print(page_05)
+    decision_04 = choisir_deux_options(choix_05_01, choix_05_02)
 
 if decision_02 == 3:
     print("   ")
     print(page_06)
+
 
     
 
