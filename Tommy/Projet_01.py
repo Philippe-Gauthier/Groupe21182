@@ -99,9 +99,8 @@ choix_28_02 = "Tu ne dis rien et ne fais que mimer une fermeture-éclair qui se 
 choix_33_01 = "Tu lui dis: «Mais c'est qui Maryse? Tout ce que vous dîtes ne fait aucun sens chef.»"
 choix_33_02 = "(Tu ne l'as jamais écouté et tu continues à nommer des phrases en lien avec les animaux): «Un air de boeuf, une tete de cochon... »"
 
-# Variable pour la fonction de choix.
+# Variable pour insérer dans la fonction choisir_options.
 absence_choix = " "
-
 
 # Fonction pour choix
 def choisir_options(choix1, choix2, choix3):
@@ -112,10 +111,10 @@ def choisir_options(choix1, choix2, choix3):
     But: demander à l'utilisateur de choisir une option
 
     """
+    
     while True: 
 
         if choix3 == absence_choix:
-          
           print("----------------------------------------------")
           print("   ")
           print(f"1: {choix1}")
@@ -134,7 +133,6 @@ def choisir_options(choix1, choix2, choix3):
 
      
         else:
-          
           print("----------------------------------------------")
           print("   ")
           print(f"1: {choix1}")
@@ -151,7 +149,6 @@ def choisir_options(choix1, choix2, choix3):
              print("   ")
              print("J'aime ton énergie, mais il faudrait choisir une des options proposées.")
              print("   ")
-
 
 # Début du jeu
 print(page_01)
@@ -188,7 +185,30 @@ if decision_01 == 2:
 
                 elif decision_12 == 2:
                     print(page_20)
-                    decision_20 = choisir_options(choix_19_01, choix_19_02, absence_choix)
+                    decision_20 = choisir_options(choix_20_01, choix_20_02, absence_choix)
+
+                    if decision_20 == 1:
+                        print(page_31)
+
+                    elif decision_20 == 2:
+                        print(page_32)
+
+                elif decision_12 == 3:
+                    print(page_21)
+                    decision_21 = choisir_options(choix_21_01, choix_21_02, absence_choix)
+
+                    if decision_21 == 1:
+                        print(page_33)
+                        decision_33 = choisir_options(choix_33_01, choix_33_02, absence_choix)
+
+                        if decision_33 == 1:
+                            print(page_45)
+                        
+                        elif decision_33 == 2:
+                            print(page_46)
+
+                    elif decision_21 == 2:
+                        print(page_34)
 
             elif decision_08 == 2:
                   print(page_13)
@@ -202,9 +222,85 @@ if decision_01 == 2:
 
         elif decision_05 == 2:
             print(page_10)
+            decision_10 = choisir_options(choix_10_01, choix_10_02, absence_choix)
+
+            if decision_10 == 1:
+                print(page_14)
+
+            elif decision_10 == 2:
+                print(page_15)
+                decision_15 = choisir_options(choix_15_01, choix_15_02, absence_choix)
+
+                if decision_15 == 1:
+                    print(page_22)
+                    decision_22 = choisir_options(choix_22_01, choix_22_02, absence_choix)
+
+                    if decision_22 == 1:
+                        print(page_35)
+
+                    elif decision_22 == 2:
+                        print(page_36)
+
+                elif decision_15 == 2:
+                    print(page_23)
+                    decision_23 = choisir_options(choix_23_01, choix_23_02, absence_choix)
+
+                    if decision_23 == 1:
+                        print(page_37)
+
+                    elif decision_23 == 2:
+                        print(page_38)
 
         elif decision_05 == 3:
             print(page_11)
+            decision_11 = choisir_options(choix_11_01, choix_11_02, choix_11_03)
+
+            if decision_11 == 1:
+                print(page_16)
+                decision_16 = choisir_options(choix_16_01, choix_16_02, choix_16_03)
+
+                if decision_16 == 1:
+                    print(page_24)
+
+                elif decision_16 == 2:
+                    print(page_25)
+                    decision_25 = choisir_options(choix_25_01, choix_25_02, absence_choix)
+
+                    if decision_25 == 1:
+                        print(page_39)
+
+                    elif decision_25 == 2:
+                        print(page_40)
+
+                elif decision_16 == 3:
+                    print(page_26)
+                    decision_26 = choisir_options(choix_26_01, choix_26_02, absence_choix)
+
+                    if decision_26 == 1:
+                        print(page_41)
+
+                    elif decision_26 == 2:
+                        print(page_42)
+
+            elif decision_11 == 2:
+                print(page_17)
+
+            elif decision_11 == 3:
+                print(page_18)
+                decision_18 = choisir_options(choix_18_01, choix_18_02, absence_choix)
+
+                if decision_18 == 1:
+                    print(page_27)
+
+                elif decision_18 == 2:
+                    print(page_28)
+                    decision_28 = choisir_options(choix_28_01, choix_28_02, absence_choix)
+
+                    if decision_28 == 1:
+                        print(page_43)
+
+                    elif decision_28 == 2:
+                        print(page_44)
 
     elif decision_02 == 3:
         print(page_06)
