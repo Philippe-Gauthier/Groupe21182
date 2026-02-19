@@ -3,8 +3,8 @@ Tommy Brunelle
 Fichier principal du projet de livre interactif
 
 """
-# Pages du livres/Mises en situation.
-intro = "C'est le grand jour, tes mensonges ont porté fruit.\nTu commences ton premier quart de travail en tant que chef cuisinier dans 1h.\nTu es remplis de remords face aux mensonges liés à cette embauche, mais il faut ce qu'il faut pour arriver hein?\nTu dois te préparer à partir, mais tu es terriblement stressé."
+# Pages du livre/Mises en situation.
+page_01 = "C'est le grand jour, tes mensonges ont porté fruit.\nTu commences ton premier quart de travail en tant que chef cuisinier dans 1h.\nTu es remplis de remords face aux mensonges liés à cette embauche, mais il faut ce qu'il faut pour arriver hein?\nTu dois te préparer à partir, mais tu es terriblement stressé."
 page_02 = "Tu arrives en cuisine et tout semble normal, personne ne mentionne l'odeur d'alcool. Le chef arrive et te salue. «On est dans le rush déjà pour la préparation, va blanchir des patates.»"
 page_03 = "Une fois arrivé, le chef te dévisage instantanémment. Il te reniffle. «T'es clairement ajeun...T'es pas un vrai cook!» Il te crie dessus et te force à quitter les lieux.\n\nGame Over\n"
 page_04 = "Il te faut des chaudières, tu cherches un peu et entre dans une chambre froide où il y a plein plein plein de chaudières."
@@ -53,8 +53,8 @@ page_46 = "Le chef n'a pas l'air d'apprécier. Il soupir fort et te dis de laiss
 
 # Options disponibles pour chaque page.
 # Nomenclature: choix_(# de page)_(choix # x)
-choix_intro_01 = "Tu prends un bon grand respir et te dirige au travail, ça va passer."
-choix_intro_02 = "Tu décides de prendre 2-3 shooters pour la confiance, il est midi quelque part comme on dit"
+choix_01_01 = "Tu prends un bon grand respir et te dirige au travail, ça va passer."
+choix_01_02 = "Tu décides de prendre 2-3 shooters pour la confiance, il est midi quelque part comme on dit"
 choix_02_01 = "Tu décides d'aller remplir une chaudière d'eau bouillante salée et une chaudière d'eau glacée pour les patates."
 choix_02_02 = "Tu restes immobile, paniqué. Tu vois un cuisinier au loin qui te fait signe d'approcher. Tu te rends vers lui."
 choix_02_03 = "Tu fouilles partout à la recherche de peinture blanche."
@@ -65,10 +65,39 @@ choix_05_02 = "Tu prends un couteau et fixe la carotte devant toi."
 choix_05_03 = "Tu lui avoue ne rien savoir et que tu as besoin d'aide pour ne pas que ça paraisse."
 choix_08_01 = "Tu te places au seul poste où il y n'y a personne...Tu attends."
 choix_08_02 = "Tu demandes au chef quand est-ce qu'on prend la pause de 15 minutes"
-choix_10_01 = "Tu paniques encore plus, tu quittes la station et va aviser ton chef que tu ne te sens pas en sécurité."
-choix_10_02 = ""
-choix_11_01 = ""
-choix_11_02 = ""
+choix_10_01 = "Tu paniques encore plus, tu quittes la station et tu vas aviser ton chef que tu ne te sens pas en sécurité."
+choix_10_02 = "Tu complimentes son tattoo et lui demande si c'est son premier."
+choix_11_01 = "Tu dis: «Sérieux? Heille toi! Va blanchir des patates!»"
+choix_11_02 = "Tu réponds: «D'accord...» Tu hésites. «Coupe les légumes pour ce soir!»"
+choix_11_03 = "Tu dis: «Nice. Toi là-bas! donne moi 20$!»"
+choix_12_01 = "Tu ris dans sa face en entendant cet enchainement de mots et tu penses qu'il te niaise."
+choix_12_02 = "Tu pars chercher ce qu'on te demande. Tu reviens avec des oeufs."
+choix_12_03 = "Tu regardes autour de toi et tu prends la première chose que tu vois: des bols en stainless."
+choix_15_01 = "Tu tentes de sauver la situation: «C'est ton premier shift?»"
+choix_15_02 = "Tu râcles ta gorge et répètes: «C'est ton premier tattoo?»"
+choix_16_01 = "Tu fixes un autre employé et tu claques des doigts pour qu'il te regarde. «J'ai besoin de persil!»"
+choix_16_02 = "Tu ajoutes: «Toi!, vite, j'ai besoin de lait!»"
+choix_16_03 = "Tu demandes en blague une cigarette. «Vite, j'ai besoin d'une clope!»"
+choix_18_01 = "Tu rétorques: «De quoi, non? Fais ce que je te dis!»"
+choix_18_02 = "Tu renchéris avec un air baveux: «Ok...30$?»"
+choix_19_01 = "Tu réponds avec un ton incertain: «Bin oui je sais c'est quoi...»"
+choix_19_02 = "Tu le corriges: «Ça s'appelle un cloaque.»"
+choix_20_01 = "Tu mens: «Pas besoin, je suis un pro. Fais-moi confiance.»"
+choix_20_02 = "Tu décides d'être honnête: «Chef, je ne sais pas ce que je fais... Voulez-vous m'apprendre?»"
+choix_21_01 = "Tu lui demandes tanné: «Est-ce que tu me niaises depuis tantôt? Des culs de poule, des langues de chats...»"
+choix_21_02 = "Tu prends une louche près de toi."
+choix_22_01 = "Tu lèves les mains dans les airs et réponds nerveux:«Woah! Pour vrai je cherche pas la marde, promis!»"
+choix_22_02 = "Tu ne te laisses pas parler demême, tu réponds avec un ton hautain: «En ce-moment? Ton attitude.»"
+choix_23_01 = "Tu lui réponds: «Honnêtement, Non.»"
+choix_23_02 = "Tu lui dis en hésitant: «Euhmm Ok..Oui»"
+choix_25_01 = "Tu fais semblant de rire. Tu lui réponds: «Tu pourrais aller chez ta mère et aller le prendre directement de la vache haha»"
+choix_25_02 = "Tu fais semblant de rire et tu vas t'enfermer dans une des chambres froide. Cette blague t'as atteint."
+choix_26_01 = "Tu commences à fumer."
+choix_26_02 = "Tu ris et t'exclames: «Bin voyons gang, je niaisais. Ça m'écoeure la cigarette.»"
+choix_28_01 = "Intimidé par sa carrure, tu sors 50$ de ton porte-feuille."
+choix_28_02 = "Tu ne dis rien et ne fais que mimer une fermeture-éclair qui se ferme par-dessus ta bouche."
+choix_33_01 = "Tu lui dis: «Mais c'est qui Maryse? Tout ce que vous dîtes ne fait aucun sens chef.»"
+choix_33_02 = "(Tu ne l'as jamais écouté et tu continues à nommer des phrases en lien avec les animaux): «Un air de boeuf, une tete de cochon... »"
 
 # Variable pour la fonction de choix.
 absence_choix = " "
@@ -121,12 +150,12 @@ def choisir_options(choix1, choix2, choix3):
              print("   ")
 
 
-
+# Début du jeu
 print("   ")
-print(intro)
-decision_intro = choisir_options(choix_intro_01, choix_intro_02, absence_choix)
+print(page_01)
+decision_01 = choisir_options(choix_01_01, choix_01_02, absence_choix)
 
-if decision_intro == 2:
+if decision_01 == 2:
     print("   ")
     print(page_02)
     decision_02 = choisir_options(choix_02_01, choix_02_02, choix_02_03)
