@@ -106,11 +106,6 @@ choix_33_02 = "Tu réponds rapidement: «J'ai pas eu de cours chef!»"
 # Variable pour insérer dans la fonction choisir_options.
 absence_choix = " "
 
-
-def supprimer_vieux_texte():
-    os.system("cls") #os.system permet d'exécuter une commande du terminal à partir de python
-    #cls = commande pour vider le terminal sur Windows
-
 # Fonction pour choix
 def choisir_options(choix1, choix2, choix3):
       
@@ -149,6 +144,17 @@ def choisir_options(choix1, choix2, choix3):
           
           else:
               print("\nJ'aime ton énergie, mais il faudrait choisir une des options proposées.\n")
+
+def supprimer_vieux_texte():
+    """
+    Entrées: Aucune
+    Sortie: commande (string)
+    But: effacer le texte dans le terminal.(Entrer la commande "clear" sans avoir à l'écrire.)
+
+    """
+    os.system("cls") #os.system permet d'exécuter une commande du terminal à partir de python
+    #cls = commande pour vider le terminal sur Windows
+
 
 # Début du jeu
 supprimer_vieux_texte()
