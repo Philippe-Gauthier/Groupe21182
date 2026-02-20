@@ -147,7 +147,7 @@ def choisir_options(choix1, choix2, choix3):
 def supprimer_vieux_texte():
     """
     Entrées: Aucune
-    Sortie: commande (string)
+    Sortie: commande
     But: effacer le texte dans le terminal.(Entrer la commande "clear" sans avoir à l'écrire.)
 
     """
