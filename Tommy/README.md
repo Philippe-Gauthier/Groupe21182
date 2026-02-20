@@ -24,4 +24,4 @@
   
 
 # *CHEAT SHEET*
-![Le plan de toutes les branches possibles.](image.png)
+![](image.png)
