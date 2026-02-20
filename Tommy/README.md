@@ -20,7 +20,8 @@
 - Chaque décision vous fait progresser tranquillement dans l'histoire et vous emmène vers une nouvelle situation unique. Aucun chemin n'est le même et aucune décision ne vous apportera au même endroit.
 
 # À FAIRE
-- Rédiger l'histoire ainsi que les choix possibles
-- Choisir les fonctions utilisées pour la programmation
-- Programmer le tout
-- Tester le produit final/debugging
+- Ajouter du contenu à l'histoire ainsi que de nouveaux choix possibles.
+  
+
+# *CHEAT SHEET*
+![Le plan de toutes les branches possibles.](image.png)
