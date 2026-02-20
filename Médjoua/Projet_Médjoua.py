@@ -25,7 +25,7 @@ def trouver_reponse(Question, choix1, choix2, choix3,) :
  if decision in ("1","2","3"):
     return int(decision)
  else:
-  print ("Fin du jeu")
+  print ("Erreur de choix")
 
  return decision
 
