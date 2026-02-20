@@ -8,10 +8,10 @@ Jeu de question à choix multiple.
 
 ## Description du projet.
  Le jeu sera composé de :
-- Questions.
-- choix 1.
-- choix 2.
-- choix 3.
+- questions
+- choix 1
+- choix 2
+- choix 3
 - possibiliter de retour à la question s'il ne choisir pas entre ses trois choix proposés.
 
 ## But du projet
