@@ -44,7 +44,7 @@ if reponse == 1:
    reponse = trouver_reponse("Quel outil permet de mesurer le courant électrique?", "Multimètre", "Voltmètre", "Wattmètre")
    if reponse == 1:
       print("bonne reponse")
-   else:
+   else: 
       print("mauvaise reponse")
       
       reponse = trouver_reponse("Quelle est l unité du courant électrique ?", "watt", "Ohm", "Ampère")
@@ -94,7 +94,7 @@ if reponse == 1:
                                print("bonne reponse")
                             else:
                                print("mauvaise reponse")
-                               print("fin")
+                               print(" fin ")
 elif reponse == 2:
      print("Mauvaise reponse")
 # Les questions en fonction du choix 2 de la question principale.
@@ -157,7 +157,7 @@ elif reponse == 2:
                                    print("bonne reponse")
                                 else:
                                    print("mauvaise reponse")
-                                   print ("fin")
+                                   print (" fin ")
 elif reponse == 3:
  print("Mauvaise reponse")  
 # Les questions en fonction du choix 3 de la question principale.
@@ -196,7 +196,7 @@ elif reponse == 3:
                print("bonne reponse") 
               else:
                print("mauvaise reponse") 
-               print("fin")                           
+               print(" fin ")                           
 
 
 
