@@ -18,20 +18,10 @@ Jeu de question à choix multiple.
 Le but du jeu de question à choix multiple, permet a l'utilisateu d'apprendre à étudier en s'amusant. ce qui permet à l'utilisateur de trouver le jeu  amusant car sa developpe son cerveau à retenir plus rapidement.
 
 ## Entrer
-En entrer du jeu des questions à choix multiples. On aura les questions qui seront poser grace à la fonction ---
-```python
-Input(""),
-```
----
-Chaque question aura trois propositions de reponse dont une seul sera vrai. Les questions seront indentifier par des chiffres.
+En entrer du jeu des questions à choix multiples. Chaque question aura trois propositions de reponse dont une seul sera vrai. Les questions seront indentifier par des chiffres.
 
 ## sortir
-En sortir l'utilisateur fera un choix parmi les propositions de reponse donnée en entrer grace à la fonction ---
-
-```python
-print("")
-```
----. 
+En sortir l'utilisateur fera un choix parmi les propositions de reponse donnée en entrer.
 
 ## Sturcture Control
 Lorsque les questions seront affichées par la fonction print("") avvec les propositions de reponse identifier par des chiffres,
