@@ -24,4 +24,4 @@
   
 
 # *CHEAT SHEET*
-![](image.png)
+![Cheat](image.png)
