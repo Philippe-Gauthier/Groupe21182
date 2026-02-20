@@ -4,8 +4,7 @@ Fichier principal du projet de livre interactif
 
 """
 # Pour intéragir avec le système d'exploitation Windows
-# Pour la fonction supprimer_vieux_texte
-import os
+import subprocess
 
 # Pages du livre/Mises en situation.
 page_01 = "\n\nC'est le grand jour. Tes mensonges ont porté fruit.\nTu commences ton premier quart de travail en tant que chef cuisinier dans 1h.\nTu es remplis de remords face aux mensonges liés à cette embauche, mais il faut ce qu'il faut pour arriver hein?\nTu dois te préparer à partir, mais tu es terriblement stressé."
@@ -152,8 +151,11 @@ def supprimer_vieux_texte():
     But: effacer le texte dans le terminal.(Entrer la commande "clear" sans avoir à l'écrire.)
 
     """
-    os.system("cls") #os.system permet d'exécuter une commande du terminal à partir de python
-    #cls = commande pour vider le terminal sur Windows
+    subprocess.run("cls", shell=True)
+    # .run execute une commande
+    # "cls" est la commande "clearscreen" pour Windows qu'on run == ecrire "clear" sur le terminal
+    # shell=True execute la commande dans le cmd.exe de Windows. Sinon il cherche cls.exe et rien ne se passe.
+    
 
 
 # Début du jeu
