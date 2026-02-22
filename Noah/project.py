@@ -51,7 +51,7 @@ def afficher_chapitre(chapitre):
  
 """
 Fonction appeler a chaque fois qu'on clique sur un choix pour afficher et raffraichir le chapitre correspondant au choix fait en utilisant la fonction afficher_chapitre,
-elle prend en parametre le nom du nouveau chapitre a afficher recuperer dans le json.
+elle prend en parametre le nom du nouveau chapitre avec les options a afficher recuperer dans le json et ressort le choix dans les boutouns.
 
 """
 def choisir(nouveau_chapitre):
@@ -59,7 +59,7 @@ def choisir(nouveau_chapitre):
         afficher_chapitre(nouveau_chapitre)
 
 
-### TKINTER
+### TKINTER 
 
 # Creation de la fenetre principale
 fenetre = Tk()
