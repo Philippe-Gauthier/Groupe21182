@@ -20,4 +20,3 @@ L'histoire est sous forme d'un arbre, montant a 24 histoires différentes et 45 
 
 **Voici l'histoire sous forme d'arbre:** 
 ![Image de l'histoire sous forme d'arbre](cassey_arbre_colonne.png)
-
