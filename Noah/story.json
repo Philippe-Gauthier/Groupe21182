@@ -347,7 +347,7 @@
 
     "tapis": {
         "texte": "Le tapis devient de toute les couleurs, vos parents sont fous de rage.",
-        "choix1": {"texte": "Continuer", "destination": "1an_suite_altpleurer"},
+        "choix1": {"texte": "Continuer", "destination": "1an_suite_alt_dormir"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
@@ -357,7 +357,7 @@
 
     "chien": {
         "texte": "Le chien, devenu arc-en-ciel malgré lui, vous regarde avec une profonde incompréhension. Vos parents aussi.",
-        "choix1": {"texte": "Continuer", "destination": "1an_suite_altpleurer"},
+        "choix1": {"texte": "Continuer", "destination": "1an_suite_alt_dormir"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
@@ -367,7 +367,7 @@
 
     "ramper": {
         "texte": "Vous tentez une fuite stratégique en rampant… Vous êtes lent, mais déterminé. Vos parents vous attrapent au bout de trois secondes.",
-        "choix1": {"texte": "Continuer", "destination": "1an_suite_altpleurer"},
+        "choix1": {"texte": "Continuer", "destination": "1an_suite_alt_dormir"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
@@ -377,7 +377,7 @@
 
     "blamechien": {
         "texte": "Vous pointez du doigt le chien. Le chien vous regarde. Vos parents vous regardent. Le chien est innocent mais vous essayez quand même.",
-        "choix1": {"texte": "Continuer", "destination": "1an_suite_altpleurer"},
+        "choix1": {"texte": "Continuer", "destination": "1an_suite_alt_dormir"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
@@ -386,56 +386,312 @@
     },
 
     "1an_stdenispleurer": {
-        "texte": "Votre première année s’achève. Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
-        "choix1": {"texte": "Passer à l’âge suivant", "destination": null},
+        "texte": "Votre première année s’achève.\n Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
+        "choix1": {"texte": "Passer à l’âge suivant", "destination": "ecole_stdenis_pleurer"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/1an_suite.png",
+        "image": "img/survived.png",
         "age": "1 an"
     },
 
     "1an_suite_stdenis_dormir": {
-        "texte": "Votre première année s’achève. Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
-        "choix1": {"texte": "Passer à l’âge suivant", "destination": null},
+        "texte": "Votre première année s’achève.\n Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
+        "choix1": {"texte": "Passer à l’âge suivant", "destination": "ecole_stdenis_dormeur"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/1an_suite.png",
+        "image": "img/survived.png",
         "age": "1 an"
     },
 
     "1an_suite_sp_pleure": {
-        "texte": "Votre première année s’achève. Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
-        "choix1": {"texte": "Passer à l’âge suivant", "destination": null},
+        "texte": "Votre première année s’achève.\n Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
+        "choix1": {"texte": "Passer à l’âge suivant", "destination": "ecole_sp_sensible"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/1an_suite.png",
+        "image": "img/survived.png",
         "age": "1 an"
     },
 
     "1an_suite_sp_dodo": {
-        "texte": "Votre première année s’achève. Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
-        "choix1": {"texte": "Passer à l’âge suivant", "destination": null},
+        "texte": "Votre première année s’achève.\n Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
+        "choix1": {"texte": "Passer à l’âge suivant", "destination": "ecole_saintpierre_normal"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/1an_suite.png",
+        "image": "img/survived.png",
         "age": "1 an"
     },
 
     "1an_suite_altpleurer": {
-        "texte": "Votre première année s’achève. Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
-        "choix1": {"texte": "Passer à l’âge suivant", "destination": null},
+        "texte": "Votre première année s’achève.\n Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
+        "choix1": {"texte": "Passer à l’âge suivant", "destination": "ecole_alt_agite"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
-        "image": "img/1an_suite.png",
+        "image": "img/survived.png",
         "age": "1 an"
-    }
+    },
+
+    "1an_suite_alt_dormir": {
+        "texte": "Votre première année s’achève.\n Vous avez vécu beaucoup plus d'aventures que la plupart des bébés. Le monde vous attend.",
+        "choix1": {"texte": "Passer à l’âge suivant", "destination": "ecole_alt_agite"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/survived.png",
+        "age": "1 an"
+    },
     
+    "ecole_stdenis_pleurer": {
+        "texte": "Vous arrivez à l’école primaire de Saint-Denis. \n Le bruit, la lumière, tout semble amplifier votre sensibilité.",
+        "choix1": {"texte": "Chercher un coin tranquille", "destination": "stdenis_pleurer_coin"},
+        "choix2": {"texte": "Observer les autres enfants", "destination": "stdenis_pleurer_observer"},
+        "choix3": {"texte": "Tenter de parler à quelqu’un", "destination": "stdenis_pleurer_proche"},
+        "choix4": {"texte": "Dessiner pour se calmer", "destination": "stdenis_pleurer_dessiner"},
+        "image": "img/ecolestdenis.png",
+        "age": "6 ans"
+    },
+
+    "stdenis_pleurer_coin": {
+        "texte": "Vous vous installez dans un coin discret. Le calme vous apaise, mais vous ratez certaines interactions.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_coin"},
+        "choix2": {"texte": "Regarder par la fenêtre", "destination": "fin_stdenis_pleurer_coin"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/coin.png",
+        "age": "6 ans"
+    },
+
+    "stdenis_pleurer_observer": {
+        "texte": "Vous observez les autres enfants. Les tensions et les chamailleries vous fatiguent vite.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_observer"},
+        "choix2": {"texte": "S’isoler encore plus", "destination": "fin_stdenis_pleurer_observer"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/observer.png",
+        "age": "6 ans"
+    },
+
+    "stdenis_pleurer_proche": {
+        "texte": "Vous tentez timidement de parler à un camarade. Il est un peu brusque, vous vous sentez déstabilisé.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_proche"},
+        "choix2": {"texte": "Chercher un autre enfant", "destination": "fin_stdenis_pleurer_proche"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/proche.png",
+        "age": "6 ans"
+    },
+
+    "stdenis_pleurer_dessiner": {
+        "texte": "Vous dessinez un petit monde où tout est calme. Les couleurs vous apaisent.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_dessiner"},
+        "choix2": {"texte": "Montrer le dessin à la maîtresse", "destination": "fin_stdenis_pleurer_dessiner"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/dessiner.png",
+        "age": "6 ans"
+    },
+
+    "ecole_stdenis_dormeur": {
+        "texte": "Vous arrivez à l’école de Saint-Denis, mais vous aimez rester calme et observer. Vous cherchez une place tranquille.",
+        "choix1": {"texte": "S’asseoir et regarder le tableau", "destination": "stdenis_dormeur_tableau"},
+        "choix2": {"texte": "Rester assis dans un coin", "destination": "stdenis_dormeur_coin"},
+        "choix3": {"texte": "Fermer les yeux un instant", "destination": "stdenis_dormeur_sieste"},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/ecolestdenis.png",
+        "age": "6 ans"
+    },
+
+    "stdenis_dormeur_tableau": {
+        "texte": "Vous regardez le tableau avec attention, mais vous avez du mal à rester éveillé longtemps.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_dormeur_tableau"},
+        "choix2": {"texte": "Faire un petit dessin", "destination": "fin_stdenis_dormeur_tableau"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/tableau.png",
+        "age": "6 ans"
+    },
+
+    "stdenis_dormeur_coin": {
+        "texte": "Vous restez assis dans un coin, observant les autres. Le temps passe lentement mais paisiblement.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_dormeur_coin"},
+        "choix2": {"texte": "Regarder par la fenêtre", "destination": "fin_stdenis_dormeur_coin"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/coin.png",
+        "age": "6 ans"
+    },
+
+    "stdenis_dormeur_sieste": {
+        "texte": "Vous fermez les yeux un instant et laissez le sommeil vous gagner. Vous vous sentez bien reposé.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_dormeur_sieste"},
+        "choix2": {"texte": "Se réveiller pour observer", "destination": "fin_stdenis_dormeur_sieste"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/dort3.png",
+        "age": "6 ans"
+    },
+
+    "ecole_saintpierre_normal": {
+        "texte": "Vous arrivez à l’école de Saint-Pierre. L’énergie des autres enfants vous stimule.",
+        "choix1": {"texte": "Participer à un jeu", "destination": "sp_normal_jeu"},
+        "choix2": {"texte": "Parler à un camarade", "destination": "sp_normal_parler"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/ecolesaintpierre.png",
+        "age": "6 ans"
+    },
+
+    "sp_normal_jeu": {
+        "texte": "Vous participez au jeu et vous amusez. Les autres enfants vous acceptent facilement.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_normal_jeu"},
+        "choix2": {"texte": "Continuer à jouer", "destination": "sp_normal_jeu"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/jeu.png",
+        "age": "6 ans"
+    },
+
+    "sp_normal_parler": {
+        "texte": "Vous parlez à un camarade et échangez vos idées. Vous gagnez un nouvel ami.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_normal_parler"},
+        "choix2": {"texte": "Continuer la conversation", "destination": "sp_normal_parler"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/premiermot.png",
+        "age": "6 ans"
+    },
+
+    "ecole_saintpierre_sensible": {
+        "texte": "Vous êtes un enfant sensible et l’école est moins bruyante que ce que vous pensiez.",
+        "choix1": {"texte": "Chercher un coin calme", "destination": "sp_sensible_coin"},
+        "choix2": {"texte": "Regarder les autres attentivement", "destination": "sp_sensible_observer"},
+        "choix3": {"texte": "Participer timidement", "destination": "sp_sensible_participer"},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/ecolesaintpierre.png",
+        "age": "6 ans"
+    },
+
+    "sp_sensible_coin": {
+        "texte": "Vous vous asseyez et observez. Vous commencez à vous sentir plus confiant petit à petit.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_sensible_coin"},
+        "choix2": {"texte": "Tenter d’aborder un camarade", "destination": "fin_sp_sensible_coin"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/coin.png",
+        "age": "6 ans"
+    },
+
+    "sp_sensible_observer": {
+        "texte": "Vous observez les autres, et votre confiance grandit lentement.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_sensible_observer"},
+        "choix2": {"texte": "Participer timidement", "destination": "fin_sp_sensible_observer"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/observer.png",
+        "age": "6 ans"
+    },
+
+    "sp_sensible_participer": {
+        "texte": "Vous participez timidement, mais les autres enfants répondent gentiment. Vous commencez à vous renforcer.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_sensible_participer"},
+        "choix2": {"texte": "Essayer un autre jeu", "destination": "fin_sp_sensible_participer"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/jeu.png",
+        "age": "6 ans"
+    },
+
+    "ecole_alt_agite": {
+        "texte": "Vous arrivez à l’école primaire. Votre esprit farceur vous pousse à des idées loufoques dès le premier jour.",
+        "choix1": {"texte": "Faire une blague au professeur", "destination": "alt_troll_blague"},
+        "choix2": {"texte": "Cacher les affaires des camarades", "destination": "alt_troll_cacher"},
+        "choix3": {"texte": "Dire des bêtises absurdes en classe", "destination": "alt_troll_betises"},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/ecolestdenis.png",
+        "age": "6 ans"
+    },
+
+    "alt_troll_blague": {
+        "texte": "Vous dites au professeur que vous avez vu un extraterrestre dans la cour. Tout le monde éclate de rire, mais vous êtes envoyé au coin.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_troll_blague"},
+        "choix2": {"texte": "Raconter une autre histoire", "destination": "fin_alt_troll_blague"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/blague.png",
+        "age": "6 ans"
+    },
+
+    "alt_troll_cacher": {
+        "texte": "Vous cachez les crayons de vos camarades sous le bureau. Ils cherchent partout, et vous riez en silence.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_troll_cacher"},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/cacher.png",
+        "age": "6 ans"
+    },
+
+    "alt_troll_betises": {
+        "texte": "Vous affirmez que les dodos vivent encore dans les égouts. Les autres enfants vous croient à moitié.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_troll_betises"},
+        "choix2": {"texte": "Inventer une autre théorie folle", "destination": "fin_alt_troll_betises"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/betises.png",
+        "age": "6 ans"
+    },
+
+    "ecole_alt_actif": {
+        "texte": "Vous arrivez à l’école primaire. Pas le temps de rester calme : vous commencez à créer des situations absurdes dès la porte franchie.",
+        "choix1": {"texte": "Lancer une gomme dans la tête du globe", "destination": "alt_actif_globe"},
+        "choix2": {"texte": "Empiler les chaises jusqu’au plafond", "destination": "alt_actif_chaises"},
+        "choix3": {"texte": "Attraper le tableau et le faire tomber", "destination": "alt_actif_tableau"},
+        "choix4": {"texte": "Mettre de la craie partout comme un artiste fou", "destination": "alt_actif_craie"},
+        "image": "img/ecolestdenis.png",
+        "age": "6 ans"
+    },
+
+    "alt_actif_globe": {
+        "texte": "Vous lancez la gomme… et elle rebondit sur le globe, et vole sur le professeur. La classe éclate de rire ou de panique.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_actif_globe"},
+        "choix2": {"texte": "Lancer un autre objet", "destination": "fin_alt_actif_globe"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/globe.png",
+        "age": "6 ans"
+    },
+
+    "alt_actif_chaises": {
+        "texte": "Vous empilez les chaises jusqu’au plafond. Le professseur n'est pas content, tout le monde rit.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_actif_chaises"},
+        "choix2": {"texte": "Casser la pile en riant", "destination": "fin_alt_actif_chaises"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/chaises.png",
+        "age": "6 ans"
+    },
+
+    "alt_actif_tableau": {
+        "texte": "Vous arrachez le tableau du mur et le faites tomber. Le bruit est énorme, le professeur est choqué.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_actif_tableau"},
+        "choix2": {"texte": "Cacher le tableau derrière vous", "destination": "fin_alt_actif_tableau"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/tableau2.png",
+        "age": "6 ans"
+    },
+
+    "alt_actif_craie": {
+        "texte": "Vous dispersez la craie partout sur le sol et les tables. Les enfants glissent, le professeur glousse et soupire.",
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_actif_craie"},
+        "choix2": {"texte": "Tracer des formes étranges sur tous les murs", "destination": "fin_alt_actif_craie"},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/tableau2.png",
+        "age": "6 ans"
+    }
 }
-
-
-
