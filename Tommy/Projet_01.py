@@ -113,7 +113,7 @@ def choisir_options(page, choix_01, choix_02, choix_03):
     But: Afficher le scénario et demander à l'utilisateur de choisir une option.
 
     """
-    # Boucle qui permet de sécuriser toutes les entrées et afficher un message si l'une d'elle est considérée comme non valide.
+    # Boucle qui permet de réafficher le texte et les choix si une entrée est non valide
     while True: 
         
         # S'il n'y a que deux choix.
@@ -127,7 +127,8 @@ def choisir_options(page, choix_01, choix_02, choix_03):
 
             # Effacer(clear) le terminal pour afficher du nouveau texte et faciliter la lecture.
             subprocess.run("cls", shell=True)
-
+            
+            # Sécuriser les entrées
             if decision == "1" or decision == "2":
                 return int(decision)
           
@@ -143,6 +144,7 @@ def choisir_options(page, choix_01, choix_02, choix_03):
 
             subprocess.run("cls", shell=True)
 
+            # Sécuriser les entrées
             if decision == "1" or decision == "2" or decision == "3":
                 return int(decision)
           
