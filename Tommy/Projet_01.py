@@ -175,7 +175,7 @@ def choisir_options(page, choix_01, choix_02, choix_03):
             
             # Afficher la page et les options qui y sont associées.
             print(f"{page}\n\nQue fais-tu?")
-            print(("_" * 79) + "\n")
+            print(("_" * 100) + "\n")
             print(f"1: {choix_01}\n2: {choix_02}\n")
             decision = (input("Choix: "))
 
@@ -192,7 +192,7 @@ def choisir_options(page, choix_01, choix_02, choix_03):
         # S'il y a trois choix.
         else:
             print(f"{page}\n\nQue fais-tu?")
-            print(("_" * 79) + "\n")
+            print(("_" * 100) + "\n")
             print(f"1: {choix_01}\n2: {choix_02}\n3: {choix_03}\n")
             decision = (input("Choix: "))
             
