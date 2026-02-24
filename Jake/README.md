@@ -1,7 +1,8 @@
 # Projet
-Fever Dream
+La forêt de Lancelot
 # Problème
-Survivre jusqu'au bout de ton rêve induit de Benadryl
+Découvrir le secret de la forêt
 # Thèmes
-Sombre, Fantastique
+Fantastique, fantaisie
+
 
