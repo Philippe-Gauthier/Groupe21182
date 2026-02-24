@@ -1,0 +1,13 @@
+note = int(input("Quelle est la note"))
+
+if note <= 100 and note >= 0:
+    if note >= 90:
+        print("A")
+    elif note >= 75:
+        print("B")
+    elif note >= 60:
+        print("C")
+    else:
+        print("echec")
+else: 
+    print("erreur")
