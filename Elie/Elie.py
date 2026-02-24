@@ -63,7 +63,7 @@ match reponse:
                                     exit()
 
                                 case "2":                                  
-                                    choix("Tu te dirige vers l'est et arrive à un cul-de-sac avec des ordures.","Abandonne et retourne chez toi","investiguer","Faire demi-tour vers l'ouest")
+                                    reponse = choix("Tu te dirige vers l'est et arrive à un cul-de-sac avec des ordures.","Abandonne et retourne chez toi","investiguer","Faire demi-tour vers l'ouest")
                                     match reponse:
                                     
                                         case "1":  
@@ -79,25 +79,25 @@ match reponse:
                                             elif resultat_poubelle == 3:
                                                 argent += 5
                                                 print("tu as trouvé 5$ tu as maintenant " + str(argent) + " $")
-                                            choix("Que fais-tu?","Faire demi-tour vers le nord.","Faire demi-tour vers l'ouest","quiter")
+                                            reponse = choix("Que fais-tu?","Faire demi-tour vers le nord.","Faire demi-tour vers l'ouest","quiter")
                                             
                                         #ouest
                                         case "3":
-                                            choix("Q2","A","B","C")
+                                            reponse = choix("Q2","A","B","C")
                                         
                                         case "quitter":
                                             print("au revoir")
                                             exit()
 
                                 case "3":
-                                    choix("Q2","A","B","C")
+                                    reponse = choix("Q2","A","B","C")
                                 
                                 case "quitter":
                                     print("au revoir")
                                     exit()
 
                     case "2":
-                        choix("Tu te dirige vers l'est et arrive à un cul-de-sac avec des ordures.","Abandonne et retourne chez toi","investiguer","Faire demi-tour vers l'ouest")
+                        reponse = choix("Tu te dirige vers l'est et arrive à un cul-de-sac avec des ordures.","Abandonne et retourne chez toi","investiguer","Faire demi-tour vers l'ouest")
                         match reponse:
                                     
                             case "1":  
@@ -117,14 +117,14 @@ match reponse:
                                             
                                         #ouest
                             case "3":
-                                choix("Q2","A","B","C")
+                                reponse = choix("Q2","A","B","C")
                                         
                             case "quitter":
                                 print("au revoir")
                                 exit()
         
                     case "3":
-                        choix("Q2","A","B","C")
+                        reponse = choix("Q2","A","B","C")
                     
                     case "quitter":
                         print("au revoir")
@@ -135,7 +135,7 @@ match reponse:
 
                 argent += 5
                 print("tu volle la poste de la grand mere sans deffence. Tu trouve 5$ et tu continue ton chemin avec un pas plus rapide. Tu as maintenant " + str(argent) + " $")
-                choix("Tu arrive au dépaneur et tu vois que le lait est a 20$ a cause des taifs et l'inflation tu as " + str(argent) + " $","Acheter le lait","Quitter le dépaneur et aller vers l'est","Quitter le dépaneur et aller vers l'ouest")
+                reponse = choix("Tu arrive au dépaneur et tu vois que le lait est a 20$ a cause des taifs et l'inflation tu as " + str(argent) + " $","Acheter le lait","Quitter le dépaneur et aller vers l'est","Quitter le dépaneur et aller vers l'ouest")
 
             case "3":
                 choix("Tu arrive au dépaneur et tu vois que le lait est a 20$ a cause des taifs et l'inflation tu as " + str(argent) + " $","Acheter le lait","Quitter le dépaneur et aller vers l'est","Quitter le dépaneur et aller vers l'ouest")
@@ -146,11 +146,11 @@ match reponse:
 
     #est
     case "2":
-        choix("Tu te dirige vers l'est et arrive à un cul-de-sac avec des ordures.","Faire demi-tour vers le nord.","investiguer","Faire demi-tour vers l'ouest")
+        reponse = choix("Tu te dirige vers l'est et arrive à un cul-de-sac avec des ordures.","Faire demi-tour vers le nord.","investiguer","Faire demi-tour vers l'ouest")
         match reponse:
             #nord
             case "1":  
-                choix("Q2","1","2","3")
+                reponse = choix("Q2","1","2","3")
             #investiguer les poubelles
             case "2":
                 resultat_poubelle = dice_roll("Echec critique: tu sors des poubelles avec une odeur terrible et les mais vides","Echec: tu sors des poubelles avec les mais vides ","Reussite: tu sors des poubelles avec 1$ ","Reussite critique: tu trouve une bouteille de lait intacte dans les poubelles! ")
@@ -160,18 +160,18 @@ match reponse:
                 elif resultat_poubelle == 3:
                     argent += 1
                     print("tu as " + str(argent) + " $")
-                choix("Que fais-tu?","Faire demi-tour vers le nord.","Faire demi-tour vers l'ouest","quiter")
+                    reponse = choix("Que fais-tu?","Faire demi-tour vers le nord.","Faire demi-tour vers l'ouest","quiter")
                 
             #ouest
             case "3":
-                choix("Q2","A","B","C")
+                reponse = choix("Q2","A","B","C")
             
             case "quitter":
                 print("au revoir")
                 exit()
     #ouest
     case "3":
-       choix("Vous vous dirigez vers l'ouest et trouve plusieurs source de revenus: une pizzeria qui recherche des livreurs, une table de black jack et un","","","C")
+       reponse = choix("Vous vous dirigez vers l'ouest et trouve plusieurs source de revenus: une pizzeria qui recherche des livreurs, une table de black jack et un","","","C")
 
     case "quitter":
         print("au revoir")
@@ -180,11 +180,11 @@ match reponse:
 #case ---------------
 match reponse:
     case "1":  
-        choix("Q2","1","2","3")
+        reponse = choix("Q2","1","2","3")
     case "2":
-        choix("Q2","A","B","C")
+        reponse = choix("Q2","A","B","C")
     case "3":
-       choix("Q2","A","B","C")
+       reponse = choix("Q2","A","B","C")
     
     case "quitter":
         print("au revoir")
