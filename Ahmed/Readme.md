@@ -1,5 +1,5 @@
-# entrée 
-- Les entrée du foncyion vont-être Question, choix1, choix2, choix3, et correct answer.
+# Entrée 
+- Les entrée du fonction vont-être Question, choix1, choix2, choix3, et correct answer.
 
 # Sortie
 - Le résultat affiché va être celui donner par retourne aprés toute les test fait par le programme précis pour le choix de réponse choisi
