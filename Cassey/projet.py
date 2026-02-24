@@ -4,23 +4,8 @@ Cassey Martin
 Fichier principale projet livre interactif
 """
 
-"""
-Structure en arbre
-Rappel: Aucune boucle permise.
-
-Trier par des lists en rangée pour le texte afficher
-(Incluant la question)
-Montrer les choix possibles, organiser en rangé aussi(associer aux lignes)
-
-Docstring doivent etre écrits pour chaque fonction, et pour le projet en général:
-Entrées: 
-Sorties:
-But:
-
-"""
-#tuples are ordered and unchangeable, lists are ordered and changeable, sets are unordered and unindexed, dictionaries are unordered, changeable and indexed
 introduction = "Un papillon vole dans la forêt, il est heureux et libre. Ensuite, que fais-t-il?" 
-nombere_colonne = int(5)
+nombre_colonne = int(5)
 choix_colonne_un = tuple("Il se pose sur une feuille", 
                         "Il fonce dans un oiseau", 
                         "Il essaie de trouver son ami perdu") # 3 choix
@@ -112,23 +97,69 @@ texte_colonne_quatre = ("Georgina casse les ailes de son frère George et son am
                         "Les autres papillons, n'étant pas leur première fois, les font partir et ils quittent le buffet affamer.",
                         "Ils sont heureux de quitter le buffet le ventre plein.") #24
 
+textes = (introduction, texte_colonne_un, texte_colonne_deux, texte_colonne_trois, texte_colonne_quatre)
+choix = (choix_colonne_un, choix_colonne_deux, choix_colonne_trois, choix_colonne_quatre)
+
+erreur = 0
+
 #Reste une list
 choix_afficher = []
 texte_afficher = str("")
 question_afficher = str("")
 
-commande = int(0)
+choix_faite = int(0)
+etat_actuel = 0
 
-#TODO: Trier les lists pour obtenir seulement les éléments nécessaires à afficher, et les afficher
-def trier_texte_afficher():
+#TODO: Commande 1
+#return tuple(texte, question, choix)
+def etat_actuel():
+    match etat_actuel:
+        case 0:
+            textes[0]
+            choix[0]
+            return 0
+        case 1:
+            textes[1]
+            choix[1]
+            return 0
+        case 2:
+            textes[2]
+            choix[2]
+            return 0
+        case 3:
+            textes[3]
+            choix[3]
+            return 0
+        case 4:
+            textes[4]
+            choix[4]
+            return 0
+        case _:
+            return 0
     return 0
+#TODO: Commande 2
 
+"""
+Entrées: choix_afficher, choix
+Sorties: String dans le terminal
+But: Trier liste pour obtenir les choix à afficher
+"""
 #TODO: Trier les lists pour obtenir seulement les éléments nécessaires à afficher, et les afficher
 def trier_choix_afficher():
+    global choix_afficher, choix
+    if(choix_afficher == []):
+        choix_afficher = choix[0]
+    if(choix_afficher == choix[0]):
+        index = commande
     return 0
 
 #TODO: Idéalement, trier les lists pour obtenir la question separement du texte, et les afficher
 def separer_texte_question():
+    return 0
+
+#TODO: Trier les lists pour obtenir seulement les éléments nécessaires à afficher, et les afficher
+def trier_texte_afficher():
+    global texte_afficher, textes
     return 0
 
 """
@@ -161,5 +192,60 @@ def print_final():
     print_saut_ligne()
     print("Entrez le numéro de votre choix pour continuer l'histoire.")
     print_saut_ligne()
+"""
+Entrées: choix_faite, etat_actuel, erreur
+Sortie: etat_actuel
+But: Changer d'état si désirer
+"""
+def changement_etat():
+    global choix_faite, etat_actuel, erreur
+    if choix_faite == 3 and etat_actuel == 0: #vérifie si peut passer au prochain état
+        return 1
+    elif choix_faite == 1 or choix_faite == 2:
+        return etat_actuel + 1
+    else: # sinon 
+        erreur += 1 
+        print_final()
+        print_saut_ligne()
+        print("Votre choix était invalide, veuillez le retapez")
+        print_saut_ligne()
+        return etat_actuel
 
-commande = int(input(print_final())) #input attend avant de se reéexecuter
+print_final() 
+choix_faite = int(input(print_final())) # 1er choix
+
+etat_actuel = changement_etat() # change état si peu
+print_final() 
+choix_faite = int(input(print_final())) #2em choix
+
+etat_actuel = changement_etat() # change état si peu
+print_final() 
+choix_faite = int(input(print_final())) #3em choix
+
+etat_actuel = changement_etat() # change état si peu
+print_final()
+choix_faite = int(input(print_final())) #4em choix
+
+if erreur > 0:
+    etat_actuel = changement_etat() # change état si peu
+    print_final() # X ranger
+    choix_faite = int(input(print_final())) #X choix
+    erreur -= 1
+else:
+    print_final_final()#devrais changer ou mettre logique
+
+if erreur > 0:
+    etat_actuel = changement_etat() # change état si peu
+    print_final() # X ranger
+    choix_faite = int(input(print_final())) #X choix
+    erreur -= 1
+
+if erreur > 0:
+    etat_actuel = changement_etat() # change état si peu
+    print_final() # X ranger
+    choix_faite = int(input(print_final())) #X choix
+    erreur -= 1
+
+if erreur > 0:
+    print("Trop d'erreurs ont été commise, le programme arrête de s'exécuter")
+
