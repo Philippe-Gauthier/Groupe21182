@@ -159,15 +159,25 @@ class App:
         # pour afficher le texte de la page, et des boutons pour les
         # options. On configure aussi la fenetre (taille, titre, couleur
         # de fond etc.)
-        self.text = tk.Text(window, height=17, width=10, font=("Helvetica", 16))
+        self.text = tk.Text(
+            window,
+            height=17,
+            width=10,
+            font=("Helvetica", 16),
+        )
         window.resizable(False, False)
         window.title("Livre")
         window.geometry("980x600")
         window.configure(bg="grey")
 
         self.text.grid(
-                    row=0, column=0, columnspan=2, sticky="NSEW", padx=5, pady=5
-                    )
+            row=0,
+            column=0,
+            columnspan=2,
+            sticky="NSEW",
+            padx=5,
+            pady=5,
+        )
         window.grid_rowconfigure(index=0, weight=0)
         window.grid_columnconfigure(index=0, weight=1)
 
@@ -176,8 +186,10 @@ class App:
         self.buttons = []
         for i in range(4):
             b = tk.Button(
-                        window, text="", command=lambda index=i + 1: self.on_button(index)
-                        )
+                window,
+                text="",
+                command=(lambda index=i + 1: self.on_button(index)),
+            )
             b.config(height=2, width=self.button_size)
             self.buttons.append(b)
 
@@ -221,13 +233,21 @@ class App:
                 options = ["", "", "", ""]
             else:
                 display = tw.fill(page.text, 100)
-                options = [page.option1, page.option2, page.option3, page.option4]
+                options = [
+                    page.option1,
+                    page.option2,
+                    page.option3,
+                    page.option4,
+                ]
                 self.append_to_path(self.curr_page)
                 tk.Button(
-                        self.window, text=f"Weather : {page.weather}\nTime : {page.time}",
-                        state=tk.DISABLED).grid(
-                        row=1, column=0, columnspan=2, pady=5, padx=5, sticky="W"
-                        )
+                    self.window,
+                    text=(f"Weather : {page.weather}\n"
+                          f"Time : {page.time}"),
+                    state=tk.DISABLED,
+                ).grid(
+                    row=1, column=0, columnspan=2, pady=5, padx=5, sticky="W"
+                )
 
                 self.text.config(state=tk.NORMAL)
                 self.text.delete("1.0", tk.END)
