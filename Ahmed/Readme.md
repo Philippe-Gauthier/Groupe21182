@@ -1,3 +1,6 @@
+# Description
+- Choice forge est un jeu qui permet de tester votre connaisances dans le mode de technologies, plus précisament sur le côté Hardware des ordinateurs.
+
 # Entrée 
 - Les entrée du fonction vont-être Question, choix1, choix2, choix3, et correct answer.
 
