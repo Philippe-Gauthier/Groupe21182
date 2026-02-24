@@ -24,7 +24,7 @@ def quiz(question, choix1, choix2, choix3, choix4, correct_answer):
     # Vérifie que la réponse de l'utilisateur est la bonne ou pas
     if decision == correct_answer:
         print("Bonne réponse!")
-    elif decision == valid_choices:
+    elif decision in valid_choices:
         correct_answer != valid_choices
         print("Mauvaise réponse!")
     # Si la réponse de l'utilisateur n'est pas valide, affiche un message d'erreur
