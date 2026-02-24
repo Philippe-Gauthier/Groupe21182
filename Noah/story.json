@@ -456,44 +456,114 @@
     },
 
     "stdenis_pleurer_coin": {
-        "texte": "Vous vous installez dans un coin discret. Le calme vous apaise, mais vous ratez certaines interactions.",
-        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_coin"},
-        "choix2": {"texte": "Regarder par la fenêtre", "destination": "fin_stdenis_pleurer_coin"},
+        "texte": "Vous vous installez dans un coin discret. Cependant d'autres enfants vous remarquent et se moquent de vous.",
+        "choix1": {"texte": "Vous pleurez. Fin de la journée", "destination": "fin_stdenis_pleurer_coin"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/coin.png",
         "age": "6 ans"
     },
 
+    "fin_stdenis_pleurer_coin": {
+        "texte": "Vous rentrez chez vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Vous ne voulez plus aller à l’école", "destination": null},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
+        "choix3": {"texte": "Dire que la journée était super", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/coin.png",
+        "age": "6 ans"
+    },
+
+
     "stdenis_pleurer_observer": {
         "texte": "Vous observez les autres enfants. Les tensions et les chamailleries vous fatiguent vite.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_observer"},
-        "choix2": {"texte": "S’isoler encore plus", "destination": "fin_stdenis_pleurer_observer"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/observer.png",
         "age": "6 ans"
     },
 
+    "fin_stdenis_pleurer_observer": {
+        "texte": "Vous rentrez chez vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "C'est pas aussi cool que ca avait l'air", "destination": "null"},
+        "choix2": {"texte": "Les gens sont méchants", "destination": null},
+        "choix3": {"texte": "Ne rien dire", "destination": null},
+        "choix4": {"texte": "Dire que la journée était super", "destination": null},
+        "image": "img/observer.png",
+        "age": "6 ans"
+    },
+
+
     "stdenis_pleurer_proche": {
         "texte": "Vous tentez timidement de parler à un camarade. Il est un peu brusque, vous vous sentez déstabilisé.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_proche"},
-        "choix2": {"texte": "Chercher un autre enfant", "destination": "fin_stdenis_pleurer_proche"},
+        "choix2": {"texte": "Chercher un autre enfant", "destination": "autre_stdenis_pleurer_proche"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/proche.png",
         "age": "6 ans"
     },
 
+    "autre_stdenis_pleurer_proche": {
+        "texte": "Vous cherchez un autre enfant. Vous trouvez un camarade plus calme.",
+        "choix1": {"texte": "Parler à ce camarade", "destination": "fin_autre_stdenis_pleurer_proche"},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/autre.png",
+        "age": "6 ans"
+    },
+
+    "fin_autre_stdenis_pleurer_proche": {
+        "texte": "Vous parlez à votre camarade. Vous rentrez chez vous en vous sentant mieux.",
+        "choix1": {"texte": "Fin de la journée", "destination": null},
+        "choix2": {"texte": "", "destination": null},
+        "choix3": {"texte": "", "destination": null},
+        "choix4": {"texte": "", "destination": null},
+        "image": null,
+        "age": null
+    },
+    "fin_stdenis_pleurer_proche": {
+        "texte": "Vous rentrez chez vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Que les gens sont stressant", "destination": null},
+        "choix2": {"texte": "C'est pas si pire", "destination": null},
+        "choix3": {"texte": "Ne rien dire", "destination": null},
+        "choix4": {"texte": "Dire que la journée était super", "destination": null},
+        "image": "img/proche.png",
+        "age": "6 ans"
+    },
+
     "stdenis_pleurer_dessiner": {
-        "texte": "Vous dessinez un petit monde où tout est calme. Les couleurs vous apaisent.",
+        "texte": "Vous dessinez un petit monde où tout est calme. Les couleurs vous apaisent. \n Cependant, les autres enfants ne comprennent pas votre dessin et se moquent de vous.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_pleurer_dessiner"},
-        "choix2": {"texte": "Montrer le dessin à la maîtresse", "destination": "fin_stdenis_pleurer_dessiner"},
+        "choix2": {"texte": "Montrer le dessin à la maîtresse", "destination": "fin_stdenis_pleurer_dessiner_maitresse"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/dessiner.png",
         "age": "6 ans"
     },
+    "fin_stdenis_pleurer_dessiner_maitresse": {
+        "texte": "Vous montrez votre dessin à la maîtresse. Elle vous complimente et vous dit que c'est très joli. \n vous rentrez chez vous en vous sentant un peu mieux.",
+        "choix1": {"texte": "Fin de la journée", "destination": null},
+        "choix2": {"texte": "", "destination": null},
+        "choix3": {"texte": "", "destination": null},
+        "choix4": {"texte": "", "destination": null},
+        "image": "img/proche.png",
+        "age": "6 ans"
+    },
+    "fin_stdenis_pleurer_dessiner": {
+        "texte": "Vous rentrez chez vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Les gens sont méchants", "destination": null},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
+        "choix3": {"texte": "Dire que la journée était super", "destination": null},
+        "choix4": {"texte": "", "destination": null},
+        "image": "img/proche.png",
+        "age": "6 ans"
+    },
+    
 
     "ecole_stdenis_dormeur": {
         "texte": "Vous arrivez à l’école de Saint-Denis, mais vous aimez rester calme et observer. Vous cherchez une place tranquille.",
@@ -508,32 +578,69 @@
     "stdenis_dormeur_tableau": {
         "texte": "Vous regardez le tableau avec attention, mais vous avez du mal à rester éveillé longtemps.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_dormeur_tableau"},
-        "choix2": {"texte": "Faire un petit dessin", "destination": "fin_stdenis_dormeur_tableau"},
+        "choix2": {"texte": "Faire un petit dessin", "destination": "fin_stdenis_dormeur_tableau_dessin"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/tableau.png",
         "age": "6 ans"
     },
 
+    "fin_stdenis_dormeur_tableau": {
+        "texte": "Vous vous réveillez en sursaut, réalisant que vous avez dormi pendant une partie de la journée. \n Vous rentrez chez vous en vous sentant un peu confus.",
+        "choix1": {"texte": "Dire à votre mère que vous avez dormi", "destination": null},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
+        "choix3": {"texte": "Dire que la journée était super", "destination": null},
+        "choix4": {"texte": "", "destination": null},
+        "image": "img/tableau.png",
+        "age": "6 ans"
+    },
+    
+    "fin_stdenis_dormeur_tableau_dessin": {
+        "texte": "Vous faites un dessin, les autres se moquent de votre dessin mais la maitresse vous encourage \n Vous reprenez confiance.",
+        "choix1": {"texte": "Dire à votre mère que les gens sont méchants", "destination": null},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
+        "choix3": {"texte": "Dire que la journée était super", "destination": null},
+        "choix4": {"texte": "", "destination": null},
+        "image": "img/tableau.png",
+        "age": "6 ans"
+    },
+
     "stdenis_dormeur_coin": {
-        "texte": "Vous restez assis dans un coin, observant les autres. Le temps passe lentement mais paisiblement.",
+        "texte": "Vous restez assis dans un coin, observant les autres. Le temps passe lentement mais paisiblement. \n Vous vous endormez.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_dormeur_coin"},
-        "choix2": {"texte": "Regarder par la fenêtre", "destination": "fin_stdenis_dormeur_coin"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/coin.png",
         "age": "6 ans"
     },
 
+    "fin_stdenis_dormeur_coin": {
+        "texte": "Vous vous réveillez en sursaut, réalisant que vous avez dormi pendant une partie de la journée. \n Vous rentrez chez vous en vous sentant un peu confus.",
+        "choix1": {"texte": "Dire à votre mère que vous avez dormi", "destination": null},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
+        "choix3": {"texte": "Dire que la journée était super", "destination": null},
+        "choix4": {"texte": "", "destination": null},
+        "image": "img/tableau.png",
+        "age": "6 ans"
+    },
+
     "stdenis_dormeur_sieste": {
-        "texte": "Vous fermez les yeux un instant et laissez le sommeil vous gagner. Vous vous sentez bien reposé.",
-        "choix1": {"texte": "Fin de la journée", "destination": "fin_stdenis_dormeur_sieste"},
-        "choix2": {"texte": "Se réveiller pour observer", "destination": "fin_stdenis_dormeur_sieste"},
+        "texte": "Vous vous réveillez et vous vous rendez compte que c'etait qu'un reve et vous etes au boulot en devant un rapport au patron (fin secrete)",
+        "choix1": {"texte": "Non disponible", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/dort3.png",
-        "age": "6 ans"
+        "age": "36 ans"
     },
+
+
+
+
+
+
+
 
     "ecole_saintpierre_normal": {
         "texte": "Vous arrivez à l’école de Saint-Pierre. L’énergie des autres enfants vous stimule.",
@@ -555,9 +662,20 @@
         "age": "6 ans"
     },
 
+    "fin_sp_normal_jeu": {
+        "texte": "Vous rentrez ches vous. Vous dites à votre mère que la journée était super.",
+        "choix1": {"texte": "Dire que la journée était super", "destination": null},
+        "choix2": {"texte": "Non disponible", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/jeu.png",
+        "age": "6 ans"
+    },
+
+
     "sp_normal_parler": {
         "texte": "Vous parlez à un camarade et échangez vos idées. Vous gagnez un nouvel ami.",
-        "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_normal_parler"},
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_normal_jeu"},
         "choix2": {"texte": "Continuer la conversation", "destination": "sp_normal_parler"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
@@ -578,56 +696,95 @@
     "sp_sensible_coin": {
         "texte": "Vous vous asseyez et observez. Vous commencez à vous sentir plus confiant petit à petit.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_sensible_coin"},
-        "choix2": {"texte": "Tenter d’aborder un camarade", "destination": "fin_sp_sensible_coin"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/coin.png",
         "age": "6 ans"
     },
 
+    "fin_sp_sensible_coin": {
+        "texte": "Vous rentrez ches vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Dire que la journée était pas spécial mais pas nulle", "destination": null},
+        "choix2": {"texte": "ce sera surement mieux demain", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/coin.png",
+        "age": "6 ans"
+    },
     "sp_sensible_observer": {
         "texte": "Vous observez les autres, et votre confiance grandit lentement.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_sensible_observer"},
-        "choix2": {"texte": "Participer timidement", "destination": "fin_sp_sensible_observer"},
+        "choix2": {"texte": "Participer timidement", "destination": "sp_normal_jeu"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/observer.png",
         "age": "6 ans"
     },
 
+    "fin_sp_sensible_observer": {
+        "texte": "Vous rentrez ches vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Dire que la journée était pas spécial mais pas nulle", "destination": null},
+        "choix2": {"texte": "Ce sera surement mieux demain", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/coin.png",
+        "age": "6 ans"
+    },
+
     "sp_sensible_participer": {
         "texte": "Vous participez timidement, mais les autres enfants répondent gentiment. Vous commencez à vous renforcer.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_sp_sensible_participer"},
-        "choix2": {"texte": "Essayer un autre jeu", "destination": "fin_sp_sensible_participer"},
+        "choix2": {"texte": "Essayer un autre jeu", "destination": "sp_normal_jeu"},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/jeu.png",
         "age": "6 ans"
     },
 
-    "ecole_alt_agite": {
+    "fin_sp_sensible_participer": {
+        "texte": "Vous rentrez ches vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Dire que la journée était pas trop mal", "destination": null},
+        "choix2": {"texte": "Ce sera surement mieux demain", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/jeu.png",
+        "age": "6 ans"
+    },
+
+    "ecole_alt_pl": {
         "texte": "Vous arrivez à l’école primaire. Votre esprit farceur vous pousse à des idées loufoques dès le premier jour.",
-        "choix1": {"texte": "Faire une blague au professeur", "destination": "alt_troll_blague"},
-        "choix2": {"texte": "Cacher les affaires des camarades", "destination": "alt_troll_cacher"},
-        "choix3": {"texte": "Dire des bêtises absurdes en classe", "destination": "alt_troll_betises"},
+        "choix1": {"texte": "Faire une blague au professeur", "destination": "alt_pl_blague"},
+        "choix2": {"texte": "Cacher les affaires des camarades", "destination": "alt_pl_cacher"},
+        "choix3": {"texte": "Dire des bêtises absurdes en classe", "destination": "alt_pl_betises"},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/ecolestdenis.png",
         "age": "6 ans"
     },
 
-    "alt_troll_blague": {
+    "alt_pl_blague": {
         "texte": "Vous dites au professeur que vous avez vu un extraterrestre dans la cour. Tout le monde éclate de rire, mais vous êtes envoyé au coin.",
-        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_troll_blague"},
-        "choix2": {"texte": "Raconter une autre histoire", "destination": "fin_alt_troll_blague"},
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_pl_blague"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/blague.png",
         "age": "6 ans"
     },
 
-    "alt_troll_cacher": {
+    "fin_alt_pl_blague": {
+        "texte": "Vous rentrez ches vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Dire que la journée était pas spécial mais pas nulle", "destination": null},
+        "choix2": {"texte": "Que vous avez été envoyé au coin", "destination": null},
+        "choix3": {"texte": "Ne rien dire", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/blague.png",
+        "age": "6 ans"
+    },
+
+    "alt_pl_cacher": {
         "texte": "Vous cachez les crayons de vos camarades sous le bureau. Ils cherchent partout, et vous riez en silence.",
-        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_troll_cacher"},
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_pl_cacher"},
         "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
@@ -635,11 +792,31 @@
         "age": "6 ans"
     },
 
-    "alt_troll_betises": {
+    "fin_alt_pl_cacher": {
+        "texte": "Vous rentrez ches vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Dire que la journée était pas spécial mais pas nulle", "destination": null},
+        "choix2": {"texte": "Que vous avez caché les crayons de vos camarades", "destination": null},
+        "choix3": {"texte": "Ne rien dire", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/cacher.png",
+        "age": "6 ans"
+    },
+
+    "alt_pl_betises": {
         "texte": "Vous affirmez que les dodos vivent encore dans les égouts. Les autres enfants vous croient à moitié.",
-        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_troll_betises"},
-        "choix2": {"texte": "Inventer une autre théorie folle", "destination": "fin_alt_troll_betises"},
+        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_pl_betises"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/betises.png",
+        "age": "6 ans"
+    },
+
+    "fin_alt_pl_betises": {
+        "texte": "Vous rentrez ches vous. Vous dites à votre mère que ...",
+        "choix1": {"texte": "Dire que la journée était pas spécial mais pas nulle", "destination": null},
+        "choix2": {"texte": "Que vous avez  raconter l'histoire du Saint-Dodo", "destination": null},
+        "choix3": {"texte": "Ne rien dire", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/betises.png",
         "age": "6 ans"
@@ -650,7 +827,7 @@
         "choix1": {"texte": "Lancer une gomme dans la tête du globe", "destination": "alt_actif_globe"},
         "choix2": {"texte": "Empiler les chaises jusqu’au plafond", "destination": "alt_actif_chaises"},
         "choix3": {"texte": "Attraper le tableau et le faire tomber", "destination": "alt_actif_tableau"},
-        "choix4": {"texte": "Mettre de la craie partout comme un artiste fou", "destination": "alt_actif_craie"},
+        "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/ecolestdenis.png",
         "age": "6 ans"
     },
@@ -658,8 +835,18 @@
     "alt_actif_globe": {
         "texte": "Vous lancez la gomme… et elle rebondit sur le globe, et vole sur le professeur. La classe éclate de rire ou de panique.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_actif_globe"},
-        "choix2": {"texte": "Lancer un autre objet", "destination": "fin_alt_actif_globe"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/globe.png",
+        "age": "6 ans"
+    },
+
+     "fin_alt_actif_globe": {
+        "texte": "Votre mère viens vous chercher à l’école suite a un appel du professeur.",
+        "choix1": {"texte": "S'excuser", "destination": null},
+        "choix2": {"texte": "Lancer un autre objet, sur votre mère", "destination": null},
+        "choix3": {"texte": "Ne rien dire", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/globe.png",
         "age": "6 ans"
@@ -675,20 +862,30 @@
         "age": "6 ans"
     },
 
+    "fin_alt_actif_chaises": {
+        "texte": "Par chance, le professeur vous dit simplement de remettre les chaises en place.",
+        "choix1": {"texte": "Dire à votre mère que vous avez fait une bêtise", "destination": null},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
+        "choix3": {"texte": "Non disponible", "destination": null},
+        "choix4": {"texte": "Non disponible", "destination": null},
+        "image": "img/chaises.png",
+        "age": "6 ans"
+    },
+
     "alt_actif_tableau": {
         "texte": "Vous arrachez le tableau du mur et le faites tomber. Le bruit est énorme, le professeur est choqué.",
         "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_actif_tableau"},
-        "choix2": {"texte": "Cacher le tableau derrière vous", "destination": "fin_alt_actif_tableau"},
+        "choix2": {"texte": "Non disponible", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/tableau2.png",
         "age": "6 ans"
     },
 
-    "alt_actif_craie": {
-        "texte": "Vous dispersez la craie partout sur le sol et les tables. Les enfants glissent, le professeur glousse et soupire.",
-        "choix1": {"texte": "Fin de la journée", "destination": "fin_alt_actif_craie"},
-        "choix2": {"texte": "Tracer des formes étranges sur tous les murs", "destination": "fin_alt_actif_craie"},
+    "fin_alt_actif_tableau": {
+        "texte": "Vous êtes éxclu de l'école et le professeur dit que vous êtes un cas impossible à enseigner",
+        "choix1": {"texte": "Dire à votre mère que vous avez fait une bêtise", "destination": null},
+        "choix2": {"texte": "Ne rien dire", "destination": null},
         "choix3": {"texte": "Non disponible", "destination": null},
         "choix4": {"texte": "Non disponible", "destination": null},
         "image": "img/tableau2.png",
