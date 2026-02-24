@@ -17,7 +17,7 @@
 # CONTRÔLE
 ### **Structure en arbre:**
 
-- Chaque décision vous fait progresser tranquillement dans l'histoire et vous emmène vers une nouvelle situation unique. Aucun chemin n'est le même et aucune décision ne vous apportera au même endroit.
+- Chaque décision vous fait progresser tranquillement dans l'histoire et vous emmène vers une nouvelle situation unique. Aucun chemin n'est le même et aucune décision ne vous apportera au même endroit. 
 
 # À FAIRE
 - Ajouter du contenu à l'histoire ainsi que de nouveaux choix possibles.
