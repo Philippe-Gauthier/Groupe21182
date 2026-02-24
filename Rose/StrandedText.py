@@ -110,14 +110,21 @@ class p6 :
 
 #p7
 class p7 :
-    text = "page 7"
-    option1 = "Stay on the table and wait for help"
-    option2 = "Swim towards what seems to be a small island in the distance"
-    option3 = "Try to find your friends"
-    option4 = "Scavenge the shipwreck for useful items"
+    text = (
+        "You get slapped awake by Theo, who is looking concernedly at you. "
+        "You quickly realize you're on a beach, with nothing but ocean in "
+        "front of you. You look at Theo, then behind you, only to discover "
+        "what could be considered a paradise island in other circumstances. "
+        "You quickly consort with Theo, then, with a plan in mind, you go "
+        "into the lushious palm forest."
+    )
+    option1 = "Grab a long stick, possibly for defense"
+    option2 = "Head towards a strangly tall rock"
+    option3 = "Collect some branches near the edge of the palm forest"
+    option4 = "Grab some unknown fruits from a nearby tree"
     endPage = False
-    weather = "???"
-    time = "Morning"
+    weather = "Sunny"
+    time = "Noon"
 
 
 class p8 :
@@ -143,19 +150,34 @@ class p8 :
     option3 = "Collect some branches near the edge of the palm forest"
     option4 = "Grab some unknown fruits from a nearby tree"
     endPage = False
-    weather = "???"
-    time = "???"
+    weather = "Sunny"
+    time = "Noon"
 
 
 class p9 :
-    text = "page 9"
-    option1 = "Stay on the table and wait for help"
-    option2 = "Swim towards what seems to be a small island in the distance"
-    option3 = "Try to find your friends"
-    option4 = "Scavenge the shipwreck for useful items"
+    text = (
+        "From some kind of mist, you see what looks like a deer approaching "
+        "you. Its majestic antlers seem to be raching for you. You reach "
+        "back, following the deer to a lushious cave. Through the vines, "
+        "you see a beautiful waterfall, with a small pond at the bottom. "
+        "What seemed like a small cave is in reality its own ecosystem, "
+        "with a variety of plants you've never seen before. Suddenly, you "
+        "feel a strong urge to jump into the pond. Right at the moment you "
+        "should've touched the water, you feel your skin burning up. You "
+        "open your eyes and find Theo looking concernedly at you. You "
+        "quickly realize you're on a beach, with nothing but ocean in "
+        "front of you. You look at Theo, then behind you, only to discover "
+        "what could be considered a paradise island in other circumstances. "
+        "You quickly consort with Theo, then, with a plan in mind, you go "
+        "into the lushious palm forest."
+    )
+    option1 = "Grab a long stick, possibly for defense"
+    option2 = "Head towards a strangly tall rock"
+    option3 = "Collect some branches near the edge of the palm forest"
+    option4 = "Grab some unknown fruits from a nearby tree"
     endPage = False
     weather = "Sunny"
-    time = "Morning"
+    time = "Noon"
 
 
 class p10 :

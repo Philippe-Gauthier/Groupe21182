@@ -54,14 +54,14 @@ class App:
         interactions de l'utilisateur.
         """
         self.window = window
-        self.button_size = 67
+        self.BUTTON_SIZE = 67
         self.test_mode = True
-        self.test_page = 6
+        self.test_page = 16
         self.path = []
 
         # ici on cree un "lexique" qui associe chaque numero de page a
         # son objet page, provenant du fichier StrandedText.py
-        self.pages = {
+        self.PAGES = {
             1: st.p1,
             2: st.p2,
             3: st.p3,
@@ -108,7 +108,7 @@ class App:
         # ceci est un dictionnaire qui associe chaque numero de page a une
         # liste de pages suivantes en fonction du bouton appuye (1 pour
         # A, 2 pour B, 3 pour C, 4 pour D etc.)
-        self.transitions = {
+        self.TRANSITIONS = {
             1: (2, 3, 4, 5),
             2: (6, 10, 6, 11),
             4: (8, 8, 8, 8),
@@ -123,12 +123,12 @@ class App:
             13: (15, 16, 17, 18),
             14: (19, 20, 21, 22),
             # v end v
-            15: (7, 9, 13, 23),
-            16: (24, 25, 26, 27),
-            17: (28, 29, 30, 31),
-            18: (32, 33, 34, 35),
-            19: (36, 37, 38, 39),
-            20: (40, 41, 41, 41),
+            15: (41, 41, 41, 41),
+            16: (7, 9, 7, 9),
+            17: (41, 41, 41, 41),
+            18: (41, 41, 41, 41),
+            19: (41, 41, 41, 41),
+            20: (41, 41, 41, 41),
             21: (41, 41, 41, 41),
             22: (41, 41, 41, 41),
             23: (41, 41, 41, 41),
@@ -190,7 +190,7 @@ class App:
                 text="",
                 command=(lambda index=i + 1: self.on_button(index)),
             )
-            b.config(height=2, width=self.button_size)
+            b.config(height=2, width=self.BUTTON_SIZE)
             self.buttons.append(b)
 
         # placer les boutons dans la fenetre en utilisant grid. Les
@@ -219,7 +219,7 @@ class App:
             options de la nouvelle page actuelle
 
         """
-        page = self.pages.get(self.curr_page)
+        page = self.PAGES.get(self.curr_page)
         if page.endPage:
             display = tw.fill(page.text, 100)
             self.append_to_path(self.curr_page)
@@ -278,7 +278,7 @@ class App:
         l'affichage en fonction de la nouvelle page actuelle.
 
         """
-        transition = self.transitions.get(self.curr_page)
+        transition = self.TRANSITIONS.get(self.curr_page)
         if transition and 1 <= index <= len(transition):
             self.curr_page = transition[index - 1]
         # if no transition defined, do nothing (stay on page)
@@ -297,7 +297,7 @@ class App:
         for btn in self.buttons:
             btn.destroy()
         end_button = tk.Button(self.window, text="ok")
-        end_button.config(height=2, width=self.button_size)
+        end_button.config(height=2, width=self.BUTTON_SIZE)
         end_button.grid(row=1, column=0, columnspan=2, pady=5)
 
 
