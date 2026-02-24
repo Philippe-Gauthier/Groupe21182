@@ -102,17 +102,11 @@ choix_possible = (choix_colonne_un, choix_colonne_deux, choix_colonne_trois, cho
 
 erreur = 0
 
-#Reste une list
-#choix_afficher = []
-#texte_afficher = str("")
-#question_afficher = str("")
-
 choix_faite = int(0)
 indice_precedant = int(0) #indice precedant choix maximum
 etat_actuel = int(0)
 
-#TODO: Commande 1
-#return tuple(texte, question, choix)
+#TODO: Preferablement, separer en plusieurs commande
 """
 Entrées: etat_actuel, textes_possible, choix_possible
 Sorties: tuple comprenant texte, question et choix
@@ -156,35 +150,9 @@ def informations_actuel():
             return textes_possible[0], choix_possible[0]
     return texte, choix
 
-#TODO: Commande 2
-"""
-Entrées: choix_afficher, choix
-Sorties: String dans le terminal
-But: Trier la liste de choix pour obtenir ceux besoin selon le choix actuel
-"""
-def trier_choix_a_afficher():
-    return 0
-"""
-Entrées: choix_afficher, choix
-Sorties: String dans le terminal
-But: Trier liste pour obtenir les choix à afficher
-"""
-#TODO: Trier les lists pour obtenir seulement les éléments nécessaires à afficher, et les afficher
-def trier_choix_afficher():
-    global choix_afficher, choix
-    if(choix_afficher == []):
-        choix_afficher = choix[0]
-    if(choix_afficher == choix[0]):
-        return 1
-    return 0
 
 #TODO: Idéalement, trier les lists pour obtenir la question separement du texte, et les afficher
 def separer_texte_question():
-    return 0
-
-#TODO: Trier les lists pour obtenir seulement les éléments nécessaires à afficher, et les afficher
-def trier_texte_afficher():
-    global texte_afficher, textes
     return 0
 
 """
@@ -195,6 +163,7 @@ But: Obtenir facilement une cohérence dans les sauts de ligne pour séparer les
 def print_saut_ligne():
     print("-" * 33)
 
+#TODO: Modifier commentaires partout et specifiquement entrer ici
 """
 Entrées: choix_afficher, texte_afficher, question_afficher
 Sorties: String dans le terminal
@@ -227,6 +196,8 @@ def print_final():
     if len_choix > 0:
         print("Entrez le numéro de votre choix pour continuer l'histoire.")
         print_saut_ligne()
+
+#TODO: Distinguer davantage le print lorsquune erreur
 """
 Entrées: choix_faite, etat_actuel, erreur
 Sortie: etat_actuel
@@ -251,7 +222,7 @@ prev_choix_faite = choix_faite
 choix_faite = int(input(print_final())) # 1er choix
 etat_actuel = changement_etat() # change état si peu
 
-#essayer try-except
+#TODO: essayer try-except
 #######################
 if erreur > 0:
     choix_faite = int(input(print_final())) # Xer choix
