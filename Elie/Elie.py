@@ -32,6 +32,21 @@ def dice_roll(crit_fail,fail,success,crit_success):
         print(crit_success)
         return 4
 
+def gamble():
+    bet = int(input("Combien voulez-vous parier? Vous avez " + str(argent) + " $ "))
+    while bet > argent or bet <= 0:
+        print("Montant invalide. Veuillez entrer un montant entre 1 et " + str(argent) + " $")
+        bet = int(input("Combien voulez-vous parier? Vous avez " + str(argent) + " $ "))
+    d20 = dice_roll("Echec critique: Tu n'accepte pas la défaite et continue de misé jusqu'à ne plus avoir d'argent. ","Echec: tu perds l'argent que tu as misé","Reussite: tu as gagné " + str(bet) + " $","Reussite critique: tu as gagné " + str(bet**2) + " $")
+    if d20 == 1:
+        argent = 0
+    elif d20 == 2:
+        argent -= bet
+    elif d20 == 3:
+        argent += bet
+    elif d20 == 4:
+        argent += bet**2
+    print("Tu as maintenant " + str(argent) + " $")
 #_________________________________________________________________________________
 argent = 0
 print("Bienvune dans votres aventure, faites vos chois parmis ceux proposés. Vous pouvez egalement taper quitter pour quitter le jeu.")
@@ -150,7 +165,7 @@ match reponse:
         match reponse:
             #nord
             case "1":  
-                reponse = choix("Q2","1","2","3")
+                
             #investiguer les poubelles
             case "2":
                 resultat_poubelle = dice_roll("Echec critique: tu sors des poubelles avec une odeur terrible et les mais vides","Echec: tu sors des poubelles avec les mais vides ","Reussite: tu sors des poubelles avec 1$ ","Reussite critique: tu trouve une bouteille de lait intacte dans les poubelles! ")
@@ -171,8 +186,30 @@ match reponse:
                 exit()
     #ouest
     case "3":
-       reponse = choix("Vous vous dirigez vers l'ouest et trouve plusieurs source de revenus: une pizzeria qui recherche des livreurs, une table de black jack et un","","","C")
-
+       reponse = choix("Tu te dirige vers l'ouest et trouve plusieurs source de revenus: une pizzeria qui recherche des livreurs, une table de black jack et une banque","Prendre le travail de livreurs","Jouer au black jack","Aller à la banque")
+       while reponse == "3":
+           print("la banque est fermé pour le moment, revien plus tard.")
+           reponse = choix("Tu te dirige vers l'ouest et trouve plusieurs source de revenus: une pizzeria qui recherche des livreurs, une table de black jack et une banque","Prendre le travail de livreurs","Jouer au black jack","Aller à la banque")
+       match reponse:
+        case "1":  
+            argent += 19
+            reponse = choix("Apres une journé de dure labeur tu as gagné 19$ tu as maintenant " + str(argent) + " $","Aller a la banque","Aller jouer au black jack","Retourner chez toi")
+        case "2":
+            if argent != 0:
+                gamble()
+                reponse = choix("Que fais-tu?","Prendre le travail de livreurs","Aller à la banque","Rejouer")
+                while reponse == "3":
+                    gamble()
+                    reponse = choix("Que fais-tu?","Prendre le travail de livreurs","Aller à la banque","Rejouer")
+                
+            else:
+                print("Tu n'as pas d'argent pour parier. Tu dois trouver une autre solution.")
+                reponse = choix("Que fais-tu?","Prendre le travail de livreurs","Aller à la banque","Retourner chez toi")
+            
+    
+    case "quitter":
+        print("au revoir")
+        exit()
     case "quitter":
         print("au revoir")
         exit()
