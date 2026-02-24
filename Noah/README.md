@@ -37,6 +37,6 @@
 
 ## TODO
 
-|       Main Story        | Documentation | Mécaniques principales   | Mecaniques secondaires (Argent/Age) |Finitions (Image, formattage) |
+|       Main Story        | Documentation | Mécaniques principales   | Mecaniques secondaires |Finitions (Image, formattage) |
 |:-----------------------:|:------------:|:-------------------------:|:-----------------------------------:|:----------------------------:|
-| ❌                     | ✅           |   ✅                     |✅Age ❌ Argent               |✅Image ❌ Formattage         |
+| ❌ Encore en finition mais deja plus de 40 choix disponible !                   | ✅           |   ✅                     |✅Age            |✅     |

@@ -14,12 +14,12 @@ with open("story.json", "r", encoding="utf-8") as f:
     story = json.load(f)
 
 """
-Fonction qui attribue les textes, les images et les valeurs de chaque choix de chaque chapitres dans le json a une variable qui sera afficher avec Tkinter.  
-Chaque fois que cette fonction est appeler, elle raffraichi la fenetre avec les donnees du json pour afficher le chapitre correspondant au choix fait par l'utilisateur.
+Fonction qui attribue comme entree les textes, les images et les valeurs de chaque choix de chaque chapitres dans le json a une variable qui sera afficher avec Tkinter.  
+Chaque fois que cette fonction est appeler (la sortie), elle raffraichi la fenetre avec les donnees du json pour afficher le chapitre correspondant au choix fait par l'utilisateur.
 elle prend en parametre le nom du chapitre a afficher recuperer dans le json comme "intro", "chu1", etc. et sera automatiquement mis a jour via la fonction choisir() si dessous ainsi que la commande des boutons.
 
 """
-
+#  CE QU'IL FAUT NOTER
 def afficher_chapitre(chapitre):
     global chapitre_actuel
     chapitre_actuel = chapitre
@@ -52,6 +52,7 @@ def afficher_chapitre(chapitre):
 """
 Fonction appeler a chaque fois qu'on clique sur un choix pour afficher et raffraichir le chapitre correspondant au choix fait en utilisant la fonction afficher_chapitre,
 elle prend en parametre le nom du nouveau chapitre avec les options a afficher recuperer dans le json et ressort le choix dans les boutouns.
+Sont entrees est le choix fait suite a la commande des boutons et sa sortie est le chapitre correspondant a ce choix qui sera afficher dans la fenetre.
 
 """
 def choisir(nouveau_chapitre):
