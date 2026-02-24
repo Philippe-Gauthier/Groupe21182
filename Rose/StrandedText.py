@@ -129,26 +129,21 @@ class p7 :
 
 class p8 :
     text = (
-        "From some kind of mist, you see what looks like a deer approaching "
-        "you. Its majestic antlers seem to be raching for you. You reach "
-        "back, following the deer to a lushious cave. Through the vines, "
-        "you see a beautiful waterfall, with a small pond at the bottom. "
-        "What seemed like a small cave is in reality its own ecosystem, "
-        "with a variety of plants you've never seen before. Suddenly, you "
-        "feel a strong urge to jump into the pond. Right at the moment you "
-        "should've touched the water, you feel your skin burning up. You "
-        "open your eyes and find Theo looking concernedly at you. You "
-        "quickly realize you're on a beach, with nothing but ocean in "
-        "front of you. You look at Theo, then behind you, only to discover "
-        "what could be considered a paradise island in other circumstances. "
-        "You quickly consort with Theo, then, with a plan in mind, you go "
-        "into the lushious palm forest."
+        "You find a long stick, suitable for defense, and decide to take"
+        " it with you. With a pocket knife you always carry with you, "
+        "you start sharpening the tip of the stick. You then proceed into"
+        " the palm forest, looking for anything that could be useful. "
+        "You walk for a few minutes, and find a small clearing, with only"
+        " one tree in the middle. The rest of the clearing is covered in"
+        " grass. The tree provides a lot of shade, and you decide to take"
+        " a break there. You sit down and rest. You take this time to "
+        "remeber the basics of survival : Shelter, water, food, fire."
     )
 
-    option1 = "Grab a long stick, possibly for defense"
-    option2 = "Head towards a strangly tall rock"
-    option3 = "Collect some branches near the edge of the palm forest"
-    option4 = "Grab some unknown fruits from a nearby tree"
+    option1 = "Explore the radius around the clearing"
+    option2 = "Start a fire using the stick and some dry leaves"
+    option3 = "Collect branches and palm leaves"
+    option4 = "Go get Theo to tell him what you found"
     endPage = False
     weather = "Sunny"
     time = "Noon"
@@ -248,7 +243,18 @@ class p12 :
 
 
 class p13 :
-    text = "page 13"
+    text = (
+        "In the distance, you see a weirdly shaped rock protuding from"
+        " the treeline. Intrigued, you head towards it, somewhat hypnotized"
+        " by its strange shape. It seems very far, but your tiredness "
+        "overrides you instinct to stay away from it. You keep walking, "
+        "clearing the leaves and branches that stand in your way. Your"
+        " movements are mechanical, and you don't even notice the time "
+        "passing. Eventually, you reach the rock, and find a small cave."
+        " The entrance is covered in vines and barely visible. At this moment,"
+        " you also notice the dark sky, only illuminated by a"
+        " bright full moon."
+    )
     option1 = "Stay on the table and wait for help"
     option2 = "Swim towards what seems to be a small island in the distance"
     option3 = "Try to find your friends"
@@ -365,15 +371,24 @@ class p18 :
 
 
 class p19 :
-    text = "page 19"
+    text = (
+        "Too scared to actually go into the forest, you decide to collect "
+        "some fallen branches and palm leaves, hoping to use them to "
+        "build a small shelter. You gather as much as you can, and start "
+        "building it. It's not perfect, but it's enough to protect you  "
+        "from the sun. Theo already went into the forest, so you have "
+        "to figure out what to do next on your own. It took some time"
+        " to build the shelter, and it's already noon. You are getting"
+        " hungry."
+    )
 
-    option1 = "Sleep"
-    option2 = "Sleep"
-    option3 = "Sleep"
-    option4 = "Sleep"
+    option1 = "Stay under the shelter and wait for Theo"
+    option2 = "Find materials to build a fire"
+    option3 = "Go look for Theo in the palm forest"
+    option4 = "Try crafting some useful tools"
     endPage = False
     weather = "Sunny"
-    time = "Morning"
+    time = "Noon"
 
 class p20 :
     text = "page 20"
@@ -613,3 +628,4 @@ class p41 :
     option2 = "Sleep"
     option3 = "Sleep"
     option4 = "Sleep"
+    endPage = True

@@ -54,11 +54,12 @@ class App:
         interactions de l'utilisateur.
         """
         self.window = window
-        self.BUTTON_SIZE = 67
-        self.test_mode = True
-        self.test_page = 16
+        self.BUTTON_SIZE = 52
+        self.test_mode = False
+        self.test_page = 7
         self.path = []
 
+        #TODO: debut du code pertinent pour l'evaluation
         # ici on cree un "lexique" qui associe chaque numero de page a
         # son objet page, provenant du fichier StrandedText.py
         self.PAGES = {
@@ -111,21 +112,19 @@ class App:
         self.TRANSITIONS = {
             1: (2, 3, 4, 5),
             2: (6, 10, 6, 11),
-            4: (8, 8, 8, 8),
+            4: (7, 7, 7, 7),
             5: (12, 14, 12, 14),
             6: (15, 16, 17, 18),
-            7: (15, 16, 17, 18),
-            8: (19, 20, 21, 22),
-            9: (15, 16, 17, 18),
+            7: (8, 13, 19, 20),
+            8: (41, 41, 41, 41),
+            9: (8, 13, 19, 20),
             10: (15, 16, 17, 18),
             11: (15, 16, 17, 18),
-            12: (19, 20, 21, 22),
-            13: (15, 16, 17, 18),
-            14: (19, 20, 21, 22),
-            # v end v
-            15: (41, 41, 41, 41),
+            12: (8, 13, 19, 20),
+            13: (41, 41, 41, 41),
+            14: (8, 13, 19, 20),
             16: (7, 9, 7, 9),
-            17: (41, 41, 41, 41),
+            17: (26, 27, 28, 18),
             18: (41, 41, 41, 41),
             19: (41, 41, 41, 41),
             20: (41, 41, 41, 41),
@@ -155,31 +154,38 @@ class App:
             self.curr_page = self.test_page
         else : self.curr_page = 1
 
+        #TODO: fin du code pertinent pour l'evaluation
+
         # configuration de l'interface utilisateur : on cree un widget Text
         # pour afficher le texte de la page, et des boutons pour les
         # options. On configure aussi la fenetre (taille, titre, couleur
         # de fond etc.)
         self.text = tk.Text(
             window,
-            height=17,
-            width=10,
-            font=("Helvetica", 16),
+            height = 17,
+            width = 10,
+            font = ("Helvetica", 16),
         )
         window.resizable(False, False)
         window.title("Livre")
         window.geometry("980x600")
-        window.configure(bg="grey")
+        window.configure(bg = "darkOliveGreen")
 
         self.text.grid(
-            row=0,
-            column=0,
-            columnspan=2,
-            sticky="NSEW",
-            padx=5,
-            pady=5,
+            row = 0,
+            column = 0,
+            columnspan = 2,
+            sticky = "NSEW",
+            padx = 5,
+            pady = 5,
         )
-        window.grid_rowconfigure(index=0, weight=0)
-        window.grid_columnconfigure(index=0, weight=1)
+        self.text.configure(
+            bg = "darkOliveGreen4",
+            fg = "black",
+            state = tk.DISABLED,
+        )
+        window.grid_rowconfigure(index = 0, weight = 0)
+        window.grid_columnconfigure(index = 0, weight = 1)
 
         # creer les boutons et les placer dans la fenetre. Les boutons
         # sont associes a la fonction on_button
@@ -187,22 +193,44 @@ class App:
         for i in range(4):
             b = tk.Button(
                 window,
-                text="",
-                command=(lambda index=i + 1: self.on_button(index)),
+                text = "",
+                command=(lambda index = i + 1: self.on_button(index)),
             )
-            b.config(height=2, width=self.BUTTON_SIZE)
+            b.config(
+                height = 2,
+                width = self.BUTTON_SIZE,
+                bg = "darkOliveGreen4",
+                fg = "black",
+                font = ("Helvetica", 12))
             self.buttons.append(b)
 
         # placer les boutons dans la fenetre en utilisant grid. Les
         # boutons sont placés de manière à ce qu'ils soient alignés à
         # gauche et à droite de la fenetre, avec un espacement entre eux.
-        self.buttons[0].grid(row=2, column=0, sticky="E", padx=5, pady=5)
-        self.buttons[1].grid(row=2, column=0, sticky="W", padx=5, pady=5)
-        self.buttons[2].grid(row=3, column=0, sticky="E", padx=5, pady=5)
-        self.buttons[3].grid(row=3, column=0, sticky="W", padx=5, pady=5)
+        self.buttons[0].grid(row = 2,
+                            column = 0,
+                            sticky = "E",
+                            padx = 5,
+                            pady = 5)
+        self.buttons[1].grid(row = 2,
+                             column = 0,
+                             sticky = "W",
+                             padx = 5,
+                             pady = 5)
+        self.buttons[2].grid(row = 3,
+                             column = 0,
+                             sticky = "E",
+                             padx = 5,
+                             pady = 5)
+        self.buttons[3].grid(row = 3,
+                             column = 0,
+                             sticky = "W",
+                             padx = 5,
+                             pady = 5)
 
         self.update_view()
 
+    #TODO: debut du code pertinent pour l'evaluation
     def update_view(self):
         """
         But : cette fonction met à jour le texte affiché et les
@@ -228,10 +256,13 @@ class App:
         else :
 
             if not page:
-                # gracefully handle missing pages
+                # si la page n'existe pas dans le dictionnaire,
+                # afficher un message d'erreur
                 display = "[Page missing]"
                 options = ["", "", "", ""]
             else:
+                # si la page existe, afficher son texte et ses options
+                # dans le widget de texte et les boutons.
                 display = tw.fill(page.text, 100)
                 options = [
                     page.option1,
@@ -239,23 +270,40 @@ class App:
                     page.option3,
                     page.option4,
                 ]
+                # ajouter la page actuelle au chemin parcouru pour tenir
+                # compte de la dimension temporelle de l'histoire
                 self.append_to_path(self.curr_page)
-                tk.Button(
+
+                # ajouter un bouton pour afficher la météo
+                # et l'heure de l'histoire
+                weather_button = tk.Button(
                     self.window,
-                    text=(f"Weather : {page.weather}\n"
+                    text = (f"Weather : {page.weather}\n"
                           f"Time : {page.time}"),
-                    state=tk.DISABLED,
-                ).grid(
-                    row=1, column=0, columnspan=2, pady=5, padx=5, sticky="W"
+                    bg = "darkOliveGreen4",
+                    fg = "black",
+                    font = ("Helvetica", 12)
                 )
 
-                self.text.config(state=tk.NORMAL)
+                # configurer le bouton
+                weather_button.grid(
+                    row = 1,
+                    column = 0,
+                    columnspan = 2,
+                    pady = 5,
+                    padx = 5,
+                    sticky = "W"
+                )
+
+                # mettre à jour le texte et les boutons avec les informations
+                # definies plus tot    
+                self.text.config(state = tk.NORMAL)
                 self.text.delete("1.0", tk.END)
                 self.text.insert(tk.END, display)
-                self.text.config(state=tk.DISABLED)
+                self.text.config(state = tk.DISABLED)
 
                 for btn, label in zip(self.buttons, options):
-                    btn.config(text=label)
+                    btn.config(text = label)
 
     def on_button(self, index):
         """
@@ -279,27 +327,77 @@ class App:
 
         """
         transition = self.TRANSITIONS.get(self.curr_page)
+        # si une transition est définie et que l'index du bouton
+        # est valide superieur ou egal a 1, et inferieur ou egal
+        # au nombre de transitions possibles (len)
         if transition and 1 <= index <= len(transition):
             self.curr_page = transition[index - 1]
-        # if no transition defined, do nothing (stay on page)
+    # s'il n'y a pas de transition définie,
+    # ne rien faire (rester sur la page)
         self.update_view()
 
+
     def append_to_path(self, page):
+        """
+        But : cette fonction permet d'ajouter la page actuelle
+        au chemin parcouru et l'imprimer dans la console.
+
+        Entree self: le parametre self permet d'acceder aux variables
+            qui sont normalement uniques a la fonction dans d'autres
+            fonctions de la classe App.
+        Entree page: le parametre page est le numero de la page
+            actuelle qui doit etre ajoutee au chemin parcouru.
+
+        Sorties : cette fonction n'a pas de sortie formelle, mais
+        elle modifie la variable d'instance self.path en y ajoutant
+        la page actuelle, et imprime le chemin dans la console.
+
+        """
         self.path.append(page)
         print(self.path)
 
+    
     def end_of_story(self, page):
+        """
+        But : cette fonction gère la fin de l'histoire. 
+        Lorsque la page actuelle est une page de fin (endPage=True), 
+        cette fonction est appelée pour afficher le texte de fin 
+        et supprimer les boutons d'options.
+        
+        Entree self: le parametre self permet d'acceder aux variables qui 
+            sont normalement uniques a la fonction dans d'autres
+            fonctions de la classe App.
+        Entree page: le parametre page est le numero de la page 
+            de fin qui doit etre affichee.
+
+        Sorties : la fonction modifie l'affichage de l'application
+        pour montrer le texte de fin, et supprime les boutons
+        d'options. Elle affiche aussi un message dans la console
+        pour indiquer que la fin de l'histoire a été atteinte.
+
+        """
+
         print("End of story reached.")
-        self.text.config(state=tk.NORMAL)
+        # ajouter le texte dans le widget de texte
+        self.text.config(state = tk.NORMAL)
         self.text.delete("1.0", tk.END)
         self.text.insert(tk.END, page)
-        self.text.config(state=tk.DISABLED)
+        self.text.config(state = tk.DISABLED)
+        # supprimer les boutons d'options
         for btn in self.buttons:
             btn.destroy()
-        end_button = tk.Button(self.window, text="ok")
-        end_button.config(height=2, width=self.BUTTON_SIZE)
-        end_button.grid(row=1, column=0, columnspan=2, pady=5)
-
+        # ajouter un bouton pour indiquer que l'utilisateur
+        # accepte la fin de l'histoire et peut fermer la fenetre
+        end_button = tk.Button(self.window, text = "ok")
+        end_button.config(
+            height = 2, 
+            width = self.BUTTON_SIZE,
+            bg = "firebrick4",)
+        end_button.grid(row = 1,
+                        column = 0,
+                        columnspan = 2,
+                        pady = 5)
+    # TODO: fin du code pertinent pour l'evaluation
 
 
 # la partie suivante crée la fenetre principale de l'application, crée une
