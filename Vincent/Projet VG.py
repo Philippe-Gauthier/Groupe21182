@@ -5,7 +5,7 @@ Fichier principale projet livre interactif
 
 """
 
-print("Ton ami vien d'avoir sa licence de pilote d'avion et vous décidez de partir avec son avion qu'il vient de construire. Tout à coup, une tempête vous prend par surprise et vous vous écrasez dans le milieu d'une forêt. Tu t'en es bien sorti mais ton ami est inconscient.")
+print("Ton ami vient d'avoir sa licence de pilote d'avion et vous décidez de partir avec son avion qu'il vient de construire. Tout à coup, une tempête vous prend par surprise et vous vous écrasez dans le milieu d'une forêt. Tu t'en es bien sorti mais ton ami est inconscient.")
 
 def le_choix(choix_1, choix_2, choix_3, choix_4) :
     """
@@ -43,7 +43,7 @@ if (choix_un == 1 ) :
         print("Avant de commencer la marche, tu as réussi à trouver une boussole et une bouteille d'eau dans l'avion. Tu dois décider maintenant dans quelle direction te diriger.")
 
         nord = "Si tu veux te diriger vers le nord, puisque c'est plus simple d'utiliser la boussole ainsi, écrit : 1"
-        est = "Si tu prens la décision de te diriger vers l'ouest puisque tu avais apercu un village sur le chemin, écrit : 2"
+        est = "Si tu prends la décision de te diriger vers l'ouest puisque tu avais apercu un village sur le chemin, écrit : 2"
         sud = "Si tu te dis vouloir aller vers le sud puisque tu es à bout des températures du Canada et espères avoir plus chaud, écrit : 3"
         ouest = "Si tu décides de te dirgier vers l'est puisque c'était vers cette direction que vous vous dirigiez avant le crash, écrit : 4"
         choix_debut = le_choix(nord, est, sud, ouest)
@@ -161,8 +161,8 @@ elif (choix_un == 2):
 elif (choix_un == 3):
     print("En vérifiant son pouls, tu confirme le décès de ton meilleur ami. Tu dois tout de même faire un choix pour la suite.")
     
-    good= "Si tu veux commencé à avancer puisque tu pense que t'a survie est plus importante pour l'instant, écrit : 1"
-    triste= "Tu n'encaisse pas le décès de ton ami et tu trouve injuste que tu soit toujours vivant. Si tu veux pleuré et rejoindre ton ami, écrit : 2"
+    good= "Si tu veux commencer à avancer puisque tu penses que ta survie est plus importante pour l'instant, écrit : 1"
+    triste= "Tu n'encaisse pas le décès de ton ami et tu trouves injuste que tu sois toujours vivant. Si tu veux pleurer et rejoindre ton ami, écrit : 2"
     choix_postdeces = le_choix(good,triste,"","")
     
     if(choix_postdeces == 1): 
@@ -170,7 +170,7 @@ elif (choix_un == 3):
 
         nord = "Si tu veux te diriger vers le nord, puisque c'est plus simple d'utiliser la boussole ainsi, écrit : 1"
         est = "Si tu décides de te dirgier vers l'est puisque c'était vers cette direction que vous vous dirigiez avant le crash, écrit : 2"
-        sud = "Si tu te dit vouloir aller vers le sud puisque tu est à bout des température du canada et espères avoir plus chaud, écrit : 3"
+        sud = "Si tu te dis vouloir aller vers le sud puisque tu ess à bout des température du canada et espères avoir plus chaud, écrit : 3"
         ouest = "Si tu prend la décision de te diriger vers l'ouest puisque tu avait apercu un village sur le chemin, écrit : 4"
         choix_debut = le_choix( nord, est, sud, ouest)
         
@@ -271,4 +271,4 @@ elif (choix_un == 3):
              print("Félicitations! Tu as réussi à survivre! Bien joué !")
             
     elif(choix_postdeces == 2):
-        print("La partie est terminer, mais tu as retrouver ton ami! Bon repos")
+        print("La partie est terminée, mais tu as retrouvée ton ami! Bon repos")
