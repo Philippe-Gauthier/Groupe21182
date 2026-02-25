@@ -4,8 +4,7 @@ Cassey Martin
 Fichier principale projet livre interactif
 """
 
-introduction = "Un papillon vole dans la forêt, il est heureux et libre. Ensuite, que fais-t-il?" 
-nombre_colonne = int(5)
+introduction = "Un papillon vole dans la forêt, il est heureux et libre. Ensuite, que fais-t-il?"
 choix_colonne_un = ("Il se pose sur une feuille", 
                         "Il fonce dans un oiseau", 
                         "Il essaie de trouver son ami perdu") # 3 choix
@@ -158,7 +157,7 @@ def print_saut_ligne():
 #TODO: Modifier commentaires partout et specifiquement entrer ici
 """
 Entrées: choix_afficher, texte_afficher, question_afficher
-Sorties: String dans le terminal
+Sortie: String dans le terminal
 But: Afficher les information pertinentes, tels que le texte, la question, les choix possibles et l'instruction, de manière claire et bien formatté pour le lecteur
 """
 def print_final():
