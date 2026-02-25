@@ -1,26 +1,28 @@
-"Nom = Karaboue
-Prénom = Médjoua
-Groupe = 21182
-Cours : 243-224-SH"
+- Nom = Karaboue
+- Prénom = Médjoua
+- Groupe = 21182
+- Cours : 243-224-SH  
 
-
-
-# projet
+# Titre du projet 
 Jeu de question à choix multiple.
 
-# But du projet
-Le but du jeu de question à choix multiple est permet Médjoua d'apprendre à étudier en s'amusant. ce qui permet à Médjoua de trouver le jeu  amusant car sa developpe son cerveau à retenir plus rapidement et à voir les enjeux qui y sont appliqués.
+## Description du projet.
+ Le jeu sera composé de :
+- Questions
+- choix 1
+- choix 2
+- choix 3
+- possibiliter de retour à la question s'il ne choisir pas entre ses trois choix proposés.
 
-# Entrer
-En entrer du jeu de question à choix multiple on aura les questions qui seront poser grace à la fonction Input(""),
-Chaque question aura trois propositions de reponse dont une seul sera vrai qui seront indentifier par des chiffres.
+## But du projet
+Le but du jeu de question à choix multiple, permet a l'utilisateu d'apprendre à étudier en s'amusant. ce qui permet à l'utilisateur de trouver le jeu  amusant car sa developpe son cerveau à retenir plus rapidement.
 
-# sortir
-En sortir Médjoua fera un choix parmi les propositions de reponse donnée en entrer grace à la fonction print("").
+## Entrer
+En entrer du jeu des questions à choix multiples. Chaque question aura trois propositions de reponse dont une seul sera vrai. Les questions seront indentifier par des chiffres.
+L'utilisateur fera un choix parmi les propositions de reponse suivant: choix1, choix2, choix3.
 
+## sortir
+ Le choix de reponse choisir par l'utilisateur le fera avancer dans le jeu et les questions auront un lien avec sont choix précédent.
 
-# Sturcture Control
-Lorsque les questions seront affichées par la fonction print("") avvec les propositions de reponse identifier par des chiffres
-et que Médjoua fera un choix de reponse grace à la fonction Input("") ceci le ména à une serie de questions.
-je vais utiliser la fonction "trouver_reponse" pour permet d'introduit les choix de reponse en fonction du test.
-je vais utiliser la condition "If", "elif" et "else" pour donner les condition de chaque choix qu'il fera.
+## Sturcture Control
+Dans le jeu de question à choix multiple chaque choix que l'utilisateur va faire, le fera progresser dans la branche qui aura un lien avec sont choix qu'il a faire tout au debut du jeu.
