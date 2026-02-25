@@ -7,22 +7,26 @@ Fichier principale projet livre interactif
 
 print("Ton ami vient d'avoir sa licence de pilote d'avion et vous décidez de partir avec son avion qu'il vient de construire. Tout à coup, une tempête vous prend par surprise et vous vous écrasez dans le milieu d'une forêt. Tu t'en es bien sorti mais ton ami est inconscient.")
 
-def le_choix(choix_1, choix_2, choix_3, choix_4) :
-    """
-    Entrée : les trois choix (texte)
-    Sortie : choix décider (entier)
-    But : Demander à l'utilisateur quel action faire
-    """
+def le_choix(choix_1, choix_2, choix_3, choix_4):
+
     print(f"1: {choix_1}")
     print(f"2: {choix_2}")
-    if(choix_3 != ""):
+
+    options_valides = [1, 2]
+
+    if choix_3 != "":
         print(f"3: {choix_3}")
-    if(choix_4 != ""):
-        print(f"4: {choix_4}")        
-    descision = int(input("Choisisez une option:"))
-    if(le_choix != choix_1 and le_choix !=choix_2 and le_choix !=choix_3 and le_choix !=choix_4):
+        options_valides.append(3)
+
+    if choix_4 != "":
+        print(f"4: {choix_4}")
+        options_valides.append(4)
+
+    descision = int(input("Choisissez une option: "))
+
+    if descision not in options_valides:
         print("euh, non! tu ne peux pas faire cela. Bye Bye!")
-    
+
     return descision
 
 soin = "Si tu veux chercher l'avion en espérant trouver du soin à ton ami, écrit : 1"
