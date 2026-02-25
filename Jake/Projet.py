@@ -52,6 +52,7 @@ while jeu_actif:
             scene = "voix1"
         else:
             print ("Choix invalide.")
+
     elif scene == "etang":
         print("L'étang semblait être le meilleur choix pour toi. La surface réflète la Lune avec un éclat presque éblouissant.")
         time.sleep(2)
@@ -65,6 +66,7 @@ while jeu_actif:
             scene == "loup"
         else:
             print ("Choix invalide.")
+
     elif scene == "noyade":
         print("Tu t'approches du centre de l'étang. L'eau est peu profonde.")
         time.sleep(2)
@@ -72,8 +74,122 @@ while jeu_actif:
         time.sleep(2)
         print("La main t'attrape par le visage et te tire sous l'eau. L'air sort de ta poitrine, et tu te prépares à une mort lente.")
         jeu_actif = False
+
     elif scene == "loup":
         print("Un loup bloque ton chemin, ses dents visibles entre ses lèvres retroussées.")
         time.sleep(2)
         print("Il te saute à la gorge. Tu t'éteins.")
         jeu_actif = False
+
+    elif scene == "voix1":
+        print("Tu trouves la source de la voix. C'est un petit chat blond. Il est couché sur une grande pile d'or.")
+        time.sleep(2)
+        print("À ta vue, il descent de son trône de dragon. Il grimpe sur ton épaule.")
+        time.sleep(2)
+        print("Il te chuchote: Ce n'est pas pour te faire peur, mais tout ceci est mon royaume. Vois-tu, cela fait plus de deux ans que je repose ici.")
+        time.sleep(2)
+        print("Je règne pour toujours dans cette forêt. J'aime bien mes sujets, mais la seule chose qui me tient ici est l'espoir qu'un jour mon propre roi revienne.")
+        time.sleep(2)
+        print("À tous les jours il pense à moi. C'est son amour qui me donne la force de rester dans cet endroit.")
+        time.sleep(2)
+        print("Je t'offre un choix pour finir cette histoire. Tu peux décider de rester dans ton rêve et vivre dans la forêt avec moi(1), tu peux te réveiller(2), ou rester un peu plus longtemps pour mieux me connaître(3).")
+        choix = input("> ")
+        if choix == "1":
+            scene == "fin2"
+        elif choix == "2":
+            scene == "fin3"
+        elif choix == "3":
+            scene == "questions"
+        else:
+            print("Choix invalide.")
+
+    elif scene == "fin2":
+        print("Tu restes endormi. Avec le chat, tu apprends à chasser, à trouver de l'eau douce et lire les sons de la forêt.")
+        time.sleep(2)
+        print("Avec le temps, tu oublies ta vie à l'extérieur. Tu ne t'ennuies plus de ta famille. Chaque jour est difficile, mais, à force de te servir de tes mains, tu développes un véritable amour pour cet endroit.")
+        time.sleep(2)
+        print("Tu vis heureux avec le chat comme fidèle compagnon.")
+        time.sleep(2)
+        print("FIN")
+        jeu_actif = False
+
+    elif scene == "fin3":
+        print("Tu te réveilles doucement dans ton lit.")
+        time.sleep(2)
+        print("Les souvenirs vivides de ton rêve ne quittent pas ton esprit.")
+        time.sleep(2)
+        print("Tu sens un poids sur tes genoux, mais, quand tu regardes, il n'y a rien.")
+        time.sleep(2)
+        print("La masse qui repose sur toi se soulève, et tu sens ses pattes descendre de ton lit.")
+        time.sleep(2)
+        print("Un miaulement doux se fait entendre. Tu te rendors.")
+        time.sleep(2)
+        print("FIN")
+    
+    elif scene == "questions":
+        print("Que veux-tu connaître? Mon histoire(1), ou mon roi(2)?")
+        choix = input("> ")
+        if choix == "1":
+            scene == "lancelot"
+        elif choix == "2":
+            scene == "roi"
+        else:
+            print("Choix invalide.")
+
+    elif scene == "lancelot":
+        print("Je m'appelle Lancelot. J'ai vécu dans ces bois pendant 10 ans avec mon roi. On chassait ensemble à presque tous les jours.")
+        time.sleep(2)
+        print("Il était un superbe archer. J'utilisais mes griffes, personnellement. On partageait toujours nos prises.")
+        time.sleep(2)
+        print("Il sortait de la mousse grise de son sac et nous allumait un petit feu, pour se réchauffer et pour cuire sa viande.")
+        time.sleep(2)
+        print("Il me gardait toujours quelques morceaux crus. Il choisissait chaque fois les meilleurs pièces avec le plus de gras.")
+        time.sleep(2)
+        print("Il est temps pour toi de retourner chez toi.")
+        time.sleep(5)
+        print("Tu te réveilles doucement dans ton lit.")
+        time.sleep(2)
+        print("Les souvenirs vivides de ton rêve ne quittent pas ton esprit.")
+        time.sleep(2)
+        print("Tu sens un poids sur tes genoux, mais, quand tu regardes, il n'y a rien.")
+        time.sleep(2)
+        print("La masse qui repose sur toi se soulève, et tu sens ses pattes descendre de ton lit.")
+        time.sleep(2)
+        print("Un miaulement doux se fait entendre. Tu te rendors.")
+        time.sleep(2)
+        print("FIN")
+    
+    elif scene == "roi":
+        print("Mon roi était un humain comme toi. Il était grand et fort.")
+        time.sleep(2)
+        print("Il utilisait des outils qui me semblaient comme de la magie.")
+        time.sleep(2)
+        print("Il me portait sur ses épaules ou dans ses bras quand je me sentais fatigué ou quand j'avais froid.")
+        time.sleep(2)
+        print("À tous les jours on allait se promener ensemble, découvrir des nouveaux endroits dans la forêt.")
+        time.sleep(2)
+        print("Il sortait sa grande feuille de papier et il dessinait chaque pas qu'on prenait dans une nouvelle direction.")
+        time.sleep(2)
+        print("Il n'a jamais terminé son dessin de la forêt. Ses devoirs l'ont apporté ailleurs.")
+        time.sleep(2)
+        print("Ses conseillers et lui ont décidé que je serais plus heureux de rester dans la forêt plutôt que de venir avec lui.")
+        time.sleep(2)
+        print("Et ils avaient raison. Je m'ennuyais, c'est certain, mais je voulais terminer son projet.")
+        time.sleep(2)
+        print("Ça a pris si longtemps, mais maintenant, je connais chaque arbre de cette forêt et toutes leurs histoires.")
+        time.sleep(2)
+        print("J'espère un jour pouvoir lui remettre sa carte complétée.")
+        time.sleep(2)
+        print("Il est temps pour toi de retourner chez toi.")
+        time.sleep(5)
+        print("Tu te réveilles doucement dans ton lit.")
+        time.sleep(2)
+        print("Les souvenirs vivides de ton rêve ne quittent pas ton esprit.")
+        time.sleep(2)
+        print("Tu sens un poids sur tes genoux, mais, quand tu regardes, il n'y a rien.")
+        time.sleep(2)
+        print("La masse qui repose sur toi se soulève, et tu sens ses pattes descendre de ton lit.")
+        time.sleep(2)
+        print("Un miaulement doux se fait entendre. Tu te rendors.")
+        time.sleep(2)
+        print("FIN")
