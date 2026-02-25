@@ -100,16 +100,13 @@ texte_colonne_quatre = ("Georgina casse les ailes de son frère George et son am
 textes_possible = (introduction, texte_colonne_un, texte_colonne_deux, texte_colonne_trois, texte_colonne_quatre)
 choix_possible = (choix_colonne_un, choix_colonne_deux, choix_colonne_trois, choix_colonne_quatre)
 
-erreur = 0
-
 choix_faite = int(0)
-indice_precedant = int(0) #indice precedant choix maximum
+indice_precedant = int(0)
 etat_actuel = int(0)
 
-#TODO: Preferablement, separer en plusieurs commande
 """
-Entrées: etat_actuel, textes_possible, choix_possible
-Sorties: tuple comprenant texte, question et choix
+Entrées: etat_actuel, choix_faite, textes_possible, choix_possible
+Sorties: tuple(texte, choix())
 But: Regrouper l'information à afficher selon l'état actuel
 """
 def informations_actuel():
@@ -117,43 +114,38 @@ def informations_actuel():
     match etat_actuel:
         case 0:
             texte = textes_possible[etat_actuel]
-            choix = choix_possible[choix_faite - 1]
+            choix = choix_possible[choix_faite]
         case 1:
-            list_texte = textes_possible[etat_actuel] # colonnne associer(retourne list)
-            texte = list_texte[choix_faite - 1] # A partir du choix faite(retourne texte)
+            list_texte = textes_possible[etat_actuel] # retourne list de texte en fonction de l'état
+            texte = list_texte[choix_faite - 1] # retourne texte en fonction du choix faite
             
-            list_choix = choix_possible[etat_actuel] # colonne associer(retourne list)
-            indice_precedant = choix_faite*2
-            choix = (list_choix[(indice_precedant) - 1 - 1], list_choix[indice_precedant - 1]) # (12 34 56)
+            list_choix = choix_possible[etat_actuel] # retourne list de choix en fonction de l'état
+            indice_precedant = choix_faite*2 # emplacement choix maximale dans arbre selon etat
+            choix = (list_choix[(indice_precedant) - 1 - 1], list_choix[indice_precedant - 1]) # retour comprenant les choix en fonction de l'état
         case 2:
             list_texte = textes_possible[etat_actuel]
-            endroit_texte = indice_precedant + choix_faite - 2 # 2-2 donne 0 donc max possible, et 1-2 donne -1 ce qui correspont a lui d'avant
-            texte = list_texte[endroit_texte - 1] 
+            endroit_texte = indice_precedant + choix_faite - 2 # trouve l'endroit du texte en fonction du choix faite
+            texte = list_texte[endroit_texte - 1]
             
             list_choix = choix_possible[etat_actuel]
-            indice_precedant = endroit_texte * 2
+            indice_precedant = endroit_texte * 2 # trouve le choix maximale en fonction du choix faite
             choix = (list_choix[indice_precedant - 1 - 1], list_choix[indice_precedant - 1])
         case 3:
             list_texte = textes_possible[etat_actuel]
             endroit_texte = indice_precedant + choix_faite - 2 
             texte = list_texte[endroit_texte - 1]
 
-            list_choix = textes_possible[etat_actuel]
+            list_choix = choix_possible[etat_actuel]
             indice_precedant = endroit_texte * 2
             choix = (list_choix[indice_precedant - 1 - 1], list_choix[indice_precedant - 1])
         case 4:
             list_texte = textes_possible[etat_actuel]
             endroit_texte = indice_precedant + choix_faite - 2
             texte = list_texte[endroit_texte - 1]
-            choix = "" # Aucun choix puisque texte finale
+            choix = () # Aucun choix puisque texte finale
         case _:
-            return textes_possible[0], choix_possible[0]
+            return "", tuple()
     return texte, choix
-
-
-#TODO: Idéalement, trier les lists pour obtenir la question separement du texte, et les afficher
-def separer_texte_question():
-    return 0
 
 """
 Entrées: Rien
@@ -161,22 +153,18 @@ Sorties: String dans le terminal
 But: Obtenir facilement une cohérence dans les sauts de ligne pour séparer les différentes sections du texte, question et choix
 """
 def print_saut_ligne():
-    print("-" * 33)
+    print("-" * 60)
 
 #TODO: Modifier commentaires partout et specifiquement entrer ici
 """
 Entrées: choix_afficher, texte_afficher, question_afficher
 Sorties: String dans le terminal
-But: Afficher le texte, la question, les choix possibles et l'instruction de manière claire et bien formatté pour le lecteur
-But futur: Manipuler les listes pour afficher seulement les éléments nécessaires, et les afficher de manière claire pour le lecteur
+But: Afficher les information pertinentes, tels que le texte, la question, les choix possibles et l'instruction, de manière claire et bien formatté pour le lecteur
 """
 def print_final():
     informations = informations_actuel()
     print_saut_ligne()
     print(f"Texte: {informations[0]}")
-    print_saut_ligne()
-    #print(f"Question: {information[1]}")
-    print("aaaaaaaaaaaaaaaaaaaaaaaaaaa")
     print_saut_ligne()
     i = 0
     len_choix = len(informations[1])
@@ -184,6 +172,8 @@ def print_final():
         choix_x_visible = informations[1][i]
         print(f"Choix {i+1}: {choix_x_visible}")
         i += 1
+    else:
+        return "--- fin ---"
     if i < len_choix:
         choix_x_visible = informations[1][i]
         print(f"Choix {i+1}: {choix_x_visible}")
@@ -191,72 +181,58 @@ def print_final():
     if i < len_choix:
         choix_x_visible = informations[1][i]
         print(f"Choix {i+1}: {choix_x_visible}")
-        #i += 1
     print_saut_ligne()
     if len_choix > 0:
-        print("Entrez le numéro de votre choix pour continuer l'histoire.")
-        print_saut_ligne()
+        return "Entrez le numéro de votre choix pour continuer l'histoire: "
 
-#TODO: Distinguer davantage le print lorsquune erreur
 """
-Entrées: choix_faite, etat_actuel, erreur
-Sortie: etat_actuel
-But: Changer d'état si désirer
+Entrées: choix_faite, etat_actuel
+Sortie: Aucune
+But: Gerer etat_actuel
 """
 def changement_etat():
-    global choix_faite, etat_actuel, erreur, prev_choix_faite
-    if choix_faite == 3 and etat_actuel == 0: #vérifie si peut passer au prochain état
-        return 1
-    elif choix_faite == 1 or choix_faite == 2:
-        return int(etat_actuel + 1)
-    else: # sinon 
-        choix_faite = prev_choix_faite
-        erreur += 1 
-        print_final()
-        print_saut_ligne()
-        print("Votre choix était invalide, veuillez le retapez")
-        print_saut_ligne()
-        return etat_actuel
+    global choix_faite, etat_actuel
+    def choix_valide():
+        global choix_faite, etat_actuel
+        if choix_faite == 3 and etat_actuel == 0:
+            return True
+        elif choix_faite == 1 or choix_faite == 2:
+            return True
+        else:
+            return False
+    def choix_invalide():
+        global choix_faite, etat_actuel
+        try:
+                choix_faite = int(input(("*"*60 + "\nVotre choix est invalide, veuillez le retapez\n"+ "*"*60))) #Xem choix, variable pas assigner si erreur
+        except:
+            choix_faite = 1
+            print("*"*60)
+            print(f"Le choix choisi est {choix_faite} ")
+            print("*"*60)
+            return int(etat_actuel + 1)
+        else:
+            if choix_valide():
+                return int(etat_actuel + 1)
+            else: 
+                choix_faite = 1
+                print("*"*60)
+                print(f"Le choix choisi est {choix_faite} ")
+                print("*"*60)
+                return int(etat_actuel + 1)
+    try: # demande à l'usager d'inscire son choix
+        choix_faite = int(input(print_final()))
+    except ValueError: 
+        etat_actuel = choix_invalide()
+    except:
+        print("Quelque chose ne va pas...") # Ne devrait pas atteindre cette partie
+    else:
+        if choix_valide():
+            etat_actuel = etat_actuel + 1
+        else:
+            etat_actuel = choix_invalide()
 
-prev_choix_faite = choix_faite
-choix_faite = int(input(print_final())) # 1er choix
-etat_actuel = changement_etat() # change état si peu
-
-#TODO: essayer try-except
-#######################
-if erreur > 0:
-    choix_faite = int(input(print_final())) # Xer choix
-    etat_actuel = changement_etat() # change état si peu
-    erreur -= 1
-else:
-    prev_choix_faite = choix_faite
-    choix_faite = int(input(print_final())) #2em choix
-    etat_actuel = changement_etat() # change état si peu
-
-#######################
-if erreur > 0:
-    choix_faite = int(input(print_final())) # Xer choix
-    etat_actuel = changement_etat() # change état si peu
-    erreur -= 1
-else:
-    prev_choix_faite = choix_faite
-    choix_faite = int(input(print_final())) #3em choix
-    etat_actuel = changement_etat() # change état si peu
-
-#######################
-if erreur > 0:
-    choix_faite = int(input(print_final())) # Xer choix
-    etat_actuel = changement_etat() # change état si peu
-    erreur -= 1
-else:
-    prev_choix_faite = choix_faite
-    choix_faite = int(input(print_final())) #4em choix
-    etat_actuel = changement_etat() # change état si peu
-
-#######################
-if erreur > 0:
-    choix_faite = int(input(print_final())) # Xer choix
-    etat_actuel = changement_etat() # change état si peu
-    erreur -= 1
-else:
-    print_final()
+changement_etat() #1er choix
+changement_etat() #2em choix
+changement_etat() #3em choix
+changement_etat() #4em choix
+print(print_final()) #text final
