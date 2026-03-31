@@ -1,8 +1,16 @@
 # Projet Vincent Goulet 
 
-Pour commencer, il y aura une introduction pour bien ce mettre dans la peau du personnage pricipale. 
+## But ## 
+Faire des actions en fonction des évènements et des anciennes décision. 
 
-A chaque déscision que le personnage principale aura a prendre, il y aura un choix a faire (1-2-3-4-...) pour le déroulement de l'histoire.
+## Entrée ##
+Les entrées sont le choix effectué par le joueur. Il y aura minimum de deux choix et un maximum de 4 choix par évènement. 
 
-Après chaque déscision y aura un texte expliquant la contunité de l'histoire. 
+## Sortie ##
+Les sorties vous montrera le résultat de votre choix et vous en proposé d'autres selon si vous êtes toujours dans le jeu.
 
+## Structure de contrôle ##
+Le joueur devra prendre des décisions, celles-ci le dirigeant vers une autre situation avec d'autres décisions et ainsi de suite en suivant la structure d'un arbre. 
+
+## thème ## 
+Le thème de l'histoire est la prise de décision en situation de survie suite à un évènement inattendu ou extrème. Tout ça avec une petite touche d'humour.  
