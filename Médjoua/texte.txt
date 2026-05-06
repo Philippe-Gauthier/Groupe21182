@@ -1,0 +1,3 @@
+Ceci est un texte d'exemple. Il contient des caractères spéciaux comme: é, à, ç, 123, @, #, etc.
+Les chiffres 0-9 ne sont pas autorisés!
+Même les accents: é à ù ô î - ne sont pas autorisés.
