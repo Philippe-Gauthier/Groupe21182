@@ -1,0 +1,19 @@
+import questions
+import etudiant #sa liste export en .py au lieu de .txt
+
+repo = etudiant.repo # repo = ['4', '2', '10']
+bonne_reponse = questions.reponses
+
+compteur = 0 
+score = 0 
+
+for element in repo:
+    if element == bonne_reponse[compteur]: # [compteur] est [0] si compteur = 0
+        score = score + 1
+    compteur = compteur + 1
+
+score = str(score)
+compteur = str(compteur)
+resultat = score + "/" + compteur
+
+print(resultat)
