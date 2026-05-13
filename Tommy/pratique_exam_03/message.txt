@@ -1,0 +1,2 @@
+Ceci est un message secret! Veuillez valider la reception.
+Merci.
